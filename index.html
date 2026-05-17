@@ -401,7 +401,7 @@
 <div class="container">
   <header>
     <h1>The AI Model Stack</h1>
-    <p class="subtitle">A newcomer's reference to every layer used to build, train, evaluate, and deploy modern AI models — with the top 5 representative players in each.</p>
+    <p class="subtitle">A newcomer's reference to every layer of modern AI infrastructure — from power and chips through training, evaluation, and deployment — with the leading 5–10 players per category.</p>
     <p class="meta">Last updated: May 2026 · Click pipeline stages below to jump · Use filters to narrow the view</p>
   </header>
 
@@ -425,7 +425,7 @@
     </div>
     <div class="chip" data-filter="frontier">
       <span class="chip-dot" style="background: var(--orange)"></span>
-      Frontier-critical
+      Frontier
     </div>
     <div class="chip" id="clear-filters" style="margin-left: auto; background: transparent; border-color: var(--border-strong);">Clear all</div>
   </div>
@@ -498,7 +498,10 @@ const PHASES = [
           { name: "AMD", badges: ["commercial"], note: "MI300X / MI350 — the credible #2 GPU; gaining share in inference workloads." },
           { name: "Google TPU", badges: ["commercial", "frontier"], note: "Custom accelerators used internally for Gemini; rentable via GCP." },
           { name: "AWS Trainium / Inferentia", badges: ["commercial", "frontier"], note: "Amazon's in-house chips; Anthropic uses Trainium at scale." },
-          { name: "Cerebras / Groq", badges: ["commercial"], note: "Specialists — Cerebras for wafer-scale training, Groq for ultra-fast inference (LPUs)." }
+          { name: "Cerebras", badges: ["commercial"], note: "Wafer-scale training systems; the entire silicon wafer as a single chip." },
+          { name: "Groq", badges: ["commercial"], note: "LPU-based ultra-fast inference; deterministic execution for very low latency." },
+          { name: "Tenstorrent", badges: ["commercial"], note: "Jim Keller's startup; AI hardware with open-source software stack and RISC-V cores." },
+          { name: "SambaNova", badges: ["commercial"], note: "Reconfigurable dataflow architecture; enterprise full-stack appliances." }
         ]
       },
       {
@@ -509,6 +512,7 @@ const PHASES = [
           { name: "Broadcom", badges: ["commercial", "frontier"], note: "Tomahawk / Jericho switches; co-designs custom AI ASICs with hyperscalers." },
           { name: "Arista Networks", badges: ["commercial"], note: "High-end Ethernet switches; the push for 'AI Ethernet' as InfiniBand alternative." },
           { name: "Marvell", badges: ["commercial"], note: "Optical DSPs and custom silicon; key supplier for inter-DC links." },
+          { name: "Astera Labs", badges: ["commercial", "frontier"], note: "Retimers and PCIe/CXL connectivity ICs; increasingly load-bearing inside AI fabric." },
           { name: "Cisco", badges: ["commercial"], note: "Networking incumbent re-entering AI fabric with Silicon One." }
         ]
       }
@@ -584,6 +588,17 @@ const PHASES = [
           { name: "Megatron-LM", badges: ["open", "frontier"], note: "NVIDIA's reference implementation for scaling transformers — tensor/pipeline parallelism." },
           { name: "Hugging Face Transformers", badges: ["open"], note: "Not a scaling framework but the standard model hub and reference implementations." }
         ]
+      },
+      {
+        name: "Tokenization & Checkpoint Formats",
+        def: "The unglamorous plumbing that decides how text becomes tokens and how trained weights get saved and shared.",
+        companies: [
+          { name: "tiktoken", badges: ["open", "frontier"], note: "OpenAI's fast BPE tokenizer; the reference for GPT-family models." },
+          { name: "SentencePiece", badges: ["open", "frontier"], note: "Google's tokenizer; standard for non-English and subword tokenization across many model families." },
+          { name: "Hugging Face Tokenizers", badges: ["open"], note: "Rust-backed, blazingly fast tokenization library; backs the Transformers ecosystem." },
+          { name: "safetensors", badges: ["open", "frontier"], note: "Hugging Face format replacing pickle for safe, fast checkpoint storage." },
+          { name: "GGUF", badges: ["open"], note: "llama.cpp's quantized checkpoint format; how most local-LLM weights are distributed." }
+        ]
       }
     ]
   },
@@ -600,7 +615,7 @@ const PHASES = [
         companies: [
           { name: "Common Crawl", badges: ["open", "frontier"], note: "Non-profit open web crawl; the backbone of nearly every LLM's pretraining mix." },
           { name: "Reddit", badges: ["commercial"], note: "Licenses its corpus to Google and OpenAI for substantial annual fees." },
-          { name: "Stack Exchange", badges: ["commercial"], note: "Licensed to OpenAI; high-quality Q&A and technical content." },
+          { name: "Stack Exchange", badges: ["commercial"], note: "Licensed to both OpenAI and Google (Gemini); high-quality Q&A and technical content." },
           { name: "GitHub (Microsoft)", badges: ["commercial", "frontier"], note: "Source of most code training data; access policies vary by lab." },
           { name: "News publishers", badges: ["commercial"], note: "NYT, FT, Axel Springer, AP — direct licensing deals worth $100M+ collectively." }
         ]
@@ -772,7 +787,10 @@ const PHASES = [
           { name: "OpenAI", badges: ["commercial", "frontier"], note: "GPT and o-series; the original modern foundation model provider." },
           { name: "Google DeepMind", badges: ["commercial", "frontier"], note: "Gemini family; integrated across Google products." },
           { name: "Meta AI", badges: ["open", "frontier"], note: "Llama family — released with open weights, anchor of the open model ecosystem." },
-          { name: "xAI / Mistral / DeepSeek", badges: ["commercial", "open"], note: "Notable challengers — xAI (Grok, commercial), Mistral (hybrid), DeepSeek (open weights from China)." }
+          { name: "xAI", badges: ["commercial"], note: "Grok family; building the Colossus supercluster in Memphis." },
+          { name: "Mistral", badges: ["hybrid"], note: "European challenger; open weights for smaller models plus paid API for flagship tier." },
+          { name: "DeepSeek", badges: ["open"], note: "Chinese lab releasing strong open-weight models; pushed reasoning capabilities into the open ecosystem." },
+          { name: "Cohere", badges: ["commercial"], note: "Enterprise-focused alternative; emphasizes RAG, deployment flexibility, and multilingual support." }
         ]
       },
       {
@@ -783,7 +801,9 @@ const PHASES = [
           { name: "Weaviate", badges: ["hybrid"], note: "Open-core vector DB with hybrid search; commercial cloud offering on top." },
           { name: "Chroma", badges: ["open"], note: "Lightweight open-source vector DB; dominant for prototyping and local dev." },
           { name: "Qdrant", badges: ["hybrid"], note: "Rust-based and performance-focused; open-source core with managed cloud." },
-          { name: "pgvector", badges: ["open"], note: "Postgres extension; the 'good enough' default for teams already on Postgres." }
+          { name: "pgvector", badges: ["open"], note: "Postgres extension; the 'good enough' default for teams already on Postgres." },
+          { name: "Milvus (Zilliz)", badges: ["open"], note: "Large-scale open-source vector DB; one of the most-deployed at production scale, commercialized by Zilliz." },
+          { name: "LanceDB", badges: ["open"], note: "Embedded multi-modal vector DB; rapidly gaining ground for AI workloads." }
         ]
       },
       {
@@ -801,11 +821,14 @@ const PHASES = [
         name: "Agent Frameworks",
         def: "Libraries for building applications on top of foundation models — tool use, memory, multi-step workflows.",
         companies: [
-          { name: "LangChain", badges: ["hybrid"], note: "Largest agent framework by adoption; commercial product LangSmith for observability." },
+          { name: "LangChain", badges: ["hybrid"], note: "Largest agent framework by adoption; spawned LangGraph (now separate) and LangSmith (observability)." },
+          { name: "LangGraph", badges: ["open"], note: "Graph-based agent orchestration from the LangChain team; explicit state machines for longer-running agents." },
           { name: "LlamaIndex", badges: ["hybrid"], note: "Originally retrieval-focused; broader agent framework now." },
           { name: "CrewAI", badges: ["hybrid"], note: "Multi-agent orchestration; growing rapidly in enterprise pilots." },
           { name: "AutoGen", badges: ["open"], note: "Microsoft's multi-agent framework; research-led." },
-          { name: "Letta (formerly MemGPT)", badges: ["open"], note: "Focus on persistent memory and stateful agents." }
+          { name: "Letta (formerly MemGPT)", badges: ["open"], note: "Focus on persistent memory and stateful agents." },
+          { name: "Mastra", badges: ["open"], note: "TypeScript-native AI framework; rapid traction with Node and frontend developers." },
+          { name: "Pydantic AI", badges: ["open"], note: "Type-safe agent framework from the Pydantic team; emphasis on validated structured outputs." }
         ]
       },
       {
@@ -838,6 +861,9 @@ const PHASES = [
           { name: "GitHub Copilot", badges: ["commercial", "frontier"], note: "The originator (2021); deepest enterprise distribution via Microsoft." },
           { name: "Claude Code", badges: ["commercial", "frontier"], note: "Anthropic's terminal-based agentic coding tool; runs locally with Claude as the engine." },
           { name: "Cognition (Devin)", badges: ["commercial"], note: "Autonomous SWE agent; longer-horizon tasks delegated rather than co-authored." },
+          { name: "Windsurf", badges: ["commercial"], note: "VS Code fork from Codeium; subject of the 2025 OpenAI acquisition saga, ultimately landed at Cognition." },
+          { name: "Zed", badges: ["hybrid"], note: "High-performance Rust-built editor with a strong recent agentic AI push; open-source core." },
+          { name: "Aider", badges: ["open"], note: "Open-source terminal pair programmer; CLI-first agentic coding." },
           { name: "Replit", badges: ["commercial"], note: "Browser-based AI-native development; strong with prototyping and non-traditional developers." }
         ]
       }
