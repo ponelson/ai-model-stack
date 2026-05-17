@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Model Stack — A Newcomer's Reference</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --bg-elev: #14171f;
+    --bg-card: #1a1e28;
+    --bg-card-hover: #222734;
+    --border: #2a3040;
+    --border-strong: #3a4256;
+    --text: #e8ecf3;
+    --text-dim: #9aa3b5;
+    --text-faint: #6b7385;
+    --accent: #7c9eff;
+    --accent-dim: #4a5d8f;
+    --green: #5ec27e;
+    --blue: #6aa9f0;
+    --purple: #b58cf0;
+    --orange: #f5a96b;
+    --yellow: #e8c468;
+    --red: #e87878;
+    --phase-1: #f5a96b; /* physical */
+    --phase-2: #6aa9f0; /* compute */
+    --phase-3: #b58cf0; /* software */
+    --phase-4: #5ec27e; /* data */
+    --phase-5: #e8c468; /* eval */
+    --phase-6: #f08aa9; /* inference */
+    --phase-7: #7c9eff; /* application */
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* Header */
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #fff 0%, #9aa3b5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 16px;
+    margin: 0 0 12px;
+    max-width: 720px;
+  }
+
+  .meta {
+    color: var(--text-faint);
+    font-size: 13px;
+  }
+
+  /* Filter bar */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+    padding: 16px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .filter-label {
+    font-size: 12px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-right: 12px;
+    align-self: center;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+
+  .chip:hover {
+    background: var(--bg-card-hover);
+    color: var(--text);
+  }
+
+  .chip.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--text);
+  }
+
+  .chip-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Pipeline overview */
+  .pipeline {
+    display: flex;
+    gap: 4px;
+    margin: 24px 0 40px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .pipeline-stage {
+    flex: 1;
+    min-width: 130px;
+    padding: 14px 16px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+  }
+
+  .pipeline-stage:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+  }
+
+  .pipeline-stage::after {
+    content: "→";
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-faint);
+    font-size: 18px;
+    z-index: 1;
+  }
+
+  .pipeline-stage:last-child::after { display: none; }
+
+  .pipeline-stage-num {
+    font-size: 11px;
+    color: var(--text-faint);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .pipeline-stage-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+    color: var(--text);
+  }
+
+  .pipeline-stage-bar {
+    height: 3px;
+    width: 24px;
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+
+  /* Phase sections */
+  .phase {
+    margin-top: 56px;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .phase-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+  }
+
+  .phase-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .phase-desc {
+    color: var(--text-dim);
+    margin: 4px 0 24px;
+    max-width: 720px;
+  }
+
+  .phase-bar {
+    height: 3px;
+    width: 60px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+
+  /* Layer cards */
+  .layers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 16px;
+  }
+
+  .layer {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.15s;
+  }
+
+  .layer:hover {
+    border-color: var(--border-strong);
+  }
+
+  .layer-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+
+  .layer-def {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0 0 16px;
+    line-height: 1.5;
+  }
+
+  .companies {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .company {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.15s;
+  }
+
+  .company.hidden {
+    display: none;
+  }
+
+  .company-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .company-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .company-note {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .badges {
+    display: inline-flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .badge.open {
+    background: rgba(94, 194, 126, 0.15);
+    color: var(--green);
+    border: 1px solid rgba(94, 194, 126, 0.3);
+  }
+
+  .badge.commercial {
+    background: rgba(106, 169, 240, 0.15);
+    color: var(--blue);
+    border: 1px solid rgba(106, 169, 240, 0.3);
+  }
+
+  .badge.hybrid {
+    background: rgba(232, 196, 104, 0.15);
+    color: var(--yellow);
+    border: 1px solid rgba(232, 196, 104, 0.3);
+  }
+
+  .badge.spans {
+    background: rgba(181, 140, 240, 0.15);
+    color: var(--purple);
+    border: 1px solid rgba(181, 140, 240, 0.3);
+  }
+
+  .badge.frontier {
+    background: rgba(245, 169, 107, 0.15);
+    color: var(--orange);
+    border: 1px solid rgba(245, 169, 107, 0.3);
+  }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-faint);
+    font-size: 14px;
+    grid-column: 1 / -1;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  footer .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  footer .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  @media (max-width: 700px) {
+    h1 { font-size: 24px; }
+    .phase-title { font-size: 20px; }
+    .pipeline { flex-direction: column; }
+    .pipeline-stage { min-width: 0; }
+    .pipeline-stage::after { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>The AI Model Stack</h1>
+    <p class="subtitle">A newcomer's reference to every layer used to build, train, evaluate, and deploy modern AI models — with the top 5 representative players in each.</p>
+    <p class="meta">Last updated: May 2026 · Click pipeline stages below to jump · Use filters to narrow the view</p>
+  </header>
+
+  <div class="filters" id="filters">
+    <span class="filter-label">Filter</span>
+    <div class="chip" data-filter="open">
+      <span class="chip-dot" style="background: var(--green)"></span>
+      Open source
+    </div>
+    <div class="chip" data-filter="commercial">
+      <span class="chip-dot" style="background: var(--blue)"></span>
+      Commercial
+    </div>
+    <div class="chip" data-filter="hybrid">
+      <span class="chip-dot" style="background: var(--yellow)"></span>
+      Hybrid (open core + paid)
+    </div>
+    <div class="chip" data-filter="spans">
+      <span class="chip-dot" style="background: var(--purple)"></span>
+      Spans multiple layers
+    </div>
+    <div class="chip" data-filter="frontier">
+      <span class="chip-dot" style="background: var(--orange)"></span>
+      Frontier-critical
+    </div>
+    <div class="chip" id="clear-filters" style="margin-left: auto; background: transparent; border-color: var(--border-strong);">Clear all</div>
+  </div>
+
+  <div class="pipeline" id="pipeline"></div>
+
+  <main id="main"></main>
+
+  <footer>
+    <div class="legend">
+      <span class="legend-item"><span class="badge open">OSS</span> Open source / free to use</span>
+      <span class="legend-item"><span class="badge commercial">COMMERCIAL</span> Paid product</span>
+      <span class="legend-item"><span class="badge hybrid">HYBRID</span> Open core with paid tier</span>
+      <span class="legend-item"><span class="badge spans">SPANS</span> Operates across multiple layers</span>
+      <span class="legend-item"><span class="badge frontier">FRONTIER</span> Used by frontier labs (Anthropic, OpenAI, Google, etc.)</span>
+    </div>
+    <p>This is a curated reference, not exhaustive. The space moves fast; companies shift layers, new entrants emerge, incumbents pivot. Treat it as a map, not a directory.</p>
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// DATA — Edit this to keep the reference current
+// ============================================================
+const PHASES = [
+  {
+    id: "physical",
+    num: "01",
+    name: "Physical Substrate",
+    color: "var(--phase-1)",
+    desc: "The atoms beneath the bits. Without power, buildings, chips, and the optical fabric connecting them, no model gets trained.",
+    layers: [
+      {
+        name: "Power & Energy",
+        def: "Electricity supply for datacenters. Frontier-scale AI now requires gigawatt-class deals, often via long-term power purchase agreements (PPAs) with nuclear or renewable operators.",
+        companies: [
+          { name: "Constellation Energy", badges: ["commercial", "frontier"], note: "Largest US nuclear operator; reopening Three Mile Island for Microsoft." },
+          { name: "Talen Energy", badges: ["commercial", "frontier"], note: "Nuclear PPA with AWS for direct power to a Pennsylvania datacenter campus." },
+          { name: "Vistra", badges: ["commercial"], note: "Nuclear + gas generation; major supplier to Texas datacenter buildouts." },
+          { name: "Brookfield Renewable", badges: ["commercial", "frontier"], note: "$10B+ renewable PPA framework with Microsoft." },
+          { name: "GE Vernova", badges: ["commercial"], note: "Turbines and grid hardware — the bottleneck under the bottleneck." }
+        ]
+      },
+      {
+        name: "Datacenter Builders & Operators",
+        def: "Companies that design, build, and operate the physical buildings — racks, cooling, power distribution. Some are AI-specialized; some are generalist colocation incumbents.",
+        companies: [
+          { name: "Crusoe", badges: ["commercial", "spans", "frontier"], note: "AI-native, energy-integrated; building gigawatt-scale campuses. Also runs a neocloud." },
+          { name: "Applied Digital", badges: ["commercial"], note: "HPC-focused datacenter developer in low-cost-power regions like North Dakota." },
+          { name: "Equinix", badges: ["commercial"], note: "Largest colocation operator globally; dominant in network interconnection." },
+          { name: "Digital Realty", badges: ["commercial"], note: "Hyperscale-grade colos; long-term leases to AWS/Azure/GCP." },
+          { name: "QTS (Blackstone)", badges: ["commercial"], note: "Hyperscaler-focused build-to-suit campuses; one of the fastest growers." }
+        ]
+      },
+      {
+        name: "Chips / Silicon",
+        def: "The processors that actually run training and inference. GPUs dominate, with custom accelerators from hyperscalers and a long tail of specialists.",
+        companies: [
+          { name: "NVIDIA", badges: ["commercial", "frontier"], note: "~90% market share in AI training. H100/H200/B200 and the CUDA software moat." },
+          { name: "AMD", badges: ["commercial"], note: "MI300X / MI350 — the credible #2 GPU; gaining share in inference workloads." },
+          { name: "Google TPU", badges: ["commercial", "frontier"], note: "Custom accelerators used internally for Gemini; rentable via GCP." },
+          { name: "AWS Trainium / Inferentia", badges: ["commercial", "frontier"], note: "Amazon's in-house chips; Anthropic uses Trainium at scale." },
+          { name: "Cerebras / Groq", badges: ["commercial"], note: "Specialists — Cerebras for wafer-scale training, Groq for ultra-fast inference (LPUs)." }
+        ]
+      },
+      {
+        name: "Networking & Interconnect",
+        def: "High-bandwidth fabric that lets thousands of GPUs train one model. InfiniBand and NVLink dominate inside clusters; high-radix Ethernet is the emerging alternative.",
+        companies: [
+          { name: "NVIDIA (Mellanox)", badges: ["commercial", "frontier"], note: "InfiniBand and NVLink — the de facto fabric inside GPU clusters." },
+          { name: "Broadcom", badges: ["commercial", "frontier"], note: "Tomahawk / Jericho switches; co-designs custom AI ASICs with hyperscalers." },
+          { name: "Arista Networks", badges: ["commercial"], note: "High-end Ethernet switches; the push for 'AI Ethernet' as InfiniBand alternative." },
+          { name: "Marvell", badges: ["commercial"], note: "Optical DSPs and custom silicon; key supplier for inter-DC links." },
+          { name: "Cisco", badges: ["commercial"], note: "Networking incumbent re-entering AI fabric with Silicon One." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "compute",
+    num: "02",
+    name: "Compute Providers",
+    color: "var(--phase-2)",
+    desc: "Where you actually rent the GPUs. Hyperscalers offer everything, neoclouds offer bare-metal GPU clusters, decentralized networks aggregate distributed compute.",
+    layers: [
+      {
+        name: "Hyperscalers",
+        def: "Massive cloud providers offering compute, storage, networking, databases, ML services — everything. Frontier labs run on these.",
+        companies: [
+          { name: "AWS", badges: ["commercial", "frontier"], note: "Largest cloud; Anthropic's primary compute partner via Trainium." },
+          { name: "Microsoft Azure", badges: ["commercial", "frontier"], note: "OpenAI's primary partner; deepest enterprise AI distribution." },
+          { name: "Google Cloud", badges: ["commercial", "frontier"], note: "TPU access; runs Google's own Gemini training." },
+          { name: "Oracle Cloud (OCI)", badges: ["commercial", "frontier"], note: "Late entrant punching above weight via OpenAI and xAI deals." },
+          { name: "Alibaba Cloud", badges: ["commercial"], note: "Largest non-US AI cloud; powers Qwen and the Chinese AI ecosystem." }
+        ]
+      },
+      {
+        name: "Neoclouds (GPU Clouds)",
+        def: "Specialized providers offering bare-metal GPU clusters, optimized for AI training and inference. Generally cheaper and faster to provision than hyperscalers.",
+        companies: [
+          { name: "CoreWeave", badges: ["commercial", "frontier"], note: "Largest neocloud; tightly aligned with NVIDIA; serves OpenAI, Microsoft, Meta." },
+          { name: "Lambda Labs", badges: ["commercial"], note: "On-demand GPU instances popular with researchers and smaller labs." },
+          { name: "Nebius", badges: ["commercial"], note: "Full-stack AI cloud (ex-Yandex); strong European presence." },
+          { name: "Crusoe", badges: ["commercial", "spans"], note: "Spans into this layer — owns its datacenters and power, then sells GPU capacity." },
+          { name: "Together AI", badges: ["commercial", "spans"], note: "GPU cloud plus open-model inference; trains and hosts models." }
+        ]
+      },
+      {
+        name: "Decentralized Compute",
+        def: "Networks that aggregate GPUs across many providers or individuals into a single addressable pool. Some focus on training, others on inference or marketplaces.",
+        companies: [
+          { name: "Prime Intellect", badges: ["commercial", "spans", "frontier"], note: "Distributed training across geographies + RL environments marketplace. Distinct from CoreWeave: CoreWeave rents centralized bare-metal clusters; Prime Intellect coordinates training across heterogeneous nodes." },
+          { name: "Gensyn", badges: ["commercial"], note: "Verifiable distributed training using crypto-economic proofs of compute." },
+          { name: "Akash Network", badges: ["open", "commercial"], note: "Decentralized GPU marketplace built on Cosmos; open-source protocol." },
+          { name: "io.net", badges: ["commercial"], note: "Aggregates idle GPUs from datacenters, crypto miners, and consumer rigs." },
+          { name: "Bittensor", badges: ["open"], note: "Decentralized AI network where subnets reward model contributions via TAO tokens." }
+        ]
+      },
+      {
+        name: "Orchestration & Scheduling",
+        def: "Software that schedules training jobs across clusters, handles failures, optimizes utilization. Critical at scale — frontier training runs touch thousands of nodes.",
+        companies: [
+          { name: "SkyPilot", badges: ["open"], note: "Multi-cloud job launcher; finds cheapest GPUs across clouds for you." },
+          { name: "Run:ai", badges: ["commercial"], note: "Enterprise GPU orchestration; acquired by NVIDIA in 2024." },
+          { name: "Anyscale (Ray)", badges: ["hybrid", "spans"], note: "Ray is the dominant open-source distributed compute framework; Anyscale is the managed platform." },
+          { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU compute; also covers inference hosting." },
+          { name: "Kubernetes + Kubeflow", badges: ["open"], note: "Generic container orchestration; the foundation most other tools build on." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "software",
+    num: "03",
+    name: "Training Software",
+    color: "var(--phase-3)",
+    desc: "The libraries and frameworks that turn math into models — defining architectures, distributing the computation, optimizing the gradients.",
+    layers: [
+      {
+        name: "Training Frameworks",
+        def: "Core libraries for defining models, computing gradients, and distributing training across many GPUs.",
+        companies: [
+          { name: "PyTorch", badges: ["open", "frontier"], note: "Dominant deep learning framework; Meta-led, now under the PyTorch Foundation." },
+          { name: "JAX", badges: ["open", "frontier"], note: "Google's framework; favored at Anthropic and DeepMind for clean autodiff and TPU support." },
+          { name: "DeepSpeed", badges: ["open"], note: "Microsoft library for massive-scale distributed training (ZeRO, pipeline parallelism)." },
+          { name: "Megatron-LM", badges: ["open", "frontier"], note: "NVIDIA's reference implementation for scaling transformers — tensor/pipeline parallelism." },
+          { name: "Hugging Face Transformers", badges: ["open"], note: "Not a scaling framework but the standard model hub and reference implementations." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "data",
+    num: "04",
+    name: "Data",
+    color: "var(--phase-4)",
+    desc: "Models are made of data. This phase sources it, labels it, moves it at scale, and increasingly generates it synthetically.",
+    layers: [
+      {
+        name: "Data Sources",
+        def: "Where pretraining data actually comes from. Increasingly a mix of open web crawls and licensed deals with major content holders.",
+        companies: [
+          { name: "Common Crawl", badges: ["open", "frontier"], note: "Non-profit open web crawl; the backbone of nearly every LLM's pretraining mix." },
+          { name: "Reddit", badges: ["commercial"], note: "Licenses its corpus to Google and OpenAI for substantial annual fees." },
+          { name: "Stack Exchange", badges: ["commercial"], note: "Licensed to OpenAI; high-quality Q&A and technical content." },
+          { name: "GitHub (Microsoft)", badges: ["commercial", "frontier"], note: "Source of most code training data; access policies vary by lab." },
+          { name: "News publishers", badges: ["commercial"], note: "NYT, FT, Axel Springer, AP — direct licensing deals worth $100M+ collectively." }
+        ]
+      },
+      {
+        name: "Data Labeling & Human Feedback",
+        def: "Humans rate, annotate, and write demonstrations used in supervised fine-tuning and RLHF. Quality of this work directly shapes model behavior.",
+        companies: [
+          { name: "Scale AI", badges: ["commercial", "frontier"], note: "Dominant labeling provider for frontier labs; Meta took a 49% stake in 2025." },
+          { name: "Surge AI", badges: ["commercial", "frontier"], note: "Premium RLHF and expert annotation; Anthropic is a known customer." },
+          { name: "Mercor", badges: ["commercial", "frontier"], note: "Marketplace for domain expert labelers (lawyers, doctors, engineers)." },
+          { name: "Invisible Technologies", badges: ["commercial"], note: "RLHF + operational AI workflows; works with multiple frontier labs." },
+          { name: "Labelbox", badges: ["commercial"], note: "Labeling platform + workforce; broader ML focus beyond LLMs." }
+        ]
+      },
+      {
+        name: "Data Pipelines / ETL",
+        def: "Tools for moving, cleaning, and transforming data at scale before it reaches training. Originated in analytics; now central to AI data prep.",
+        companies: [
+          { name: "Databricks", badges: ["commercial", "spans"], note: "Lakehouse + Mosaic training platform; spans data, training, and inference." },
+          { name: "Snowflake", badges: ["commercial"], note: "Cloud data warehouse; building out AI features via Cortex." },
+          { name: "dbt Labs", badges: ["hybrid"], note: "SQL-based transformation; the standard for analytics engineering." },
+          { name: "Airbyte", badges: ["hybrid"], note: "Open-source data integration; hundreds of connectors." },
+          { name: "Fivetran", badges: ["commercial"], note: "Managed ELT — automated connectors from SaaS sources to warehouses." }
+        ]
+      },
+      {
+        name: "Synthetic Data",
+        def: "Generating training data with other models. Increasingly central to post-training as human-labeled data runs out.",
+        companies: [
+          { name: "Scale AI", badges: ["commercial", "spans"], note: "Synthetic data is part of its broader labeling product." },
+          { name: "Datology AI", badges: ["commercial"], note: "Automated data curation and synthesis for pretraining." },
+          { name: "Gretel", badges: ["commercial"], note: "Privacy-preserving synthetic data; tabular and unstructured." },
+          { name: "Mostly AI", badges: ["commercial"], note: "Synthetic tabular data for enterprise use cases." },
+          { name: "Frontier labs (internal)", badges: ["frontier"], note: "OpenAI, Anthropic, Google generate most synthetic data internally with their own models." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "eval",
+    num: "05",
+    name: "Evaluation & Experiments",
+    color: "var(--phase-5)",
+    desc: "How you know if the model is any good — tracking experiments, running benchmarks, building environments where agents can be tested at scale.",
+    layers: [
+      {
+        name: "Experiment Tracking",
+        def: "Tracks training runs, hyperparameters, metrics, artifacts. Essential when running many parallel experiments.",
+        companies: [
+          { name: "Weights & Biases", badges: ["commercial", "spans", "frontier"], note: "Dominant experiment tracker; expanding into evals and observability." },
+          { name: "MLflow", badges: ["open"], note: "Open-source standard; created at Databricks." },
+          { name: "Comet", badges: ["commercial"], note: "Strong in classical ML; growing LLM features." },
+          { name: "Neptune", badges: ["commercial"], note: "Focused on at-scale experiment management for foundation model training." },
+          { name: "ClearML", badges: ["hybrid"], note: "Open-source core, enterprise tier; ML platform with orchestration." }
+        ]
+      },
+      {
+        name: "Evals & Benchmarks",
+        def: "Measure model quality — capability, safety, helpfulness. Mix of academic benchmarks, human preference arenas, and proprietary expert evals.",
+        companies: [
+          { name: "LMSYS / Chatbot Arena", badges: ["open", "frontier"], note: "Crowdsourced human preference rankings; the de facto leaderboard." },
+          { name: "Scale SEAL", badges: ["commercial", "spans"], note: "Expert-graded evals across domains; private leaderboards for frontier labs." },
+          { name: "METR", badges: ["open"], note: "Non-profit running dangerous capability and autonomy evals on frontier models." },
+          { name: "HELM (Stanford CRFM)", badges: ["open"], note: "Academic holistic evaluation framework; broad but slower-moving." },
+          { name: "Hugging Face Leaderboards", badges: ["open"], note: "Public benchmarks for open models — Open LLM Leaderboard and successors." }
+        ]
+      },
+      {
+        name: "RL Environments & Agentic Evals",
+        def: "Sandboxes where agents can be trained or evaluated — from coding tasks to browser use to operating real software. Increasingly important as RL post-training drives capability.",
+        companies: [
+          { name: "HUD", badges: ["commercial", "frontier"], note: "Agent evaluation platform — standardized benchmarks for browser, code, and OS agents." },
+          { name: "Prime Intellect Environments Hub", badges: ["open", "spans"], note: "Open marketplace of RL environments; pairs with their distributed training." },
+          { name: "Mechanize", badges: ["commercial"], note: "Building automated RL environments at scale to drive economically valuable agent capability." },
+          { name: "Browserbase", badges: ["commercial"], note: "Headless browser infrastructure used for agent evals and runtime." },
+          { name: "OpenAI Gymnasium", badges: ["open"], note: "Successor to OpenAI Gym; the classical RL environment standard." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "inference",
+    num: "06",
+    name: "Inference & Serving",
+    color: "var(--phase-6)",
+    desc: "Once a model exists, it needs to run cheaply and quickly. This phase covers the runtimes, hosting providers, and routing gateways.",
+    layers: [
+      {
+        name: "Inference Runtimes",
+        def: "Software that makes a trained model run efficiently — batching, KV cache management, quantization, speculative decoding.",
+        companies: [
+          { name: "vLLM", badges: ["open", "frontier"], note: "Dominant open-source LLM serving engine; PagedAttention." },
+          { name: "SGLang", badges: ["open"], note: "Fast structured generation; competitive with vLLM, strong for agent workloads." },
+          { name: "TensorRT-LLM", badges: ["commercial"], note: "NVIDIA's optimized runtime; tightly coupled to their hardware." },
+          { name: "llama.cpp", badges: ["open"], note: "CPU/edge inference; how most local LLM apps actually run." },
+          { name: "DeepSpeed-Inference", badges: ["open"], note: "Microsoft's inference companion to DeepSpeed training." }
+        ]
+      },
+      {
+        name: "Inference Providers",
+        def: "Hosted model serving — you call an API, they run the model. Some host open models, some host their own, many do both.",
+        companies: [
+          { name: "Together AI", badges: ["commercial", "spans"], note: "Open-model API hosting + GPU cloud + training services." },
+          { name: "Fireworks AI", badges: ["commercial"], note: "Fast inference with custom kernels; strong fine-tuning offering." },
+          { name: "Baseten", badges: ["commercial"], note: "Custom model deployment with cold-start optimization." },
+          { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU platform; popular for custom inference setups." },
+          { name: "Replicate", badges: ["commercial"], note: "Open-model API marketplace; popular with prototype builders." }
+        ]
+      },
+      {
+        name: "Gateways & Routers",
+        def: "Single API across many models. Useful for cost optimization, fallback routing, and centralized observability.",
+        companies: [
+          { name: "OpenRouter", badges: ["commercial"], note: "Largest model marketplace; access to hundreds of models behind one API." },
+          { name: "LiteLLM", badges: ["open"], note: "Open-source proxy for unifying calls across model providers." },
+          { name: "Portkey", badges: ["commercial"], note: "AI gateway with caching, fallbacks, observability — enterprise-focused." },
+          { name: "Martian", badges: ["commercial"], note: "Model routing based on query complexity to optimize cost/quality." },
+          { name: "Helicone", badges: ["hybrid", "spans"], note: "Open-source LLM observability proxy; also covers monitoring." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "application",
+    num: "07",
+    name: "Application Layer",
+    color: "var(--phase-7)",
+    desc: "The models themselves and what sits on top of them — agent frameworks, observability for production AI apps.",
+    layers: [
+      {
+        name: "Foundation Model Providers",
+        def: "The labs that actually train frontier models and offer them via API or open weights.",
+        companies: [
+          { name: "Anthropic", badges: ["commercial", "frontier"], note: "Claude family; safety-focused frontier lab." },
+          { name: "OpenAI", badges: ["commercial", "frontier"], note: "GPT and o-series; the original modern foundation model provider." },
+          { name: "Google DeepMind", badges: ["commercial", "frontier"], note: "Gemini family; integrated across Google products." },
+          { name: "Meta AI", badges: ["open", "frontier"], note: "Llama family — released with open weights, anchor of the open model ecosystem." },
+          { name: "xAI / Mistral / DeepSeek", badges: ["commercial", "open"], note: "Notable challengers — xAI (Grok, commercial), Mistral (hybrid), DeepSeek (open weights from China)." }
+        ]
+      },
+      {
+        name: "Agent Frameworks",
+        def: "Libraries for building applications on top of foundation models — tool use, memory, multi-step workflows.",
+        companies: [
+          { name: "LangChain", badges: ["hybrid"], note: "Largest agent framework by adoption; commercial product LangSmith for observability." },
+          { name: "LlamaIndex", badges: ["hybrid"], note: "Originally retrieval-focused; broader agent framework now." },
+          { name: "CrewAI", badges: ["hybrid"], note: "Multi-agent orchestration; growing rapidly in enterprise pilots." },
+          { name: "AutoGen", badges: ["open"], note: "Microsoft's multi-agent framework; research-led." },
+          { name: "Letta (formerly MemGPT)", badges: ["open"], note: "Focus on persistent memory and stateful agents." }
+        ]
+      },
+      {
+        name: "Observability",
+        def: "Monitor production AI applications — traces, costs, quality, drift. The ML observability category retooled for LLMs.",
+        companies: [
+          { name: "LangSmith", badges: ["commercial"], note: "From the LangChain team; deeply integrated with their framework." },
+          { name: "Arize AI", badges: ["commercial"], note: "ML observability incumbent; expanded into LLM tracing." },
+          { name: "Langfuse", badges: ["open"], note: "Open-source LLM observability; rapidly growing in adoption." },
+          { name: "Helicone", badges: ["hybrid", "spans"], note: "Proxy-based observability; spans into the gateway layer." },
+          { name: "Weights & Biases", badges: ["commercial", "spans"], note: "Originally experiment tracking; production observability is a newer addition." }
+        ]
+      }
+    ]
+  }
+];
+
+// ============================================================
+// RENDER
+// ============================================================
+const BADGE_LABELS = {
+  open: "OSS",
+  commercial: "COMMERCIAL",
+  hybrid: "HYBRID",
+  spans: "SPANS",
+  frontier: "FRONTIER"
+};
+
+function renderPipeline() {
+  const pipeline = document.getElementById("pipeline");
+  pipeline.innerHTML = PHASES.map(p => `
+    <div class="pipeline-stage" data-target="${p.id}">
+      <div class="pipeline-stage-num">${p.num}</div>
+      <div class="pipeline-stage-name">${p.name}</div>
+      <div class="pipeline-stage-bar" style="background: ${p.color}"></div>
+    </div>
+  `).join("");
+  pipeline.querySelectorAll(".pipeline-stage").forEach(el => {
+    el.addEventListener("click", () => {
+      const target = document.getElementById(el.dataset.target);
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function renderPhases() {
+  const main = document.getElementById("main");
+  main.innerHTML = PHASES.map(phase => `
+    <section class="phase" id="${phase.id}">
+      <div class="phase-header">
+        <span class="phase-num">PHASE ${phase.num}</span>
+        <h2 class="phase-title">${phase.name}</h2>
+      </div>
+      <p class="phase-desc">${phase.desc}</p>
+      <div class="phase-bar" style="background: ${phase.color}"></div>
+      <div class="layers">
+        ${phase.layers.map(layer => `
+          <div class="layer">
+            <h3 class="layer-name">${layer.name}</h3>
+            <p class="layer-def">${layer.def}</p>
+            <div class="companies">
+              ${layer.companies.map(c => `
+                <div class="company" data-badges="${c.badges.join(' ')}">
+                  <div class="company-main">
+                    <div class="company-name">
+                      ${c.name}
+                      <span class="badges">
+                        ${c.badges.map(b => `<span class="badge ${b}">${BADGE_LABELS[b]}</span>`).join("")}
+                      </span>
+                    </div>
+                    <div class="company-note">${c.note}</div>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+  `).join("");
+}
+
+// ============================================================
+// FILTERING
+// ============================================================
+const activeFilters = new Set();
+
+function applyFilters() {
+  const companies = document.querySelectorAll(".company");
+  companies.forEach(c => {
+    if (activeFilters.size === 0) {
+      c.classList.remove("hidden");
+      return;
+    }
+    const badges = c.dataset.badges.split(" ");
+    const matches = [...activeFilters].every(f => badges.includes(f));
+    c.classList.toggle("hidden", !matches);
+  });
+
+  // Hide empty layer cards
+  document.querySelectorAll(".layer").forEach(layer => {
+    const visible = layer.querySelectorAll(".company:not(.hidden)").length;
+    layer.style.display = visible === 0 ? "none" : "";
+  });
+
+  // Hide empty phases
+  document.querySelectorAll(".phase").forEach(phase => {
+    const visibleLayers = [...phase.querySelectorAll(".layer")].filter(l => l.style.display !== "none").length;
+    phase.style.display = visibleLayers === 0 ? "none" : "";
+  });
+}
+
+function setupFilters() {
+  document.querySelectorAll(".chip[data-filter]").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const f = chip.dataset.filter;
+      if (activeFilters.has(f)) {
+        activeFilters.delete(f);
+        chip.classList.remove("active");
+      } else {
+        activeFilters.add(f);
+        chip.classList.add("active");
+      }
+      applyFilters();
+    });
+  });
+
+  document.getElementById("clear-filters").addEventListener("click", () => {
+    activeFilters.clear();
+    document.querySelectorAll(".chip[data-filter]").forEach(c => c.classList.remove("active"));
+    applyFilters();
+  });
+}
+
+// ============================================================
+// INIT
+// ============================================================
+renderPipeline();
+renderPhases();
+setupFilters();
+</script>
+</body>
+</html>
