@@ -460,24 +460,34 @@ const PHASES = [
     layers: [
       {
         name: "Power & Energy",
-        def: "Electricity supply for datacenters. Frontier-scale AI now requires gigawatt-class deals, often via long-term power purchase agreements (PPAs) with nuclear or renewable operators.",
+        def: "Electricity supply and the equipment that generates it. Frontier-scale AI now requires gigawatt-class deals — long-term PPAs with nuclear and renewable operators, plus the gas turbines, fuel cells, and Small Modular Reactors (SMRs) that bridge the gap while grid interconnection queues stretch into years.",
         companies: [
           { name: "Constellation Energy", badges: ["commercial", "frontier"], note: "Largest US nuclear operator; reopening Three Mile Island for Microsoft." },
           { name: "Talen Energy", badges: ["commercial", "frontier"], note: "Nuclear PPA with AWS for direct power to a Pennsylvania datacenter campus." },
           { name: "Vistra", badges: ["commercial"], note: "Nuclear + gas generation; major supplier to Texas datacenter buildouts." },
           { name: "Brookfield Renewable", badges: ["commercial", "frontier"], note: "$10B+ renewable PPA framework with Microsoft." },
-          { name: "GE Vernova", badges: ["commercial"], note: "Turbines and grid hardware — the bottleneck under the bottleneck." }
+          { name: "GE Vernova", badges: ["commercial", "frontier"], note: "Gas turbines and grid hardware; the AI buildout's most order-backlogged turbine OEM." },
+          { name: "Siemens Energy", badges: ["commercial"], note: "Gas turbines (SGT-9000HL class); the European counterweight to GE Vernova." },
+          { name: "Mitsubishi Power (MHI)", badges: ["commercial"], note: "M501JAC and M701JAC gas turbines; dominant in Asia, growing US presence." },
+          { name: "Solar Turbines (Caterpillar)", badges: ["commercial"], note: "Smaller industrial gas turbines; popular for distributed and on-site datacenter generation." },
+          { name: "Rolls-Royce", badges: ["commercial"], note: "Aero-derivative gas turbines plus a credible Small Modular Reactor program." },
+          { name: "Bloom Energy", badges: ["commercial"], note: "Solid oxide fuel cells; emerging on-site power for datacenters where the grid won't keep up." }
         ]
       },
       {
         name: "Datacenter Builders & Operators",
-        def: "Companies that design, build, and operate the physical buildings — racks, cooling, power distribution. Some are AI-specialized; some are generalist colocation incumbents.",
+        def: "Companies that design, build, and operate the physical buildings — racks, cooling, power distribution. Mix of AI-native specialists and generalist colocation incumbents. Listed deeper here since the space is unusually fragmented and capacity-constrained.",
         companies: [
           { name: "Crusoe", badges: ["commercial", "spans", "frontier"], note: "AI-native, energy-integrated; building gigawatt-scale campuses. Also runs a neocloud." },
-          { name: "Applied Digital", badges: ["commercial"], note: "HPC-focused datacenter developer in low-cost-power regions like North Dakota." },
-          { name: "Equinix", badges: ["commercial"], note: "Largest colocation operator globally; dominant in network interconnection." },
-          { name: "Digital Realty", badges: ["commercial"], note: "Hyperscale-grade colos; long-term leases to AWS/Azure/GCP." },
-          { name: "QTS (Blackstone)", badges: ["commercial"], note: "Hyperscaler-focused build-to-suit campuses; one of the fastest growers." }
+          { name: "Applied Digital", badges: ["commercial"], note: "HPC-focused developer in low-cost-power regions like North Dakota; CoreWeave is a major tenant." },
+          { name: "Equinix", badges: ["commercial"], note: "Largest colocation operator globally; dominant in network interconnection points." },
+          { name: "Digital Realty", badges: ["commercial"], note: "Hyperscale-grade colos; long-term leases to AWS, Azure, GCP." },
+          { name: "QTS (Blackstone)", badges: ["commercial"], note: "Hyperscaler build-to-suit campuses; one of the fastest growers since Blackstone took it private." },
+          { name: "Vantage Data Centers", badges: ["commercial"], note: "DigitalBridge-backed; massive hyperscale campuses across North America, EMEA, and APAC." },
+          { name: "CyrusOne", badges: ["commercial"], note: "KKR/GIP-owned; one of the largest privately-held hyperscale operators." },
+          { name: "Aligned Data Centers", badges: ["commercial"], note: "Macquarie-backed; known for liquid cooling at scale and rapid build cycles." },
+          { name: "Switch", badges: ["commercial"], note: "DigitalBridge-owned; large 'SuperNAP' campuses in Nevada, Michigan, Georgia, Texas." },
+          { name: "NTT Global Data Centers", badges: ["commercial"], note: "Japanese telecom giant; major operator across Asia, Europe, and the US." }
         ]
       },
       {
@@ -660,6 +670,17 @@ const PHASES = [
         ]
       },
       {
+        name: "Prompt & Eval Management",
+        def: "Developer tooling for iterating on prompts and evals — versioning, A/B testing, regression checks. Overlaps with observability but focused on the build loop, not production monitoring.",
+        companies: [
+          { name: "Braintrust", badges: ["commercial"], note: "Eval-driven prompt development; rapid adoption with engineering teams at frontier-using companies." },
+          { name: "PromptLayer", badges: ["commercial"], note: "Prompt versioning, deployment, and analytics; one of the originals in this category." },
+          { name: "Promptfoo", badges: ["open"], note: "Open-source CLI for prompt and model testing; popular in CI pipelines." },
+          { name: "DeepEval (Confident AI)", badges: ["open"], note: "Open-source LLM eval framework; pytest-style assertions for model outputs." },
+          { name: "Vellum", badges: ["commercial"], note: "Workflow-builder approach to prompt orchestration plus evals; enterprise-focused." }
+        ]
+      },
+      {
         name: "RL Environments & Agentic Evals",
         def: "Sandboxes where agents can be trained or evaluated — from coding tasks to browser use to operating real software. Increasingly important as RL post-training drives capability.",
         companies: [
@@ -702,6 +723,28 @@ const PHASES = [
         ]
       },
       {
+        name: "Fine-tuning Platforms",
+        def: "Hosted services for adapting open or proprietary models to specific tasks or domains. Sits between training and inference — these platforms train your model and then serve it.",
+        companies: [
+          { name: "Predibase", badges: ["commercial"], note: "Infrastructure for fine-tuning open models at scale; LoRA-focused." },
+          { name: "OpenPipe", badges: ["commercial"], note: "Fine-tune small models from production traces to replace expensive frontier calls." },
+          { name: "Together AI", badges: ["commercial", "spans"], note: "Fine-tuning is one piece of their broader open-model platform." },
+          { name: "OpenAI Fine-tuning API", badges: ["commercial", "frontier"], note: "Hosted fine-tuning for GPT and o-series; supervised plus reinforcement fine-tuning." },
+          { name: "Hugging Face AutoTrain", badges: ["hybrid"], note: "No-code fine-tuning on the HF Hub; integrates with the open model ecosystem." }
+        ]
+      },
+      {
+        name: "Enterprise Model Hubs",
+        def: "Hyperscaler-branded multi-model catalogs with enterprise SLAs, security controls, and integrated billing. The default way most large enterprises consume frontier models — distinct from developer-first inference providers (Together, Fireworks) and from independent gateways (OpenRouter).",
+        companies: [
+          { name: "AWS Bedrock", badges: ["commercial", "frontier"], note: "Anthropic Claude, Meta Llama, Mistral, Cohere, Amazon Nova — Amazon's managed multi-model service." },
+          { name: "Azure AI Foundry", badges: ["commercial", "frontier"], note: "Formerly Azure AI Studio; OpenAI's GPT family, Llama, Mistral, Microsoft's own Phi models." },
+          { name: "Google Vertex AI Model Garden", badges: ["commercial", "frontier"], note: "Gemini, Claude (via the Anthropic partnership), Llama; tightly integrated with GCP tooling." },
+          { name: "Databricks Mosaic AI", badges: ["commercial", "spans"], note: "Foundation Model APIs plus custom fine-tuning on top of lakehouse data. Spans into training and data layers." },
+          { name: "NVIDIA NIM", badges: ["commercial"], note: "Containerized inference microservices; portable across any environment with NVIDIA GPUs. Sold via NVIDIA AI Enterprise." }
+        ]
+      },
+      {
         name: "Gateways & Routers",
         def: "Single API across many models. Useful for cost optimization, fallback routing, and centralized observability.",
         companies: [
@@ -719,7 +762,7 @@ const PHASES = [
     num: "07",
     name: "Application Layer",
     color: "var(--phase-7)",
-    desc: "The models themselves and what sits on top of them — agent frameworks, observability for production AI apps.",
+    desc: "The models themselves and the production infrastructure built on top — retrieval, guardrails, agent runtimes, observability, and the end-user products (like AI-native IDEs) where most developers actually meet the stack.",
     layers: [
       {
         name: "Foundation Model Providers",
@@ -730,6 +773,28 @@ const PHASES = [
           { name: "Google DeepMind", badges: ["commercial", "frontier"], note: "Gemini family; integrated across Google products." },
           { name: "Meta AI", badges: ["open", "frontier"], note: "Llama family — released with open weights, anchor of the open model ecosystem." },
           { name: "xAI / Mistral / DeepSeek", badges: ["commercial", "open"], note: "Notable challengers — xAI (Grok, commercial), Mistral (hybrid), DeepSeek (open weights from China)." }
+        ]
+      },
+      {
+        name: "Vector Databases & Retrieval",
+        def: "Databases optimized for storing and querying high-dimensional embeddings. The substrate for RAG (retrieval-augmented generation) — letting models cite or condition on your private data.",
+        companies: [
+          { name: "Pinecone", badges: ["commercial"], note: "Managed vector database; market leader in enterprise RAG deployments." },
+          { name: "Weaviate", badges: ["hybrid"], note: "Open-core vector DB with hybrid search; commercial cloud offering on top." },
+          { name: "Chroma", badges: ["open"], note: "Lightweight open-source vector DB; dominant for prototyping and local dev." },
+          { name: "Qdrant", badges: ["hybrid"], note: "Rust-based and performance-focused; open-source core with managed cloud." },
+          { name: "pgvector", badges: ["open"], note: "Postgres extension; the 'good enough' default for teams already on Postgres." }
+        ]
+      },
+      {
+        name: "Guardrails & AI Safety Tooling",
+        def: "Wrappers around model calls to filter input and output — block prompt injection, jailbreaks, PII leakage, off-topic responses, and unsafe content.",
+        companies: [
+          { name: "Lakera", badges: ["commercial"], note: "Prompt injection and jailbreak defense; enterprise-focused with a strong threat-research practice." },
+          { name: "Protect AI", badges: ["commercial"], note: "Broader AI security platform; model scanning, supply-chain risk, runtime defense." },
+          { name: "NVIDIA NeMo Guardrails", badges: ["open"], note: "Open-source toolkit for adding programmable rails to LLM applications." },
+          { name: "Robust Intelligence", badges: ["commercial"], note: "Model risk management and red-teaming; acquired by Cisco in 2024." },
+          { name: "Haize Labs", badges: ["commercial"], note: "Automated red-teaming as a service; finds failure modes before deployment." }
         ]
       },
       {
@@ -744,6 +809,17 @@ const PHASES = [
         ]
       },
       {
+        name: "Agent Sandboxes & Code Execution",
+        def: "Isolated environments where agents can safely run code, install packages, and interact with files or browsers. Critical infrastructure as agents move from chat to action.",
+        companies: [
+          { name: "E2B", badges: ["hybrid"], note: "Open-source plus managed; the dominant code execution sandbox for AI agents." },
+          { name: "Daytona", badges: ["commercial"], note: "Cloud development environments adapted as agent runtimes." },
+          { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU plus sandboxed execution; spans inference and orchestration too." },
+          { name: "Vercel Sandbox", badges: ["commercial"], note: "Isolated execution tightly integrated with Vercel's deployment platform." },
+          { name: "Cloudflare Containers", badges: ["commercial"], note: "Edge-deployed isolated containers; emerging option for low-latency agent execution." }
+        ]
+      },
+      {
         name: "Observability",
         def: "Monitor production AI applications — traces, costs, quality, drift. The ML observability category retooled for LLMs.",
         companies: [
@@ -752,6 +828,17 @@ const PHASES = [
           { name: "Langfuse", badges: ["open"], note: "Open-source LLM observability; rapidly growing in adoption." },
           { name: "Helicone", badges: ["hybrid", "spans"], note: "Proxy-based observability; spans into the gateway layer." },
           { name: "Weights & Biases", badges: ["commercial", "spans"], note: "Originally experiment tracking; production observability is a newer addition." }
+        ]
+      },
+      {
+        name: "AI-Native IDEs & Coding Tools",
+        def: "End-user products built directly on top of the stack — where most developers actually experience frontier models day-to-day. Included as the most mature example of an application category.",
+        companies: [
+          { name: "Cursor", badges: ["commercial"], note: "VS Code fork with deep AI integration; the breakout AI IDE." },
+          { name: "GitHub Copilot", badges: ["commercial", "frontier"], note: "The originator (2021); deepest enterprise distribution via Microsoft." },
+          { name: "Claude Code", badges: ["commercial", "frontier"], note: "Anthropic's terminal-based agentic coding tool; runs locally with Claude as the engine." },
+          { name: "Cognition (Devin)", badges: ["commercial"], note: "Autonomous SWE agent; longer-horizon tasks delegated rather than co-authored." },
+          { name: "Replit", badges: ["commercial"], note: "Browser-based AI-native development; strong with prototyping and non-traditional developers." }
         ]
       }
     ]
