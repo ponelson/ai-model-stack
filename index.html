@@ -388,6 +388,142 @@
     gap: 6px;
   }
 
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin: 24px 0 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab {
+    padding: 10px 18px;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-family: inherit;
+    transition: color 0.15s, border-color 0.15s;
+    margin-bottom: -1px;
+  }
+
+  .tab:hover { color: var(--text); }
+
+  .tab.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* News feed */
+  .news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0 16px;
+  }
+
+  .news-updated {
+    color: var(--text-faint);
+    font-size: 12px;
+  }
+
+  .news-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-height: 132px;
+    overflow-y: auto;
+  }
+
+  .news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .news-item:hover {
+    border-color: var(--border-strong);
+    background: var(--bg-card-hover);
+  }
+
+  .news-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .news-title:hover { color: var(--accent); }
+
+  .news-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+
+  .news-company {
+    background: var(--bg-elev);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--accent);
+    font-weight: 500;
+    border: 1px solid var(--border);
+  }
+
+  .news-source { color: var(--text-dim); }
+
+  .setup-note {
+    text-align: left;
+    max-width: 620px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .setup-note code {
+    background: var(--bg-elev);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--accent);
+  }
+
+  .setup-note ol { padding-left: 20px; margin: 8px 0; }
+
   @media (max-width: 700px) {
     h1 { font-size: 24px; }
     .phase-title { font-size: 20px; }
@@ -405,34 +541,52 @@
     <p class="meta">Last updated: May 2026 · Click pipeline stages below to jump · Use filters to narrow the view</p>
   </header>
 
-  <div class="filters" id="filters">
-    <span class="filter-label">Filter</span>
-    <div class="chip" data-filter="open">
-      <span class="chip-dot" style="background: var(--green)"></span>
-      Open source
+  <nav class="tabs">
+    <button class="tab active" data-tab="stack">Stack View</button>
+    <button class="tab" data-tab="news">News Feed</button>
+  </nav>
+
+  <div class="tab-content active" id="tab-stack">
+    <div class="filters" id="filters">
+      <span class="filter-label">Filter</span>
+      <div class="chip" data-filter="open">
+        <span class="chip-dot" style="background: var(--green)"></span>
+        Open source
+      </div>
+      <div class="chip" data-filter="commercial">
+        <span class="chip-dot" style="background: var(--blue)"></span>
+        Commercial
+      </div>
+      <div class="chip" data-filter="hybrid">
+        <span class="chip-dot" style="background: var(--yellow)"></span>
+        Hybrid (open core + paid)
+      </div>
+      <div class="chip" data-filter="spans">
+        <span class="chip-dot" style="background: var(--purple)"></span>
+        Spans multiple layers
+      </div>
+      <div class="chip" data-filter="frontier">
+        <span class="chip-dot" style="background: var(--orange)"></span>
+        Frontier
+      </div>
+      <div class="chip" id="clear-filters" style="margin-left: auto; background: transparent; border-color: var(--border-strong);">Clear all</div>
     </div>
-    <div class="chip" data-filter="commercial">
-      <span class="chip-dot" style="background: var(--blue)"></span>
-      Commercial
-    </div>
-    <div class="chip" data-filter="hybrid">
-      <span class="chip-dot" style="background: var(--yellow)"></span>
-      Hybrid (open core + paid)
-    </div>
-    <div class="chip" data-filter="spans">
-      <span class="chip-dot" style="background: var(--purple)"></span>
-      Spans multiple layers
-    </div>
-    <div class="chip" data-filter="frontier">
-      <span class="chip-dot" style="background: var(--orange)"></span>
-      Frontier
-    </div>
-    <div class="chip" id="clear-filters" style="margin-left: auto; background: transparent; border-color: var(--border-strong);">Clear all</div>
+
+    <div class="pipeline" id="pipeline"></div>
+
+    <main id="main"></main>
   </div>
 
-  <div class="pipeline" id="pipeline"></div>
-
-  <main id="main"></main>
+  <div class="tab-content" id="tab-news">
+    <div class="news-header">
+      <p class="meta" style="margin:0">Aggregated news for every company in the reference, refreshed daily.</p>
+      <span class="news-updated" id="news-updated"></span>
+    </div>
+    <div class="news-filters" id="news-filters"></div>
+    <div class="news-feed" id="news-feed">
+      <div class="empty-state">Loading news…</div>
+    </div>
+  </div>
 
   <footer>
     <div class="legend">
@@ -989,11 +1143,132 @@ function setupFilters() {
 }
 
 // ============================================================
+// TABS
+// ============================================================
+function setupTabs() {
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const tabId = btn.dataset.tab;
+      document.querySelectorAll(".tab").forEach(b => b.classList.toggle("active", b === btn));
+      document.querySelectorAll(".tab-content").forEach(c => {
+        c.classList.toggle("active", c.id === `tab-${tabId}`);
+      });
+      if (tabId === "news") loadNews();
+    });
+  });
+}
+
+// ============================================================
+// NEWS FEED
+// ============================================================
+const NEWS_URL = "news.json"; // produced daily by .github/workflows/fetch-news.yml
+let newsLoaded = false;
+let newsItems = [];
+const activeNewsFilter = new Set();
+
+function getAllCompanies() {
+  const set = new Set();
+  PHASES.forEach(p => p.layers.forEach(l => l.companies.forEach(c => set.add(c.name))));
+  return [...set].sort();
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[c]);
+}
+
+async function loadNews() {
+  if (newsLoaded) return;
+  const feed = document.getElementById("news-feed");
+  try {
+    const resp = await fetch(NEWS_URL + "?t=" + Date.now()); // cache-bust
+    if (!resp.ok) throw new Error("no news.json yet");
+    const data = await resp.json();
+    newsItems = data.items || [];
+    if (data.updated) {
+      document.getElementById("news-updated").textContent =
+        "Updated " + new Date(data.updated).toLocaleString();
+    }
+    renderNewsFilters();
+    renderNews();
+    newsLoaded = true;
+  } catch (e) {
+    document.getElementById("news-filters").style.display = "none";
+    feed.innerHTML = `
+      <div class="setup-note">
+        <strong style="color:var(--text)">News feed not built yet.</strong>
+        <p style="margin:8px 0 12px">To enable daily auto-updates, add two files to your repo:</p>
+        <ol>
+          <li><code>scripts/fetch_news.py</code> — pulls Google News RSS for each company</li>
+          <li><code>.github/workflows/fetch-news.yml</code> — runs the script daily and commits <code>news.json</code></li>
+        </ol>
+        <p style="margin:12px 0 0">After you push them, run the action manually once from the Actions tab to generate the first <code>news.json</code>. After that it refreshes automatically every day.</p>
+      </div>
+    `;
+  }
+}
+
+function renderNewsFilters() {
+  const companies = getAllCompanies();
+  const container = document.getElementById("news-filters");
+  container.innerHTML =
+    `<span class="filter-label">Filter</span>` +
+    companies.map(name =>
+      `<div class="chip" data-news-filter="${escapeHtml(name)}">${escapeHtml(name)}</div>`
+    ).join("") +
+    `<div class="chip" id="clear-news-filters" style="margin-left:auto;background:transparent;border-color:var(--border-strong)">Clear</div>`;
+
+  container.querySelectorAll("[data-news-filter]").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const name = chip.dataset.newsFilter;
+      if (activeNewsFilter.has(name)) {
+        activeNewsFilter.delete(name);
+        chip.classList.remove("active");
+      } else {
+        activeNewsFilter.add(name);
+        chip.classList.add("active");
+      }
+      renderNews();
+    });
+  });
+
+  document.getElementById("clear-news-filters").addEventListener("click", () => {
+    activeNewsFilter.clear();
+    container.querySelectorAll(".chip.active").forEach(c => c.classList.remove("active"));
+    renderNews();
+  });
+}
+
+function renderNews() {
+  const feed = document.getElementById("news-feed");
+  let items = newsItems;
+  if (activeNewsFilter.size > 0) {
+    items = items.filter(it => activeNewsFilter.has(it.company));
+  }
+  if (items.length === 0) {
+    feed.innerHTML = `<div class="empty-state">No matching news items.</div>`;
+    return;
+  }
+  feed.innerHTML = items.map(it => `
+    <div class="news-item">
+      <a class="news-title" href="${escapeHtml(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
+      <div class="news-meta">
+        <span class="news-company">${escapeHtml(it.company)}</span>
+        ${it.source ? `<span class="news-source">${escapeHtml(it.source)}</span>` : ""}
+        <span>${new Date(it.published).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+// ============================================================
 // INIT
 // ============================================================
 renderPipeline();
 renderPhases();
 setupFilters();
+setupTabs();
 </script>
 </body>
 </html>
