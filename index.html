@@ -524,6 +524,90 @@
 
   .setup-note ol { padding-left: 20px; margin: 8px 0; }
 
+  /* Daily brief */
+  .brief-date {
+    color: var(--text-faint);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 24px 0 8px;
+  }
+
+  .brief-headline {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    max-width: 760px;
+  }
+
+  .brief-lede {
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 0 0 32px;
+    max-width: 720px;
+  }
+
+  .brief-section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .brief-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .brief-analysis {
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0 0 16px;
+    font-size: 14.5px;
+  }
+
+  .brief-stories {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .brief-story {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .brief-story a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .brief-story a:hover { color: var(--accent); }
+
+  .brief-story-meta {
+    color: var(--text-faint);
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .brief-footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 11px;
+  }
+
   @media (max-width: 700px) {
     h1 { font-size: 24px; }
     .phase-title { font-size: 20px; }
@@ -543,6 +627,7 @@
 
   <nav class="tabs">
     <button class="tab active" data-tab="stack">Stack View</button>
+    <button class="tab" data-tab="brief">Daily Brief</button>
     <button class="tab" data-tab="news">News Feed</button>
   </nav>
 
@@ -575,6 +660,12 @@
     <div class="pipeline" id="pipeline"></div>
 
     <main id="main"></main>
+  </div>
+
+  <div class="tab-content" id="tab-brief">
+    <div id="brief-content">
+      <div class="empty-state">Loading brief…</div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-news">
@@ -1254,8 +1345,70 @@ function setupTabs() {
         c.classList.toggle("active", c.id === `tab-${tabId}`);
       });
       if (tabId === "news") loadNews();
+      if (tabId === "brief") loadBrief();
     });
   });
+}
+
+// ============================================================
+// DAILY BRIEF
+// ============================================================
+const BRIEF_URL = "brief.json";
+let briefLoaded = false;
+
+async function loadBrief() {
+  if (briefLoaded) return;
+  const container = document.getElementById("brief-content");
+  try {
+    const resp = await fetch(BRIEF_URL + "?t=" + Date.now());
+    if (!resp.ok) throw new Error("no brief.json yet");
+    const data = await resp.json();
+    renderBrief(data);
+    briefLoaded = true;
+  } catch (e) {
+    container.innerHTML = `
+      <div class="setup-note">
+        <strong style="color:var(--text)">Daily brief not generated yet.</strong>
+        <p style="margin:8px 0 12px">The brief is built locally in the workflow each day, right after the news fetch. To turn it on:</p>
+        <ol>
+          <li>Add <code>scripts/generate_brief.py</code> to your repo</li>
+          <li>Update <code>.github/workflows/fetch-news.yml</code> with the brief-enabled version</li>
+          <li>Trigger the workflow manually from the Actions tab</li>
+        </ol>
+        <p style="margin:12px 0 0">After it runs, this tab will populate with the day's roundup.</p>
+      </div>
+    `;
+  }
+}
+
+function renderBrief(data) {
+  const container = document.getElementById("brief-content");
+  const date = new Date(data.date).toLocaleDateString(undefined, {
+    weekday: "long", month: "long", day: "numeric", year: "numeric"
+  });
+  const sectionsHtml = (data.sections || []).map(section => {
+    const storiesHtml = (section.stories || []).map(s => `
+      <div class="brief-story">
+        <a href="${escapeHtml(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a><span class="brief-story-meta">${escapeHtml(s.company)}${s.source ? ' · ' + escapeHtml(s.source) : ''}</span>
+      </div>
+    `).join("");
+    return `
+      <div class="brief-section">
+        <h3 class="brief-section-title">${escapeHtml(section.title)}</h3>
+        <p class="brief-analysis">${escapeHtml(section.analysis)}</p>
+        ${storiesHtml ? `<div class="brief-stories">${storiesHtml}</div>` : ""}
+      </div>
+    `;
+  }).join("");
+  container.innerHTML = `
+    <div class="brief-date">${date}</div>
+    <h2 class="brief-headline">${escapeHtml(data.headline || "")}</h2>
+    <p class="brief-lede">${escapeHtml(data.lede || "")}</p>
+    ${sectionsHtml}
+    <p class="brief-footer">
+      ${data.model ? `Generated by ${escapeHtml(data.model)} from ` : "From "}${data.item_count || "?"} news items in the last 24 hours. Not investment advice.
+    </p>
+  `;
 }
 
 // ============================================================
