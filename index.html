@@ -625,8 +625,34 @@ const PHASES = [
           { name: "Cameco", badges: ["commercial"], note: "Largest publicly traded uranium miner; reactor restarts and SMR rollouts drive demand for datacenter-aligned nuclear power." },
           { name: "Kazatomprom", badges: ["commercial"], note: "Kazakh state miner; the world's largest single uranium producer." },
           { name: "Wacker Chemie", badges: ["commercial"], note: "High-purity polysilicon — the feedstock for semiconductor wafers." },
+          { name: "Sibelco", badges: ["commercial", "frontier"], note: "Operates the largest Spruce Pine, NC quartz mines; its IOTA-brand high-purity quartz is the world's standard feedstock for the crucibles in which every semiconductor-grade silicon ingot is grown. Essentially no substitute at scale." },
+          { name: "The Quartz Corp", badges: ["commercial", "frontier"], note: "Spruce Pine's other operator and Sibelco's only meaningful competitor; together the two companies supply virtually all global high-purity quartz. Hurricane Helene briefly shut both down in 2024, triggering a global chip-supply scare." },
           { name: "Linde", badges: ["commercial", "frontier"], note: "Industrial gases (nitrogen, argon, helium, neon, hydrogen) — without these, no fab runs." },
-          { name: "Air Liquide", badges: ["commercial"], note: "Linde's duopoly counterpart in industrial gases; major supplier to TSMC, Samsung, Intel fabs." }
+          { name: "Air Liquide", badges: ["commercial"], note: "Linde's duopoly counterpart in industrial gases; major supplier to TSMC, Samsung, Intel fabs." },
+          { name: "Air Products", badges: ["commercial", "frontier"], note: "Third major industrial gas company; particularly dominant in helium — operates the world's largest helium production facility in Qatar with Qatar Energy, with Helium 3 expansion under construction." },
+          { name: "Renergen", badges: ["commercial"], note: "South African helium and natural gas specialist; the Virginia Gas Project is one of the few emerging non-traditional helium sources outside Qatar, the US, and Russia." }
+        ]
+      },
+      {
+        name: "Semiconductor Equipment & Lithography",
+        def: "The machines that turn silicon into chips. EUV lithography is a flat monopoly; deposition, etch, and metrology are oligopolies. A handful of companies — mostly Dutch, American, and Japanese — supply every leading-edge fab on earth.",
+        companies: [
+          { name: "ASML", badges: ["commercial", "frontier"], note: "Dutch lithography monopoly; the only company in the world making EUV machines. Every leading-edge node — and therefore every frontier AI chip — depends on its tools." },
+          { name: "Applied Materials", badges: ["commercial", "frontier"], note: "Broadest tool portfolio in semis: deposition, etch, ion implantation, inspection. Quietly load-bearing across every fab." },
+          { name: "Lam Research", badges: ["commercial", "frontier"], note: "Deposition and etch specialist; critical for 3D NAND and advanced logic patterning." },
+          { name: "Tokyo Electron", badges: ["commercial", "frontier"], note: "Japanese counterpart to Applied Materials and Lam; dominant in resist coaters/developers and broadly diversified across the toolchain." },
+          { name: "KLA", badges: ["commercial", "frontier"], note: "Process control, metrology, and inspection — the eyes of every modern fab. Defect detection at angstrom scale." }
+        ]
+      },
+      {
+        name: "Foundries",
+        def: "Where chips actually become chips. The most concentrated and capacity-constrained layer in the entire AI stack — TSMC alone fabricates the silicon for NVIDIA, AMD, Apple, Broadcom, and most others, and its CoWoS advanced-packaging capacity is the gating constraint behind every B200 and MI350 shipment.",
+        companies: [
+          { name: "TSMC", badges: ["commercial", "frontier"], note: "Dominant leading-edge foundry; arguably the single most important company in the AI hardware stack. Makes the silicon for NVIDIA, AMD, Apple, Broadcom, MediaTek, and most others." },
+          { name: "Samsung Foundry", badges: ["commercial", "frontier"], note: "Only other foundry running at leading-edge nodes; meaningfully behind TSMC but the principal alternative for designers seeking to diversify." },
+          { name: "Intel Foundry", badges: ["commercial"], note: "Intel's separated manufacturing arm; betting on the 18A node as its bid to retake leadership. Strategic partner under CHIPS Act incentives." },
+          { name: "GlobalFoundries", badges: ["commercial"], note: "Mature-node specialist; exited the leading-edge race in 2018 to focus on profitable older processes — RF, automotive, IoT." },
+          { name: "SMIC", badges: ["commercial"], note: "China's leading foundry; producing surprisingly capable nodes under tightening US export controls." }
         ]
       },
       {
@@ -706,11 +732,15 @@ const PHASES = [
           { name: "VAST Data", badges: ["commercial", "frontier"], note: "All-flash data platform purpose-built for AI; deployed at major neoclouds and frontier-scale buildouts." },
           { name: "WEKA", badges: ["commercial", "frontier"], note: "Parallel file system optimized for GPU workloads; common pick at neoclouds and enterprise AI." },
           { name: "DDN", badges: ["commercial", "frontier"], note: "HPC storage incumbent; widely deployed under frontier-scale training runs." },
+          { name: "IBM Storage Scale", badges: ["commercial", "frontier"], note: "Parallel filesystem formerly known as GPFS / Spectrum Scale; the original HPC standard, still common in frontier deployments." },
           { name: "Pure Storage", badges: ["commercial"], note: "All-flash arrays; co-engineered AIRI reference architecture with NVIDIA." },
           { name: "NetApp", badges: ["commercial"], note: "Enterprise storage incumbent; ONTAP AI bundles with NVIDIA DGX." },
+          { name: "Dell PowerScale", badges: ["commercial"], note: "Scale-out NAS (formerly Isilon); long-running HPC and AI deployments at enterprise scale." },
+          { name: "Qumulo", badges: ["commercial"], note: "Hybrid cloud file storage with strong streaming-throughput characteristics; growing footprint in AI workloads." },
           { name: "Solidigm", badges: ["commercial"], note: "SK Hynix subsidiary; high-capacity QLC SSDs increasingly used for AI data lakes." },
           { name: "Kioxia", badges: ["commercial"], note: "NAND flash for enterprise SSDs; major supplier to hyperscalers." },
-          { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." }
+          { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." },
+          { name: "MinIO", badges: ["hybrid"], note: "Open-source S3-compatible object storage; ubiquitous in AI/ML pipelines for datasets, checkpoints, and model registries." }
         ]
       },
       {
@@ -776,6 +806,21 @@ const PHASES = [
           { name: "Anyscale (Ray)", badges: ["hybrid", "spans"], note: "Ray is the dominant open-source distributed compute framework; Anyscale is the managed platform." },
           { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU compute; also covers inference hosting." },
           { name: "Kubernetes + Kubeflow", badges: ["open"], note: "Generic container orchestration; the foundation most other tools build on." }
+        ]
+      },
+      {
+        name: "Quantum Computing (Adjacent)",
+        def: "Not running today's AI workloads, but a structurally different compute paradigm aimed at specific problem classes — simulation, factoring, optimization. Worth tracking because every frontier lab and hyperscaler maintains a quantum program, and error-correction breakthroughs in the last year have meaningfully shortened the timeline.",
+        companies: [
+          { name: "IBM Quantum", badges: ["commercial", "frontier"], note: "Largest superconducting roadmap; openly published progression toward 1000+ qubit systems. Long-running IBM Quantum Network." },
+          { name: "Google Quantum AI", badges: ["commercial", "frontier"], note: "Willow chip's below-threshold error correction milestone in late 2024 was widely seen as a turning point for fault-tolerant quantum." },
+          { name: "PsiQuantum", badges: ["commercial"], note: "Photonic approach; raised at high valuations against a goal of a million-qubit, fault-tolerant system." },
+          { name: "Quantinuum", badges: ["commercial"], note: "Honeywell + Cambridge Quantum merger; trapped-ion with industry-leading gate fidelity." },
+          { name: "IonQ", badges: ["commercial"], note: "Trapped-ion; publicly traded, among the more mature gate-based hardware programs." },
+          { name: "Rigetti Computing", badges: ["commercial"], note: "Superconducting; publicly traded US ecosystem player." },
+          { name: "QuEra Computing", badges: ["commercial"], note: "Neutral-atom approach; MIT/Harvard heritage, growing rapidly in error-corrected demonstrations." },
+          { name: "Atom Computing", badges: ["commercial"], note: "Neutral-atom; first to publicly demonstrate 1000+ qubit array." },
+          { name: "D-Wave", badges: ["commercial"], note: "Quantum annealing — a different paradigm from gate-based competitors; publicly traded, mature deployments in optimization problems." }
         ]
       }
     ]
