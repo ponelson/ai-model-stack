@@ -613,6 +613,23 @@ const PHASES = [
     desc: "The atoms beneath the bits. Without power, buildings, chips, and the optical fabric connecting them, no model gets trained.",
     layers: [
       {
+        name: "Critical Minerals & Raw Materials",
+        def: "The atoms before the atoms. Every datacenter and chip rests on a global supply chain of copper, rare earths, semiconductor-grade polysilicon, gallium, uranium, and specialty gases — much of it concentrated in a handful of countries and firms, and increasingly contested by export controls.",
+        companies: [
+          { name: "Freeport-McMoRan", badges: ["commercial"], note: "Largest US copper producer; copper demand for grid expansion and datacenter cabling is the structural backbone of the AI buildout." },
+          { name: "BHP", badges: ["commercial"], note: "Diversified miner pivoting hard into copper — internally framed as 'the metal of electrification.'" },
+          { name: "Codelco", badges: ["commercial"], note: "Chilean state-owned; the world's largest copper producer." },
+          { name: "Glencore", badges: ["commercial"], note: "Copper, cobalt, nickel plus a global commodity trading desk; integrated upstream-to-market footprint." },
+          { name: "MP Materials", badges: ["commercial", "frontier"], note: "Only at-scale US rare earth producer; Mountain Pass mine, US DoD-backed magnet supply chain plans." },
+          { name: "Lynas Rare Earths", badges: ["commercial"], note: "Largest rare earth producer outside China; Australian mines, Malaysian processing." },
+          { name: "Cameco", badges: ["commercial"], note: "Largest publicly traded uranium miner; reactor restarts and SMR rollouts drive demand for datacenter-aligned nuclear power." },
+          { name: "Kazatomprom", badges: ["commercial"], note: "Kazakh state miner; the world's largest single uranium producer." },
+          { name: "Wacker Chemie", badges: ["commercial"], note: "High-purity polysilicon — the feedstock for semiconductor wafers." },
+          { name: "Linde", badges: ["commercial", "frontier"], note: "Industrial gases (nitrogen, argon, helium, neon, hydrogen) — without these, no fab runs." },
+          { name: "Air Liquide", badges: ["commercial"], note: "Linde's duopoly counterpart in industrial gases; major supplier to TSMC, Samsung, Intel fabs." }
+        ]
+      },
+      {
         name: "Power & Energy",
         def: "Electricity supply and the equipment that generates it. Frontier-scale AI now requires gigawatt-class deals — long-term PPAs with nuclear and renewable operators, plus the gas turbines, fuel cells, and Small Modular Reactors (SMRs) that bridge the gap while grid interconnection queues stretch into years.",
         companies: [
@@ -656,6 +673,44 @@ const PHASES = [
           { name: "Groq", badges: ["commercial"], note: "LPU-based ultra-fast inference; deterministic execution for very low latency." },
           { name: "Tenstorrent", badges: ["commercial"], note: "Jim Keller's startup; AI hardware with open-source software stack and RISC-V cores." },
           { name: "SambaNova", badges: ["commercial"], note: "Reconfigurable dataflow architecture; enterprise full-stack appliances." }
+        ]
+      },
+      {
+        name: "CPUs & Host Processors",
+        def: "GPUs do the math, but CPUs still run the host — data loading, orchestration, networking stacks, and the general datacenter workloads sitting alongside AI. ARM is steadily displacing x86, with every major hyperscaler now designing its own.",
+        companies: [
+          { name: "Intel", badges: ["commercial"], note: "Xeon — still the most-deployed datacenter CPU, though losing share at both ends." },
+          { name: "AMD", badges: ["commercial", "frontier"], note: "EPYC — the rising x86 alternative; common host CPU in NVIDIA GPU servers and frontier-lab clusters." },
+          { name: "NVIDIA Grace", badges: ["commercial", "frontier"], note: "ARM-based CPU; pairs with Hopper/Blackwell GPUs in Grace-Hopper and Grace-Blackwell superchips via shared memory fabric." },
+          { name: "AWS Graviton", badges: ["commercial"], note: "Amazon's in-house ARM CPUs; powers a large fraction of general AWS compute and increasingly inference workloads." },
+          { name: "Microsoft Cobalt", badges: ["commercial"], note: "Azure's in-house ARM datacenter CPU; rolling into Azure general compute services." },
+          { name: "Google Axion", badges: ["commercial"], note: "Google's first in-house ARM datacenter CPU; deploying across GCP services." },
+          { name: "Ampere", badges: ["commercial"], note: "Independent ARM datacenter CPU designer; foundation of Oracle Cloud's ARM offering." },
+          { name: "Apple Silicon", badges: ["commercial"], note: "M-series chips with unified memory; the de facto local-LLM dev platform, surprisingly capable for inference." },
+          { name: "SiFive", badges: ["commercial"], note: "Leading RISC-V CPU IP vendor; emerging as the open-ISA alternative to ARM and x86." }
+        ]
+      },
+      {
+        name: "Memory (HBM & DRAM)",
+        def: "High-Bandwidth Memory stacked on AI accelerators is the bottleneck most coverage overlooks — every B200, MI350, and TPU is gated by HBM supply. A three-supplier oligopoly globally.",
+        companies: [
+          { name: "SK Hynix", badges: ["commercial", "frontier"], note: "Dominant HBM3E supplier; primary memory partner for NVIDIA Hopper and Blackwell." },
+          { name: "Samsung", badges: ["commercial"], note: "Largest overall memory maker; HBM share lagged on the latest generations after qualification stumbles but recovering." },
+          { name: "Micron", badges: ["commercial", "frontier"], note: "Only US-headquartered HBM maker; HBM3E qualified into Hopper and ramping for Blackwell." }
+        ]
+      },
+      {
+        name: "Storage",
+        def: "Training a frontier model means streaming petabytes of tokens through GPUs and checkpointing terabytes of state every few minutes. Specialized parallel filesystems and all-flash arrays handle workloads traditional enterprise storage can't keep up with.",
+        companies: [
+          { name: "VAST Data", badges: ["commercial", "frontier"], note: "All-flash data platform purpose-built for AI; deployed at major neoclouds and frontier-scale buildouts." },
+          { name: "WEKA", badges: ["commercial", "frontier"], note: "Parallel file system optimized for GPU workloads; common pick at neoclouds and enterprise AI." },
+          { name: "DDN", badges: ["commercial", "frontier"], note: "HPC storage incumbent; widely deployed under frontier-scale training runs." },
+          { name: "Pure Storage", badges: ["commercial"], note: "All-flash arrays; co-engineered AIRI reference architecture with NVIDIA." },
+          { name: "NetApp", badges: ["commercial"], note: "Enterprise storage incumbent; ONTAP AI bundles with NVIDIA DGX." },
+          { name: "Solidigm", badges: ["commercial"], note: "SK Hynix subsidiary; high-capacity QLC SSDs increasingly used for AI data lakes." },
+          { name: "Kioxia", badges: ["commercial"], note: "NAND flash for enterprise SSDs; major supplier to hyperscalers." },
+          { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." }
         ]
       },
       {
