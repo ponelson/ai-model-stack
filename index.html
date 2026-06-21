@@ -753,10 +753,23 @@ const PHASES = [
         ]
       },
       {
+        name: "Open Eval Frameworks & Harnesses",
+        def: "Open-source libraries for running LLM evaluations in code — the developer infrastructure beneath both the commercial eval platforms above and the public benchmarks. The default choices when you need reproducible, version-controlled evals in CI or research pipelines.",
+        companies: [
+          { name: "lm-evaluation-harness (EleutherAI)", badges: ["open", "frontier"], note: "The de facto standard open harness for LLM benchmarks; used by EleutherAI, Hugging Face, and most academic open-weight releases." },
+          { name: "OpenAI Evals", badges: ["open"], note: "OpenAI's open-source evaluation framework; YAML-defined evals registry covering capability and reasoning tasks." },
+          { name: "Inspect (UK AI Security Institute)", badges: ["open", "frontier"], note: "Government-backed safety evaluation framework from the UK AISI; used in pre-deployment evaluations of frontier models." },
+          { name: "Ragas", badges: ["open"], note: "Open-source eval framework purpose-built for RAG pipelines; metrics for faithfulness, answer relevance, context precision and recall." },
+          { name: "NVIDIA NeMo Evaluator", badges: ["open"], note: "Open evaluation tooling within NVIDIA's NeMo framework; integrates with NeMo training and deployment workflows." }
+        ]
+      },
+      {
         name: "Prompt & Eval Management",
         def: "Developer tooling for iterating on prompts and evals — versioning, A/B testing, regression checks. Overlaps with observability but focused on the build loop, not production monitoring.",
         companies: [
           { name: "Braintrust", badges: ["commercial"], note: "Eval-driven prompt development; rapid adoption with engineering teams at frontier-using companies." },
+          { name: "Galileo", badges: ["commercial"], note: "Generative AI evaluation and observability platform; strong focus on hallucination detection and production quality metrics." },
+          { name: "Patronus", badges: ["commercial"], note: "Automated LLM evaluation with built-in safety, hallucination, and custom-policy checks; targets enterprise compliance use cases." },
           { name: "PromptLayer", badges: ["commercial"], note: "Prompt versioning, deployment, and analytics; one of the originals in this category." },
           { name: "Promptfoo", badges: ["open"], note: "Open-source CLI for prompt and model testing; popular in CI pipelines." },
           { name: "DeepEval (Confident AI)", badges: ["open"], note: "Open-source LLM eval framework; pytest-style assertions for model outputs." },
@@ -875,6 +888,16 @@ const PHASES = [
         ]
       },
       {
+        name: "Memory Frameworks",
+        def: "Persistent context and memory abstractions for AI agents — letting them remember user preferences, prior interactions, and accumulated knowledge across sessions. These sit on top of real stores (pgvector, Neo4j, Qdrant, Neptune), wrapping them in opinionated APIs for hierarchical memory, summarization, and retrieval. The category churns hard, with frameworks benchmarking against each other every quarter — a rentable, volatile layer above durable storage, not a replacement for it.",
+        companies: [
+          { name: "Mem0", badges: ["open"], note: "Persistent memory layer for LLM applications; hierarchical short-term and long-term memory with automatic extraction. Strong adoption in production AI assistants." },
+          { name: "Graphiti (Zep)", badges: ["open", "hybrid"], note: "Knowledge graph memory engine; the open-source core of Zep. Builds temporal entity-relationship graphs from agent interactions for richer-than-vector retrieval." },
+          { name: "Cognee", badges: ["open"], note: "Cognitive architecture for AI agents; combines graph databases, vector storage, and knowledge representation into a unified memory layer." },
+          { name: "Letta (formerly MemGPT)", badges: ["open", "spans"], note: "Stateful agent platform built around persistent memory as its core abstraction; originated as MemGPT research at UC Berkeley. Spans into Agent Frameworks." }
+        ]
+      },
+      {
         name: "Guardrails & AI Safety Tooling",
         def: "Wrappers around model calls to filter input and output — block prompt injection, jailbreaks, PII leakage, off-topic responses, and unsafe content.",
         companies: [
@@ -894,7 +917,6 @@ const PHASES = [
           { name: "LlamaIndex", badges: ["hybrid"], note: "Originally retrieval-focused; broader agent framework now." },
           { name: "CrewAI", badges: ["hybrid"], note: "Multi-agent orchestration; growing rapidly in enterprise pilots." },
           { name: "AutoGen", badges: ["open"], note: "Microsoft's multi-agent framework; research-led." },
-          { name: "Letta (formerly MemGPT)", badges: ["open"], note: "Focus on persistent memory and stateful agents." },
           { name: "Mastra", badges: ["open"], note: "TypeScript-native AI framework; rapid traction with Node and frontend developers." },
           { name: "Pydantic AI", badges: ["open"], note: "Type-safe agent framework from the Pydantic team; emphasis on validated structured outputs." }
         ]
