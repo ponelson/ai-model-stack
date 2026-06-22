@@ -440,6 +440,169 @@
     gap: 6px;
   }
 
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin: 24px 0 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .tab {
+    padding: 10px 18px;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-family: inherit;
+    transition: color 0.15s, border-color 0.15s;
+    margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* News feed */
+  .news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0 16px;
+  }
+  .news-updated { color: var(--text-faint); font-size: 12px; }
+  .news-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-height: 148px;
+    overflow-y: auto;
+  }
+  .news-feed { display: flex; flex-direction: column; gap: 10px; }
+  .news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .news-item:hover { border-color: var(--border-strong); background: var(--bg-card-hover); }
+  .news-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .news-title:hover { color: var(--accent); }
+  .news-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .news-company {
+    background: var(--bg-elev);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--accent);
+    font-weight: 500;
+    border: 1px solid var(--border);
+  }
+  .news-source { color: var(--text-dim); }
+  .setup-note {
+    text-align: left;
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .setup-note code {
+    background: var(--bg-elev);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--accent);
+  }
+  .setup-note ol { padding-left: 20px; margin: 8px 0; }
+
+  /* Daily brief */
+  .brief-date {
+    color: var(--text-faint);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 24px 0 8px;
+  }
+  .brief-headline {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    max-width: 760px;
+  }
+  .brief-lede {
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 0 0 32px;
+    max-width: 720px;
+  }
+  .brief-section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .brief-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .brief-analysis { color: var(--text); line-height: 1.65; margin: 0 0 16px; font-size: 14.5px; }
+  .brief-stories {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .brief-story { font-size: 13px; line-height: 1.5; }
+  .brief-story a { color: var(--text); text-decoration: none; font-weight: 500; }
+  .brief-story a:hover { color: var(--accent); }
+  .brief-story-meta { color: var(--text-faint); font-size: 12px; margin-left: 8px; }
+  .brief-footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 11px;
+  }
+
   @media (max-width: 700px) {
     h1 { font-size: 24px; }
     .phase-title { font-size: 20px; }
@@ -473,6 +636,13 @@
     </div>
   </header>
 
+  <nav class="tabs">
+    <button class="tab active" data-tab="stack">Stack View</button>
+    <button class="tab" data-tab="brief">Daily Brief</button>
+    <button class="tab" data-tab="news">News Feed</button>
+  </nav>
+
+  <div class="tab-content active" id="tab-stack">
   <div class="filters" id="filters">
     <span class="filter-label">Filter</span>
     <div class="chip" data-filter="open">
@@ -501,6 +671,24 @@
   <div class="pipeline" id="pipeline"></div>
 
   <main id="main"></main>
+  </div>
+
+  <div class="tab-content" id="tab-brief">
+    <div id="brief-content">
+      <div class="empty-state">Loading brief…</div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tab-news">
+    <div class="news-header">
+      <p class="meta" style="margin:0">Aggregated news for every company in the reference, refreshed daily.</p>
+      <span class="news-updated" id="news-updated"></span>
+    </div>
+    <div class="news-filters" id="news-filters"></div>
+    <div class="news-feed" id="news-feed">
+      <div class="empty-state">Loading news…</div>
+    </div>
+  </div>
 
   <footer>
     <div class="legend">
@@ -526,6 +714,49 @@ const PHASES = [
     color: "var(--phase-1)",
     desc: "The atoms beneath the bits. Without power, buildings, chips, and the optical fabric connecting them, no model gets trained.",
     layers: [
+      {
+        name: "Critical Minerals & Raw Materials",
+        def: "The atoms before the atoms. Every datacenter and chip rests on a global supply chain of copper, rare earths, semiconductor-grade quartz and polysilicon, uranium, and specialty gases — much of it concentrated in a handful of countries and firms, and increasingly contested by export controls.",
+        companies: [
+          { name: "Freeport-McMoRan", badges: ["commercial"], note: "Largest US copper producer; copper demand for grid expansion and datacenter cabling is the structural backbone of the AI buildout." },
+          { name: "BHP", badges: ["commercial"], note: "Diversified miner pivoting hard into copper — internally framed as 'the metal of electrification.'" },
+          { name: "Codelco", badges: ["commercial"], note: "Chilean state-owned; the world's largest copper producer." },
+          { name: "Glencore", badges: ["commercial"], note: "Copper, cobalt, nickel plus a global commodity trading desk; integrated upstream-to-market footprint." },
+          { name: "MP Materials", badges: ["commercial", "frontier"], note: "Only at-scale US rare earth producer; Mountain Pass mine, US DoD-backed magnet supply chain plans." },
+          { name: "Lynas Rare Earths", badges: ["commercial"], note: "Largest rare earth producer outside China; Australian mines, Malaysian processing." },
+          { name: "Cameco", badges: ["commercial"], note: "Largest publicly traded uranium miner; reactor restarts and SMR rollouts drive demand for datacenter-aligned nuclear power." },
+          { name: "Kazatomprom", badges: ["commercial"], note: "Kazakh state miner; the world's largest single uranium producer." },
+          { name: "Wacker Chemie", badges: ["commercial"], note: "High-purity polysilicon — the feedstock for semiconductor wafers." },
+          { name: "Sibelco", badges: ["commercial", "frontier"], note: "Operates the largest Spruce Pine, NC quartz mines; its IOTA-brand high-purity quartz is the world's standard feedstock for the crucibles in which every semiconductor-grade silicon ingot is grown. Essentially no substitute at scale." },
+          { name: "The Quartz Corp", badges: ["commercial", "frontier"], note: "Spruce Pine's other operator and Sibelco's only meaningful competitor; together the two supply virtually all global high-purity quartz. Hurricane Helene briefly shut both down in 2024, triggering a global chip-supply scare." },
+          { name: "Linde", badges: ["commercial", "frontier"], note: "Industrial gases (nitrogen, argon, helium, neon, hydrogen) — without these, no fab runs." },
+          { name: "Air Liquide", badges: ["commercial"], note: "Linde's duopoly counterpart in industrial gases; major supplier to TSMC, Samsung, Intel fabs." },
+          { name: "Air Products", badges: ["commercial", "frontier"], note: "Third major industrial gas company; particularly dominant in helium — operates the world's largest helium facility in Qatar with QatarEnergy." },
+          { name: "Renergen", badges: ["commercial"], note: "South African helium and natural gas specialist; one of the few emerging non-traditional helium sources outside Qatar, the US, and Russia." }
+        ]
+      },
+      {
+        name: "Semiconductor Equipment & Lithography",
+        def: "The machines that turn silicon into chips. EUV lithography is a flat monopoly; deposition, etch, and metrology are oligopolies. A handful of companies — mostly Dutch, American, and Japanese — supply every leading-edge fab on earth.",
+        companies: [
+          { name: "ASML", badges: ["commercial", "frontier"], note: "Dutch lithography monopoly; the only company in the world making EUV machines. Every leading-edge node — and therefore every frontier AI chip — depends on its tools." },
+          { name: "Applied Materials", badges: ["commercial", "frontier"], note: "Broadest tool portfolio in semis: deposition, etch, ion implantation, inspection. Quietly load-bearing across every fab." },
+          { name: "Lam Research", badges: ["commercial", "frontier"], note: "Deposition and etch specialist; critical for 3D NAND and advanced logic patterning." },
+          { name: "Tokyo Electron", badges: ["commercial", "frontier"], note: "Japanese counterpart to Applied Materials and Lam; dominant in resist coaters/developers and broadly diversified across the toolchain." },
+          { name: "KLA", badges: ["commercial", "frontier"], note: "Process control, metrology, and inspection — the eyes of every modern fab. Defect detection at angstrom scale." }
+        ]
+      },
+      {
+        name: "Foundries",
+        def: "Where chips actually become chips. The most concentrated and capacity-constrained layer in the entire AI stack — TSMC alone fabricates the silicon for NVIDIA, AMD, Apple, Broadcom, and most others, and its CoWoS advanced-packaging capacity is the gating constraint behind every B200 and MI350 shipment.",
+        companies: [
+          { name: "TSMC", badges: ["commercial", "frontier"], note: "Dominant leading-edge foundry; arguably the single most important company in the AI hardware stack. Makes the silicon for NVIDIA, AMD, Apple, Broadcom, MediaTek, and most others." },
+          { name: "Samsung Foundry", badges: ["commercial", "frontier"], note: "Only other foundry running at leading-edge nodes; meaningfully behind TSMC but the principal alternative for designers seeking to diversify." },
+          { name: "Intel Foundry", badges: ["commercial"], note: "Intel's separated manufacturing arm; betting on the 18A node as its bid to retake leadership. Strategic partner under CHIPS Act incentives." },
+          { name: "GlobalFoundries", badges: ["commercial"], note: "Mature-node specialist; exited the leading-edge race in 2018 to focus on profitable older processes — RF, automotive, IoT." },
+          { name: "SMIC", badges: ["commercial"], note: "China's leading foundry; producing surprisingly capable nodes under tightening US export controls." }
+        ]
+      },
       {
         name: "Power & Energy",
         def: "Electricity supply and the equipment that generates it. Frontier-scale AI now requires gigawatt-class deals — long-term PPAs with nuclear and renewable operators, plus the gas turbines, fuel cells, and Small Modular Reactors (SMRs) that bridge the gap while grid interconnection queues stretch into years.",
@@ -570,6 +801,48 @@ const PHASES = [
           { name: "Groq", badges: ["commercial"], note: "LPU-based ultra-fast inference; deterministic execution for very low latency." },
           { name: "Tenstorrent", badges: ["commercial"], note: "Jim Keller's startup; AI hardware with open-source software stack and RISC-V cores." },
           { name: "SambaNova", badges: ["commercial"], note: "Reconfigurable dataflow architecture; enterprise full-stack appliances." }
+        ]
+      },
+      {
+        name: "CPUs & Host Processors",
+        def: "GPUs do the math, but CPUs still run the host — data loading, orchestration, networking stacks, and the general datacenter workloads sitting alongside AI. ARM is steadily displacing x86, with every major hyperscaler now designing its own.",
+        companies: [
+          { name: "Intel", badges: ["commercial"], note: "Xeon — still the most-deployed datacenter CPU, though losing share at both ends." },
+          { name: "AMD", badges: ["commercial", "frontier"], note: "EPYC — the rising x86 alternative; common host CPU in NVIDIA GPU servers and frontier-lab clusters." },
+          { name: "NVIDIA Grace", badges: ["commercial", "frontier"], note: "ARM-based CPU; pairs with Hopper/Blackwell GPUs in Grace-Hopper and Grace-Blackwell superchips via shared memory fabric." },
+          { name: "AWS Graviton", badges: ["commercial"], note: "Amazon's in-house ARM CPUs; powers a large fraction of general AWS compute and increasingly inference workloads." },
+          { name: "Microsoft Cobalt", badges: ["commercial"], note: "Azure's in-house ARM datacenter CPU; rolling into Azure general compute services." },
+          { name: "Google Axion", badges: ["commercial"], note: "Google's first in-house ARM datacenter CPU; deploying across GCP services." },
+          { name: "Ampere", badges: ["commercial"], note: "Independent ARM datacenter CPU designer; foundation of Oracle Cloud's ARM offering." },
+          { name: "Apple Silicon", badges: ["commercial"], note: "M-series chips with unified memory; the de facto local-LLM dev platform, surprisingly capable for inference." },
+          { name: "SiFive", badges: ["commercial"], note: "Leading RISC-V CPU IP vendor; emerging as the open-ISA alternative to ARM and x86." }
+        ]
+      },
+      {
+        name: "Memory (HBM & DRAM)",
+        def: "High-Bandwidth Memory stacked on AI accelerators is the bottleneck most coverage overlooks — every B200, MI350, and TPU is gated by HBM supply. A three-supplier oligopoly globally.",
+        companies: [
+          { name: "SK Hynix", badges: ["commercial", "frontier"], note: "Dominant HBM3E supplier; primary memory partner for NVIDIA Hopper and Blackwell." },
+          { name: "Samsung", badges: ["commercial"], note: "Largest overall memory maker; HBM share lagged on the latest generations after qualification stumbles but recovering." },
+          { name: "Micron", badges: ["commercial", "frontier"], note: "Only US-headquartered HBM maker; HBM3E qualified into Hopper and ramping for Blackwell." }
+        ]
+      },
+      {
+        name: "Storage",
+        def: "Training a frontier model means streaming petabytes of tokens through GPUs and checkpointing terabytes of state every few minutes. Specialized parallel filesystems and all-flash arrays handle workloads traditional enterprise storage can't keep up with.",
+        companies: [
+          { name: "VAST Data", badges: ["commercial", "frontier"], note: "All-flash data platform purpose-built for AI; deployed at major neoclouds and frontier-scale buildouts." },
+          { name: "WEKA", badges: ["commercial", "frontier"], note: "Parallel file system optimized for GPU workloads; common pick at neoclouds and enterprise AI." },
+          { name: "DDN", badges: ["commercial", "frontier"], note: "HPC storage incumbent; widely deployed under frontier-scale training runs." },
+          { name: "IBM Storage Scale", badges: ["commercial", "frontier"], note: "Parallel filesystem formerly known as GPFS / Spectrum Scale; the original HPC standard, still common in frontier deployments." },
+          { name: "Pure Storage", badges: ["commercial"], note: "All-flash arrays; co-engineered AIRI reference architecture with NVIDIA." },
+          { name: "NetApp", badges: ["commercial"], note: "Enterprise storage incumbent; ONTAP AI bundles with NVIDIA DGX." },
+          { name: "Dell PowerScale", badges: ["commercial"], note: "Scale-out NAS (formerly Isilon); long-running HPC and AI deployments at enterprise scale." },
+          { name: "Qumulo", badges: ["commercial"], note: "Hybrid cloud file storage with strong streaming-throughput characteristics; growing footprint in AI workloads." },
+          { name: "Solidigm", badges: ["commercial"], note: "SK Hynix subsidiary; high-capacity QLC SSDs increasingly used for AI data lakes." },
+          { name: "Kioxia", badges: ["commercial"], note: "NAND flash for enterprise SSDs; major supplier to hyperscalers." },
+          { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." },
+          { name: "MinIO", badges: ["hybrid"], note: "Open-source S3-compatible object storage; ubiquitous in AI/ML pipelines for datasets, checkpoints, and model registries." }
         ]
       },
       {
@@ -635,6 +908,21 @@ const PHASES = [
           { name: "Anyscale (Ray)", badges: ["hybrid", "spans"], note: "Ray is the dominant open-source distributed compute framework; Anyscale is the managed platform." },
           { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU compute; also covers inference hosting." },
           { name: "Kubernetes + Kubeflow", badges: ["open"], note: "Generic container orchestration; the foundation most other tools build on." }
+        ]
+      },
+      {
+        name: "Quantum Computing (Adjacent)",
+        def: "Not running today's AI workloads, but a structurally different compute paradigm aimed at specific problem classes — simulation, factoring, optimization. Worth tracking because every frontier lab and hyperscaler maintains a quantum program, and error-correction breakthroughs in the last year have meaningfully shortened the timeline.",
+        companies: [
+          { name: "IBM Quantum", badges: ["commercial", "frontier"], note: "Largest superconducting roadmap; openly published progression toward 1000+ qubit systems. Long-running IBM Quantum Network." },
+          { name: "Google Quantum AI", badges: ["commercial", "frontier"], note: "Willow chip's below-threshold error correction milestone in late 2024 was widely seen as a turning point for fault-tolerant quantum." },
+          { name: "PsiQuantum", badges: ["commercial"], note: "Photonic approach; raised at high valuations against a goal of a million-qubit, fault-tolerant system." },
+          { name: "Quantinuum", badges: ["commercial"], note: "Honeywell + Cambridge Quantum merger; trapped-ion with industry-leading gate fidelity." },
+          { name: "IonQ", badges: ["commercial"], note: "Trapped-ion; publicly traded, among the more mature gate-based hardware programs." },
+          { name: "Rigetti Computing", badges: ["commercial"], note: "Superconducting; publicly traded US ecosystem player." },
+          { name: "QuEra Computing", badges: ["commercial"], note: "Neutral-atom approach; MIT/Harvard heritage, growing rapidly in error-corrected demonstrations." },
+          { name: "Atom Computing", badges: ["commercial"], note: "Neutral-atom; first to publicly demonstrate a 1000+ qubit array." },
+          { name: "D-Wave", badges: ["commercial"], note: "Quantum annealing — a different paradigm from gate-based competitors; publicly traded, mature deployments in optimization." }
         ]
       }
     ]
@@ -1079,11 +1367,194 @@ function setupFilters() {
 }
 
 // ============================================================
+// TABS
+// ============================================================
+function setupTabs() {
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const tabId = btn.dataset.tab;
+      document.querySelectorAll(".tab").forEach(b => b.classList.toggle("active", b === btn));
+      document.querySelectorAll(".tab-content").forEach(c => {
+        c.classList.toggle("active", c.id === `tab-${tabId}`);
+      });
+      if (tabId === "news") loadNews();
+      if (tabId === "brief") loadBrief();
+    });
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[c]);
+}
+
+function getAllCompanies() {
+  const set = new Set();
+  PHASES.forEach(p => p.layers.forEach(l => l.companies.forEach(c => set.add(c.name))));
+  return [...set].sort();
+}
+
+// ============================================================
+// NEWS FEED
+// ============================================================
+const NEWS_URL = "news.json";
+let newsLoaded = false;
+let newsItems = [];
+const activeNewsFilter = new Set();
+
+async function loadNews() {
+  if (newsLoaded) return;
+  const feed = document.getElementById("news-feed");
+  try {
+    const resp = await fetch(NEWS_URL + "?t=" + Date.now());
+    if (!resp.ok) throw new Error("no news.json yet");
+    const data = await resp.json();
+    newsItems = data.items || [];
+    if (data.updated) {
+      document.getElementById("news-updated").textContent =
+        "Updated " + new Date(data.updated).toLocaleString();
+    }
+    renderNewsFilters();
+    renderNews();
+    newsLoaded = true;
+  } catch (e) {
+    document.getElementById("news-filters").style.display = "none";
+    feed.innerHTML = `
+      <div class="setup-note">
+        <strong style="color:var(--text)">News feed not built yet.</strong>
+        <p style="margin:8px 0 12px">Daily auto-updates come from two files in your repo:</p>
+        <ol>
+          <li><code>scripts/fetch_news.py</code> — pulls Google News RSS for each company</li>
+          <li><code>.github/workflows/fetch-news.yml</code> — runs daily and commits <code>news.json</code></li>
+        </ol>
+        <p style="margin:12px 0 0">Run the workflow once from the Actions tab to generate the first <code>news.json</code>.</p>
+      </div>
+    `;
+  }
+}
+
+function renderNewsFilters() {
+  const companies = getAllCompanies();
+  const container = document.getElementById("news-filters");
+  container.innerHTML =
+    `<span class="filter-label">Filter</span>` +
+    companies.map(name =>
+      `<div class="chip" data-news-filter="${escapeHtml(name)}">${escapeHtml(name)}</div>`
+    ).join("") +
+    `<div class="chip" id="clear-news-filters" style="margin-left:auto;background:transparent;border-color:var(--border-strong)">Clear</div>`;
+
+  container.querySelectorAll("[data-news-filter]").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const name = chip.dataset.newsFilter;
+      if (activeNewsFilter.has(name)) {
+        activeNewsFilter.delete(name);
+        chip.classList.remove("active");
+      } else {
+        activeNewsFilter.add(name);
+        chip.classList.add("active");
+      }
+      renderNews();
+    });
+  });
+
+  document.getElementById("clear-news-filters").addEventListener("click", () => {
+    activeNewsFilter.clear();
+    container.querySelectorAll(".chip.active").forEach(c => c.classList.remove("active"));
+    renderNews();
+  });
+}
+
+function renderNews() {
+  const feed = document.getElementById("news-feed");
+  let items = newsItems;
+  if (activeNewsFilter.size > 0) {
+    items = items.filter(it => activeNewsFilter.has(it.company));
+  }
+  if (items.length === 0) {
+    feed.innerHTML = `<div class="empty-state">No matching news items.</div>`;
+    return;
+  }
+  feed.innerHTML = items.map(it => `
+    <div class="news-item">
+      <a class="news-title" href="${escapeHtml(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
+      <div class="news-meta">
+        <span class="news-company">${escapeHtml(it.company)}</span>
+        ${it.source ? `<span class="news-source">${escapeHtml(it.source)}</span>` : ""}
+        <span>${new Date(it.published).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+// ============================================================
+// DAILY BRIEF
+// ============================================================
+const BRIEF_URL = "brief.json";
+let briefLoaded = false;
+
+async function loadBrief() {
+  if (briefLoaded) return;
+  const container = document.getElementById("brief-content");
+  try {
+    const resp = await fetch(BRIEF_URL + "?t=" + Date.now());
+    if (!resp.ok) throw new Error("no brief.json yet");
+    const data = await resp.json();
+    renderBrief(data);
+    briefLoaded = true;
+  } catch (e) {
+    container.innerHTML = `
+      <div class="setup-note">
+        <strong style="color:var(--text)">Daily brief not generated yet.</strong>
+        <p style="margin:8px 0 12px">The brief is built locally in the workflow each day, right after the news fetch. To turn it on:</p>
+        <ol>
+          <li>Add <code>scripts/generate_brief.py</code> to your repo</li>
+          <li>Update <code>.github/workflows/fetch-news.yml</code> with the brief-enabled version</li>
+          <li>Trigger the workflow manually from the Actions tab</li>
+        </ol>
+        <p style="margin:12px 0 0">After it runs, this tab will populate with the day's roundup.</p>
+      </div>
+    `;
+  }
+}
+
+function renderBrief(data) {
+  const container = document.getElementById("brief-content");
+  const date = new Date(data.date).toLocaleDateString(undefined, {
+    weekday: "long", month: "long", day: "numeric", year: "numeric"
+  });
+  const sectionsHtml = (data.sections || []).map(section => {
+    const storiesHtml = (section.stories || []).map(s => `
+      <div class="brief-story">
+        <a href="${escapeHtml(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a><span class="brief-story-meta">${escapeHtml(s.company)}${s.source ? ' · ' + escapeHtml(s.source) : ''}</span>
+      </div>
+    `).join("");
+    return `
+      <div class="brief-section">
+        <h3 class="brief-section-title">${escapeHtml(section.title)}</h3>
+        <p class="brief-analysis">${escapeHtml(section.analysis)}</p>
+        ${storiesHtml ? `<div class="brief-stories">${storiesHtml}</div>` : ""}
+      </div>
+    `;
+  }).join("");
+  container.innerHTML = `
+    <div class="brief-date">${date}</div>
+    <h2 class="brief-headline">${escapeHtml(data.headline || "")}</h2>
+    <p class="brief-lede">${escapeHtml(data.lede || "")}</p>
+    ${sectionsHtml}
+    <p class="brief-footer">
+      ${data.model ? `Generated by ${escapeHtml(data.model)} from ` : "From "}${data.item_count || "?"} news items in the last 24 hours. Not investment advice.
+    </p>
+  `;
+}
+
+// ============================================================
 // INIT
 // ============================================================
 renderPipeline();
 renderPhases();
 setupFilters();
+setupTabs();
 </script>
 </body>
 </html>
