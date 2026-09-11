@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5f5f7" id="themeColorMeta">
-<title>The AI Model Stack v2.0 &mdash; A Newcomer's Reference</title>
-<meta property="og:title" content="The AI Model Stack v2.0">
+<title>The AI Model Stack v3.0 &mdash; A Newcomer's Reference</title>
+<meta property="og:title" content="The AI Model Stack v3.0">
 <meta property="og:description" content="A newcomer's reference to every layer of modern AI infrastructure, with the leading players per category.">
 <meta name="description" content="A newcomer's reference to every layer of modern AI infrastructure, with the leading players per category.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700;8..60,900&display=swap" rel="stylesheet">
@@ -741,7 +741,7 @@
   <nav class="nav">
     <div class="wrap">
       <span class="brand">The AI Model Stack</span>
-      <span class="vtag">v2.0</span>
+      <span class="vtag">v3.0</span>
       <div id="navlinks"></div>
       <button id="menubtn" aria-label="Menu">&#9776;</button>
     </div>
@@ -753,9 +753,16 @@
   <header>
     <h1>The AI Model Stack</h1>
     <p class="subtitle">A newcomer's reference to every layer of modern AI infrastructure — from power and chips through training, evaluation, and deployment — with the leading 5–10 players per category.</p>
-    <p class="meta">Reference / <b>v2.0</b> · 26 August 2026, 3:20 AM ET · build 2026-08-26T03:20-04:00 · content last updated May 2026</p>
+    <p class="meta">Reference / <b>v3.0</b> · 11 September 2026, 7:29 AM ET · build 2026-09-11T07:29-04:00 · silicon, memory and foundry entries verified September 2026</p>
     <p class="meta">Click pipeline stages below to jump · Use filters to narrow the view</p>
   </header>
+
+  <div class="setup-note" style="max-width:780px;margin-left:0">
+    <b>Two conventions in this edition.</b><br>
+    <b>Codenames carry their products.</b> Architecture and program codenames are useless on their own, so each one is followed by the parts it actually names: Blackwell (B200, B300), Hopper (H100, H200), Rubin (Vera Rubin NVL144), Grace and Vera, Trillium (TPU v6e), Ironwood (TPU v7). A codename alone tells a reader nothing about what ships.<br><br>
+    <b>Open source is marked, and it is not the same as open weights.</b> Every entry whose software is open carries the fact in parentheses after the name. Three states are distinguished. <i>Open source</i> means the source is licensed for use and modification (PyTorch, vLLM, Qdrant). <i>Open-source core</i> means a permissive core with a paid layer above it, which is the dominant commercial pattern here (LangChain, Weaviate, Airbyte). <i>Open weights</i> means downloadable model parameters with no training code, no data, and often a license that restricts commercial use, which is the case for Llama, DeepSeek, and most of Mistral. Calling those models open source is the single most common category error in this field, and it matters because weights you can download are not software you can audit.
+  </div>
+
 
   <nav class="tabs">
     <button class="tab active" data-tab="stack">Stack View</button>
@@ -835,9 +842,8 @@
     </div>
     <p>This is a curated reference, not exhaustive. The space moves fast; companies shift layers, new entrants emerge, incumbents pivot. Treat it as a map, not a directory.</p>
     <p class="verstamp">
-      The AI Model Stack &mdash; v2.0 · build 2026-08-26T03:20-04:00 · supersedes v1.3 (dark palette declared at the top of the sheet, light palette appended at the bottom and winning the cascade; no way to select either).<br>
-      Changes in v2.0: both palettes promoted to real themes under [data-theme] with a persisted toggle; badge and status washes retinted per theme, which corrects five badges that were rendering dark-palette tints on a light page; sticky contact strip and a topbar nav wired to the existing tabs; version stamp carried in the title, nav tag, header line and footer. Company entries, layers and pipeline order are unchanged from v1.3.
-    </p>
+      The AI Model Stack &mdash; v3.0 &middot; build 2026-09-11T07:29-04:00 &middot; supersedes v2.0 (26 August 2026), whose silicon entries still described NVIDIA's line as ending at B200 and AMD's at MI350.<br>
+      Changes in v3.0: accelerator, host-CPU, memory and foundry entries rewritten to the September 2026 position (Rubin in full production since 1 June 2026 and shipping to partners; AMD MI400 series and the Helios rack launched 23 July 2026; HBM4 in volume production at all three suppliers). Two editorial conventions applied throughout: every architecture or program codename now carries the products it names in parentheses, and every entry with open software is marked, distinguishing open source from open-source core from open weights. Sixty-eight entries gained an openness parenthetical. Four corrections: Gymnasium is maintained by the Farama Foundation, not OpenAI; Ampere Computing is distinguished from NVIDIA's Ampere GPU architecture and noted as SoftBank-owned; TensorRT-LLM is open source and was badged commercial-only; Meta AI's Llama is marked open weights rather than open source. Layer structure and pipeline order are unchanged from v2.0.</p>
   </footer>
 </div>
 
@@ -968,7 +974,7 @@ const PHASES = [
       },
       {
         name: "Foundries",
-        def: "Where chips actually become chips. The most concentrated and capacity-constrained layer in the entire AI stack — TSMC alone fabricates the silicon for NVIDIA, AMD, Apple, Broadcom, and most others, and its CoWoS advanced-packaging capacity is the gating constraint behind every B200 and MI350 shipment.",
+        def: "Where chips actually become chips. The most concentrated and capacity-constrained layer in the entire AI stack — TSMC alone fabricates the silicon for NVIDIA, AMD, Apple, Broadcom, and most others, and its CoWoS advanced-packaging capacity is the gating constraint behind every Blackwell (B200, B300), Rubin, and Instinct (MI355X, MI455X) shipment.",
         companies: [
           { name: "TSMC", badges: ["commercial", "frontier"], note: "Dominant leading-edge foundry; arguably the single most important company in the AI hardware stack. Makes the silicon for NVIDIA, AMD, Apple, Broadcom, MediaTek, and most others." },
           { name: "Samsung Foundry", badges: ["commercial", "frontier"], note: "Only other foundry running at leading-edge nodes; meaningfully behind TSMC but the principal alternative for designers seeking to diversify." },
@@ -1013,13 +1019,13 @@ const PHASES = [
         name: "Chips / Silicon",
         def: "The processors that actually run training and inference. GPUs dominate, with custom accelerators from hyperscalers and a long tail of specialists.",
         companies: [
-          { name: "NVIDIA", badges: ["commercial", "frontier"], note: "~90% market share in AI training. H100/H200/B200 and the CUDA software moat." },
-          { name: "AMD", badges: ["commercial"], note: "MI300X / MI350 — the credible #2 GPU; gaining share in inference workloads." },
-          { name: "Google TPU", badges: ["commercial", "frontier"], note: "Custom accelerators used internally for Gemini; rentable via GCP." },
-          { name: "AWS Trainium / Inferentia", badges: ["commercial", "frontier"], note: "Amazon's in-house chips; Anthropic uses Trainium at scale." },
+          { name: "NVIDIA", badges: ["commercial", "frontier"], note: "Roughly 90% of AI training silicon. The data-center line runs Hopper (H100, H200) \u2192 Blackwell (B200, B300) \u2192 Rubin, which entered full production 1 June 2026 and began partner shipments in H2 2026; Rubin Ultra (VR300, Kyber NVL576 rack) is the stated H2 2027 target and Feynman the 2028 one. The durable moat is CUDA, which is proprietary." },
+          { name: "AMD", badges: ["commercial", "frontier"], note: "The credible number two. Shipping MI350X and MI355X (CDNA 4, 288 GB HBM3e); the MI400 series launched 23 July 2026 with the MI455X inside the Helios rack: 72 GPUs, 31 TB unified HBM4, all-Ethernet scale-up rather than a proprietary fabric. Anchored by named multi-gigawatt commitments from OpenAI (6 GW) and Anthropic (2 GW). Its software stack, ROCm, is open source, which is the main structural difference from CUDA." },
+          { name: "Google TPU", badges: ["commercial", "frontier"], note: "Custom accelerators used internally for Gemini and rentable via GCP. Generations carry codenames: Trillium (v6e) and Ironwood (v7, inference-oriented). The longest-running non-NVIDIA accelerator program by some margin." },
+          { name: "AWS Trainium / Inferentia", badges: ["commercial", "frontier"], note: "Amazon's in-house training and inference chips. Anthropic runs on Trainium at scale, including Project Rainier. The compiler path is Neuron SDK; parts of it are open source, the silicon is not." },
           { name: "Cerebras", badges: ["commercial"], note: "Wafer-scale training systems; the entire silicon wafer as a single chip." },
           { name: "Groq", badges: ["commercial"], note: "LPU-based ultra-fast inference; deterministic execution for very low latency." },
-          { name: "Tenstorrent", badges: ["commercial"], note: "Jim Keller's startup; AI hardware with open-source software stack and RISC-V cores." },
+          { name: "Tenstorrent", badges: ["commercial"], note: "Jim Keller's company. AI hardware built on RISC-V (an open instruction-set architecture) with a software stack (TT-Metalium and TT-Buda) that is open source. The bet is that openness at both ISA and software beats a proprietary moat." },
           { name: "SambaNova", badges: ["commercial"], note: "Reconfigurable dataflow architecture; enterprise full-stack appliances." }
         ]
       },
@@ -1029,20 +1035,20 @@ const PHASES = [
         companies: [
           { name: "Intel", badges: ["commercial"], note: "Xeon — still the most-deployed datacenter CPU, though losing share at both ends." },
           { name: "AMD", badges: ["commercial", "frontier"], note: "EPYC — the rising x86 alternative; common host CPU in NVIDIA GPU servers and frontier-lab clusters." },
-          { name: "NVIDIA Grace", badges: ["commercial", "frontier"], note: "ARM-based CPU; pairs with Hopper/Blackwell GPUs in Grace-Hopper and Grace-Blackwell superchips via shared memory fabric." },
-          { name: "AWS Graviton", badges: ["commercial"], note: "Amazon's in-house ARM CPUs; powers a large fraction of general AWS compute and increasingly inference workloads." },
+          { name: "NVIDIA Grace / Vera", badges: ["commercial", "frontier"], note: "Arm-based host CPUs. Grace pairs with Hopper (H100, H200) and Blackwell (B200, B300) in the GH200, GB200 and GB300 superchips over NVLink-C2C. Its successor, Vera (88 custom Arm cores), pairs with Rubin — one Vera to two Rubin GPUs, in the Vera Rubin NVL144." },
+          { name: "AWS Graviton", badges: ["commercial"], note: "Amazon's in-house Arm CPUs. Powers a large fraction of general AWS compute and, increasingly, inference hosts." },
           { name: "Microsoft Cobalt", badges: ["commercial"], note: "Azure's in-house ARM datacenter CPU; rolling into Azure general compute services." },
           { name: "Google Axion", badges: ["commercial"], note: "Google's first in-house ARM datacenter CPU; deploying across GCP services." },
-          { name: "Ampere", badges: ["commercial"], note: "Independent ARM datacenter CPU designer; foundation of Oracle Cloud's ARM offering." },
+          { name: "Ampere Computing", badges: ["commercial"], note: "Independent Arm datacenter CPU designer (no relation to NVIDIA's Ampere GPU architecture, A100 generation; the name collision is a common source of confusion). Acquired by SoftBank in 2025; foundation of Oracle Cloud's Arm offering." },
           { name: "Apple Silicon", badges: ["commercial"], note: "M-series chips with unified memory; the de facto local-LLM dev platform, surprisingly capable for inference." },
-          { name: "SiFive", badges: ["commercial"], note: "Leading RISC-V CPU IP vendor; emerging as the open-ISA alternative to ARM and x86." }
+          { name: "SiFive", badges: ["commercial"], note: "Leading RISC-V CPU IP vendor. RISC-V is an open instruction-set architecture — royalty-free and openly specified, which is a different thing from open-source software; SiFive's own core designs are licensed commercially." }
         ]
       },
       {
         name: "Memory (HBM & DRAM)",
-        def: "High-Bandwidth Memory stacked on AI accelerators is the bottleneck most coverage overlooks — every B200, MI350, and TPU is gated by HBM supply. A three-supplier oligopoly globally.",
+        def: "High-Bandwidth Memory stacked on AI accelerators is the bottleneck most coverage overlooks. Every Blackwell (B200, B300), Instinct (MI355X, MI455X), and TPU shipment is gated by HBM supply. A three-supplier oligopoly globally. The generation in contention now is HBM4, which all three have confirmed in volume production for Rubin; conventional DRAM has been pulled into the same shortage.",
         companies: [
-          { name: "SK Hynix", badges: ["commercial", "frontier"], note: "Dominant HBM3E supplier; primary memory partner for NVIDIA Hopper and Blackwell." },
+          { name: "SK Hynix", badges: ["commercial", "frontier"], note: "Dominant HBM supplier and NVIDIA's primary memory partner across Hopper (H100, H200), Blackwell (B200, B300) and now HBM4 for Rubin." },
           { name: "Samsung", badges: ["commercial"], note: "Largest overall memory maker; HBM share lagged on the latest generations after qualification stumbles but recovering." },
           { name: "Micron", badges: ["commercial", "frontier"], note: "Only US-headquartered HBM maker; HBM3E qualified into Hopper and ramping for Blackwell." }
         ]
@@ -1062,7 +1068,7 @@ const PHASES = [
           { name: "Solidigm", badges: ["commercial"], note: "SK Hynix subsidiary; high-capacity QLC SSDs increasingly used for AI data lakes." },
           { name: "Kioxia", badges: ["commercial"], note: "NAND flash for enterprise SSDs; major supplier to hyperscalers." },
           { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." },
-          { name: "MinIO", badges: ["hybrid"], note: "Open-source S3-compatible object storage; ubiquitous in AI/ML pipelines for datasets, checkpoints, and model registries." }
+          { name: "MinIO (open source, AGPL)", badges: ["hybrid"], note: "Open-source S3-compatible object storage; ubiquitous in AI/ML pipelines for datasets, checkpoints, and model registries." }
         ]
       },
       {
@@ -1114,20 +1120,20 @@ const PHASES = [
         companies: [
           { name: "Prime Intellect", badges: ["commercial", "spans", "frontier"], note: "Distributed training across geographies + RL environments marketplace. Distinct from CoreWeave: CoreWeave rents centralized bare-metal clusters; Prime Intellect coordinates training across heterogeneous nodes." },
           { name: "Gensyn", badges: ["commercial"], note: "Verifiable distributed training using crypto-economic proofs of compute." },
-          { name: "Akash Network", badges: ["open", "commercial"], note: "Decentralized GPU marketplace built on Cosmos; open-source protocol." },
+          { name: "Akash Network (open source)", badges: ["open", "commercial"], note: "Decentralized GPU marketplace built on Cosmos; open-source protocol." },
           { name: "io.net", badges: ["commercial"], note: "Aggregates idle GPUs from datacenters, crypto miners, and consumer rigs." },
-          { name: "Bittensor", badges: ["open"], note: "Decentralized AI network where subnets reward model contributions via TAO tokens." }
+          { name: "Bittensor (open source)", badges: ["open"], note: "Decentralized AI network where subnets reward model contributions via TAO tokens." }
         ]
       },
       {
         name: "Orchestration & Scheduling",
         def: "Software that schedules training jobs across clusters, handles failures, optimizes utilization. Critical at scale — frontier training runs touch thousands of nodes.",
         companies: [
-          { name: "SkyPilot", badges: ["open"], note: "Multi-cloud job launcher; finds cheapest GPUs across clouds for you." },
+          { name: "SkyPilot (open source)", badges: ["open"], note: "Multi-cloud job launcher; finds cheapest GPUs across clouds for you." },
           { name: "Run:ai", badges: ["commercial"], note: "Enterprise GPU orchestration; acquired by NVIDIA in 2024." },
-          { name: "Anyscale (Ray)", badges: ["hybrid", "spans"], note: "Ray is the dominant open-source distributed compute framework; Anyscale is the managed platform." },
+          { name: "Anyscale (Ray, Ray open source; Anyscale commercial)", badges: ["hybrid", "spans"], note: "Ray is the dominant open-source distributed compute framework; Anyscale is the managed platform." },
           { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU compute; also covers inference hosting." },
-          { name: "Kubernetes + Kubeflow", badges: ["open"], note: "Generic container orchestration; the foundation most other tools build on." }
+          { name: "Kubernetes + Kubeflow (open source)", badges: ["open"], note: "Generic container orchestration; the foundation most other tools build on." }
         ]
       },
       {
@@ -1158,22 +1164,22 @@ const PHASES = [
         name: "Training Frameworks",
         def: "Core libraries for defining models, computing gradients, and distributing training across many GPUs.",
         companies: [
-          { name: "PyTorch", badges: ["open", "frontier"], note: "Dominant deep learning framework; Meta-led, now under the PyTorch Foundation." },
-          { name: "JAX", badges: ["open", "frontier"], note: "Google's framework; favored at Anthropic and DeepMind for clean autodiff and TPU support." },
-          { name: "DeepSpeed", badges: ["open"], note: "Microsoft library for massive-scale distributed training (ZeRO, pipeline parallelism)." },
-          { name: "Megatron-LM", badges: ["open", "frontier"], note: "NVIDIA's reference implementation for scaling transformers — tensor/pipeline parallelism." },
-          { name: "Hugging Face Transformers", badges: ["open"], note: "Not a scaling framework but the standard model hub and reference implementations." }
+          { name: "PyTorch (open source)", badges: ["open", "frontier"], note: "Dominant deep learning framework; Meta-led, now under the PyTorch Foundation." },
+          { name: "JAX (open source)", badges: ["open", "frontier"], note: "Google's framework; favored at Anthropic and DeepMind for clean autodiff and TPU support." },
+          { name: "DeepSpeed (open source)", badges: ["open"], note: "Microsoft library for massive-scale distributed training (ZeRO, pipeline parallelism)." },
+          { name: "Megatron-LM (open source)", badges: ["open", "frontier"], note: "NVIDIA's reference implementation for scaling transformers — tensor/pipeline parallelism." },
+          { name: "Hugging Face Transformers (open source)", badges: ["open"], note: "Not a scaling framework but the standard model hub and reference implementations." }
         ]
       },
       {
         name: "Tokenization & Checkpoint Formats",
         def: "The unglamorous plumbing that decides how text becomes tokens and how trained weights get saved and shared.",
         companies: [
-          { name: "tiktoken", badges: ["open", "frontier"], note: "OpenAI's fast BPE tokenizer; the reference for GPT-family models." },
-          { name: "SentencePiece", badges: ["open", "frontier"], note: "Google's tokenizer; standard for non-English and subword tokenization across many model families." },
-          { name: "Hugging Face Tokenizers", badges: ["open"], note: "Rust-backed, blazingly fast tokenization library; backs the Transformers ecosystem." },
-          { name: "safetensors", badges: ["open", "frontier"], note: "Hugging Face format replacing pickle for safe, fast checkpoint storage." },
-          { name: "GGUF", badges: ["open"], note: "llama.cpp's quantized checkpoint format; how most local-LLM weights are distributed." }
+          { name: "tiktoken (open source)", badges: ["open", "frontier"], note: "OpenAI's fast BPE tokenizer; the reference for GPT-family models." },
+          { name: "SentencePiece (open source)", badges: ["open", "frontier"], note: "Google's tokenizer; standard for non-English and subword tokenization across many model families." },
+          { name: "Hugging Face Tokenizers (open source)", badges: ["open"], note: "Rust-backed, blazingly fast tokenization library; backs the Transformers ecosystem." },
+          { name: "safetensors (open source)", badges: ["open", "frontier"], note: "Hugging Face format replacing pickle for safe, fast checkpoint storage." },
+          { name: "GGUF (open format)", badges: ["open"], note: "llama.cpp's quantized checkpoint format; how most local-LLM weights are distributed." }
         ]
       }
     ]
@@ -1189,7 +1195,7 @@ const PHASES = [
         name: "Data Sources",
         def: "Where pretraining data actually comes from. Increasingly a mix of open web crawls and licensed deals with major content holders.",
         companies: [
-          { name: "Common Crawl", badges: ["open", "frontier"], note: "Non-profit open web crawl; the backbone of nearly every LLM's pretraining mix." },
+          { name: "Common Crawl (open data)", badges: ["open", "frontier"], note: "Non-profit open web crawl; the backbone of nearly every LLM's pretraining mix." },
           { name: "Reddit", badges: ["commercial"], note: "Licenses its corpus to Google and OpenAI for substantial annual fees." },
           { name: "Stack Exchange", badges: ["commercial"], note: "Licensed to both OpenAI and Google (Gemini); high-quality Q&A and technical content." },
           { name: "GitHub (Microsoft)", badges: ["commercial", "frontier"], note: "Source of most code training data; access policies vary by lab." },
@@ -1213,8 +1219,8 @@ const PHASES = [
         companies: [
           { name: "Databricks", badges: ["commercial", "spans"], note: "Lakehouse + Mosaic training platform; spans data, training, and inference." },
           { name: "Snowflake", badges: ["commercial"], note: "Cloud data warehouse; building out AI features via Cortex." },
-          { name: "dbt Labs", badges: ["hybrid"], note: "SQL-based transformation; the standard for analytics engineering." },
-          { name: "Airbyte", badges: ["hybrid"], note: "Open-source data integration; hundreds of connectors." },
+          { name: "dbt Labs (dbt Core open source)", badges: ["hybrid"], note: "SQL-based transformation; the standard for analytics engineering." },
+          { name: "Airbyte (open-source core)", badges: ["hybrid"], note: "Open-source data integration; hundreds of connectors." },
           { name: "Fivetran", badges: ["commercial"], note: "Managed ELT — automated connectors from SaaS sources to warehouses." }
         ]
       },
@@ -1243,32 +1249,32 @@ const PHASES = [
         def: "Tracks training runs, hyperparameters, metrics, artifacts. Essential when running many parallel experiments.",
         companies: [
           { name: "Weights & Biases", badges: ["commercial", "spans", "frontier"], note: "Dominant experiment tracker; expanding into evals and observability." },
-          { name: "MLflow", badges: ["open"], note: "Open-source standard; created at Databricks." },
+          { name: "MLflow (open source)", badges: ["open"], note: "Open-source standard; created at Databricks." },
           { name: "Comet", badges: ["commercial"], note: "Strong in classical ML; growing LLM features." },
           { name: "Neptune", badges: ["commercial"], note: "Focused on at-scale experiment management for foundation model training." },
-          { name: "ClearML", badges: ["hybrid"], note: "Open-source core, enterprise tier; ML platform with orchestration." }
+          { name: "ClearML (open-source core)", badges: ["hybrid"], note: "Open-source core, enterprise tier; ML platform with orchestration." }
         ]
       },
       {
         name: "Evals & Benchmarks",
         def: "Measure model quality — capability, safety, helpfulness. Mix of academic benchmarks, human preference arenas, and proprietary expert evals.",
         companies: [
-          { name: "LMSYS / Chatbot Arena", badges: ["open", "frontier"], note: "Crowdsourced human preference rankings; the de facto leaderboard." },
+          { name: "LMSYS / Chatbot Arena (open source)", badges: ["open", "frontier"], note: "Crowdsourced human preference rankings; the de facto leaderboard." },
           { name: "Scale SEAL", badges: ["commercial", "spans"], note: "Expert-graded evals across domains; private leaderboards for frontier labs." },
-          { name: "METR", badges: ["open"], note: "Non-profit running dangerous capability and autonomy evals on frontier models." },
-          { name: "HELM (Stanford CRFM)", badges: ["open"], note: "Academic holistic evaluation framework; broad but slower-moving." },
-          { name: "Hugging Face Leaderboards", badges: ["open"], note: "Public benchmarks for open models — Open LLM Leaderboard and successors." }
+          { name: "METR (nonprofit; task suites open source)", badges: ["open"], note: "Non-profit running dangerous capability and autonomy evals on frontier models." },
+          { name: "HELM (Stanford CRFM, open source)", badges: ["open"], note: "Academic holistic evaluation framework; broad but slower-moving." },
+          { name: "Hugging Face Leaderboards (open)", badges: ["open"], note: "Public benchmarks for open models — Open LLM Leaderboard and successors." }
         ]
       },
       {
         name: "Open Eval Frameworks & Harnesses",
         def: "Open-source libraries for running LLM evaluations in code — the developer infrastructure beneath both the commercial eval platforms above and the public benchmarks. The default choices when you need reproducible, version-controlled evals in CI or research pipelines.",
         companies: [
-          { name: "lm-evaluation-harness (EleutherAI)", badges: ["open", "frontier"], note: "The de facto standard open harness for LLM benchmarks; used by EleutherAI, Hugging Face, and most academic open-weight releases." },
-          { name: "OpenAI Evals", badges: ["open"], note: "OpenAI's open-source evaluation framework; YAML-defined evals registry covering capability and reasoning tasks." },
-          { name: "Inspect (UK AI Security Institute)", badges: ["open", "frontier"], note: "Government-backed safety evaluation framework from the UK AISI; used in pre-deployment evaluations of frontier models." },
-          { name: "Ragas", badges: ["open"], note: "Open-source eval framework purpose-built for RAG pipelines; metrics for faithfulness, answer relevance, context precision and recall." },
-          { name: "NVIDIA NeMo Evaluator", badges: ["open"], note: "Open evaluation tooling within NVIDIA's NeMo framework; integrates with NeMo training and deployment workflows." }
+          { name: "lm-evaluation-harness (EleutherAI, open source)", badges: ["open", "frontier"], note: "The de facto standard open harness for LLM benchmarks; used by EleutherAI, Hugging Face, and most academic open-weight releases." },
+          { name: "OpenAI Evals (open source)", badges: ["open"], note: "OpenAI's open-source evaluation framework; YAML-defined evals registry covering capability and reasoning tasks." },
+          { name: "Inspect (UK AI Security Institute, open source)", badges: ["open", "frontier"], note: "Government-backed safety evaluation framework from the UK AISI; used in pre-deployment evaluations of frontier models." },
+          { name: "Ragas (open source)", badges: ["open"], note: "Open-source eval framework purpose-built for RAG pipelines; metrics for faithfulness, answer relevance, context precision and recall." },
+          { name: "NVIDIA NeMo Evaluator (open source)", badges: ["open"], note: "Open evaluation tooling within NVIDIA's NeMo framework; integrates with NeMo training and deployment workflows." }
         ]
       },
       {
@@ -1279,8 +1285,8 @@ const PHASES = [
           { name: "Galileo", badges: ["commercial"], note: "Generative AI evaluation and observability platform; strong focus on hallucination detection and production quality metrics." },
           { name: "Patronus", badges: ["commercial"], note: "Automated LLM evaluation with built-in safety, hallucination, and custom-policy checks; targets enterprise compliance use cases." },
           { name: "PromptLayer", badges: ["commercial"], note: "Prompt versioning, deployment, and analytics; one of the originals in this category." },
-          { name: "Promptfoo", badges: ["open"], note: "Open-source CLI for prompt and model testing; popular in CI pipelines." },
-          { name: "DeepEval (Confident AI)", badges: ["open"], note: "Open-source LLM eval framework; pytest-style assertions for model outputs." },
+          { name: "Promptfoo (open source)", badges: ["open"], note: "Open-source CLI for prompt and model testing; popular in CI pipelines." },
+          { name: "DeepEval (Confident AI, open source)", badges: ["open"], note: "Open-source LLM eval framework; pytest-style assertions for model outputs." },
           { name: "Vellum", badges: ["commercial"], note: "Workflow-builder approach to prompt orchestration plus evals; enterprise-focused." }
         ]
       },
@@ -1289,10 +1295,10 @@ const PHASES = [
         def: "Sandboxes where agents can be trained or evaluated — from coding tasks to browser use to operating real software. Increasingly important as RL post-training drives capability.",
         companies: [
           { name: "HUD", badges: ["commercial", "frontier"], note: "Agent evaluation platform — standardized benchmarks for browser, code, and OS agents." },
-          { name: "Prime Intellect Environments Hub", badges: ["open", "spans"], note: "Open marketplace of RL environments; pairs with their distributed training." },
+          { name: "Prime Intellect Environments Hub (open source)", badges: ["open", "spans"], note: "Open marketplace of RL environments; pairs with their distributed training." },
           { name: "Mechanize", badges: ["commercial"], note: "Building automated RL environments at scale to drive economically valuable agent capability." },
           { name: "Browserbase", badges: ["commercial"], note: "Headless browser infrastructure used for agent evals and runtime." },
-          { name: "OpenAI Gymnasium", badges: ["open"], note: "Successor to OpenAI Gym; the classical RL environment standard." }
+          { name: "OpenAI Gymnasium (Farama Foundation, open source)", badges: ["open"], note: "Successor to OpenAI Gym; the classical RL environment standard." }
         ]
       }
     ]
@@ -1308,11 +1314,11 @@ const PHASES = [
         name: "Inference Runtimes",
         def: "Software that makes a trained model run efficiently — batching, KV cache management, quantization, speculative decoding.",
         companies: [
-          { name: "vLLM", badges: ["open", "frontier"], note: "Dominant open-source LLM serving engine; PagedAttention." },
-          { name: "SGLang", badges: ["open"], note: "Fast structured generation; competitive with vLLM, strong for agent workloads." },
-          { name: "TensorRT-LLM", badges: ["commercial"], note: "NVIDIA's optimized runtime; tightly coupled to their hardware." },
-          { name: "llama.cpp", badges: ["open"], note: "CPU/edge inference; how most local LLM apps actually run." },
-          { name: "DeepSpeed-Inference", badges: ["open"], note: "Microsoft's inference companion to DeepSpeed training." }
+          { name: "vLLM (open source)", badges: ["open", "frontier"], note: "Dominant open-source LLM serving engine; PagedAttention." },
+          { name: "SGLang (open source)", badges: ["open"], note: "Fast structured generation; competitive with vLLM, strong for agent workloads." },
+          { name: "TensorRT-LLM (open source, Apache 2.0)", badges: ["open", "commercial"], note: "NVIDIA's optimized runtime; tightly coupled to their hardware." },
+          { name: "llama.cpp (open source)", badges: ["open"], note: "CPU/edge inference; how most local LLM apps actually run." },
+          { name: "DeepSpeed-Inference (open source)", badges: ["open"], note: "Microsoft's inference companion to DeepSpeed training." }
         ]
       },
       {
@@ -1334,7 +1340,7 @@ const PHASES = [
           { name: "OpenPipe", badges: ["commercial"], note: "Fine-tune small models from production traces to replace expensive frontier calls." },
           { name: "Together AI", badges: ["commercial", "spans"], note: "Fine-tuning is one piece of their broader open-model platform." },
           { name: "OpenAI Fine-tuning API", badges: ["commercial", "frontier"], note: "Hosted fine-tuning for GPT and o-series; supervised plus reinforcement fine-tuning." },
-          { name: "Hugging Face AutoTrain", badges: ["hybrid"], note: "No-code fine-tuning on the HF Hub; integrates with the open model ecosystem." }
+          { name: "Hugging Face AutoTrain (open source)", badges: ["hybrid"], note: "No-code fine-tuning on the HF Hub; integrates with the open model ecosystem." }
         ]
       },
       {
@@ -1353,10 +1359,10 @@ const PHASES = [
         def: "Single API across many models. Useful for cost optimization, fallback routing, and centralized observability.",
         companies: [
           { name: "OpenRouter", badges: ["commercial"], note: "Largest model marketplace; access to hundreds of models behind one API." },
-          { name: "LiteLLM", badges: ["open"], note: "Open-source proxy for unifying calls across model providers." },
+          { name: "LiteLLM (open source)", badges: ["open"], note: "Open-source proxy for unifying calls across model providers." },
           { name: "Portkey", badges: ["commercial"], note: "AI gateway with caching, fallbacks, observability — enterprise-focused." },
           { name: "Martian", badges: ["commercial"], note: "Model routing based on query complexity to optimize cost/quality." },
-          { name: "Helicone", badges: ["hybrid", "spans"], note: "Open-source LLM observability proxy; also covers monitoring." }
+          { name: "Helicone (open-source core)", badges: ["hybrid", "spans"], note: "Open-source LLM observability proxy; also covers monitoring." }
         ]
       }
     ]
@@ -1375,10 +1381,10 @@ const PHASES = [
           { name: "Anthropic", badges: ["commercial", "frontier"], note: "Claude family; safety-focused frontier lab." },
           { name: "OpenAI", badges: ["commercial", "frontier"], note: "GPT and o-series; the original modern foundation model provider." },
           { name: "Google DeepMind", badges: ["commercial", "frontier"], note: "Gemini family; integrated across Google products." },
-          { name: "Meta AI", badges: ["open", "frontier"], note: "Llama family — released with open weights, anchor of the open model ecosystem." },
+          { name: "Meta AI (Llama released as open weights, not open source)", badges: ["open", "frontier"], note: "Llama family — released with open weights, anchor of the open model ecosystem." },
           { name: "xAI", badges: ["commercial"], note: "Grok family; building the Colossus supercluster in Memphis." },
-          { name: "Mistral", badges: ["hybrid"], note: "European challenger; open weights for smaller models plus paid API for flagship tier." },
-          { name: "DeepSeek", badges: ["open"], note: "Chinese lab releasing strong open-weight models; pushed reasoning capabilities into the open ecosystem." },
+          { name: "Mistral (several models open weights)", badges: ["hybrid"], note: "European challenger; open weights for smaller models plus paid API for flagship tier." },
+          { name: "DeepSeek (open weights)", badges: ["open"], note: "Chinese lab releasing strong open-weight models; pushed reasoning capabilities into the open ecosystem." },
           { name: "Cohere", badges: ["commercial"], note: "Enterprise-focused alternative; emphasizes RAG, deployment flexibility, and multilingual support." }
         ]
       },
@@ -1387,22 +1393,22 @@ const PHASES = [
         def: "Databases optimized for storing and querying high-dimensional embeddings. The store behind RAG (retrieval-augmented generation) — letting models cite or condition on your private data.",
         companies: [
           { name: "Pinecone", badges: ["commercial"], note: "Managed vector database; market leader in enterprise RAG deployments." },
-          { name: "Weaviate", badges: ["hybrid"], note: "Open-core vector DB with hybrid search; commercial cloud offering on top." },
-          { name: "Chroma", badges: ["open"], note: "Lightweight open-source vector DB; dominant for prototyping and local dev." },
-          { name: "Qdrant", badges: ["hybrid"], note: "Rust-based and performance-focused; open-source core with managed cloud." },
-          { name: "pgvector", badges: ["open"], note: "Postgres extension; the 'good enough' default for teams already on Postgres." },
-          { name: "Milvus (Zilliz)", badges: ["open"], note: "Large-scale open-source vector DB; one of the most-deployed at production scale, commercialized by Zilliz." },
-          { name: "LanceDB", badges: ["open"], note: "Embedded multi-modal vector DB; rapidly gaining ground for AI workloads." }
+          { name: "Weaviate (open-source core)", badges: ["hybrid"], note: "Open-core vector DB with hybrid search; commercial cloud offering on top." },
+          { name: "Chroma (open source)", badges: ["open"], note: "Lightweight open-source vector DB; dominant for prototyping and local dev." },
+          { name: "Qdrant (open-source core)", badges: ["hybrid"], note: "Rust-based and performance-focused; open-source core with managed cloud." },
+          { name: "pgvector (open source)", badges: ["open"], note: "Postgres extension; the 'good enough' default for teams already on Postgres." },
+          { name: "Milvus (Zilliz, open source)", badges: ["open"], note: "Large-scale open-source vector DB; one of the most-deployed at production scale, commercialized by Zilliz." },
+          { name: "LanceDB (open source)", badges: ["open"], note: "Embedded multi-modal vector DB; rapidly gaining ground for AI workloads." }
         ]
       },
       {
         name: "Memory Frameworks",
         def: "Persistent context and memory abstractions for AI agents — letting them remember user preferences, prior interactions, and accumulated knowledge across sessions. These sit on top of real stores (pgvector, Neo4j, Qdrant, Neptune), wrapping them in opinionated APIs for hierarchical memory, summarization, and retrieval. The category churns hard, with frameworks benchmarking against each other every quarter — a rentable, volatile layer above durable storage, not a replacement for it.",
         companies: [
-          { name: "Mem0", badges: ["open"], note: "Persistent memory layer for LLM applications; hierarchical short-term and long-term memory with automatic extraction. Strong adoption in production AI assistants." },
-          { name: "Graphiti (Zep)", badges: ["open", "hybrid"], note: "Knowledge graph memory engine; the open-source core of Zep. Builds temporal entity-relationship graphs from agent interactions for richer-than-vector retrieval." },
-          { name: "Cognee", badges: ["open"], note: "Cognitive architecture for AI agents; combines graph databases, vector storage, and knowledge representation into a unified memory layer." },
-          { name: "Letta (formerly MemGPT)", badges: ["open", "spans"], note: "Stateful agent platform built around persistent memory as its core abstraction; originated as MemGPT research at UC Berkeley. Spans into Agent Frameworks." }
+          { name: "Mem0 (open source)", badges: ["open"], note: "Persistent memory layer for LLM applications; hierarchical short-term and long-term memory with automatic extraction. Strong adoption in production AI assistants." },
+          { name: "Graphiti (Zep, open source)", badges: ["open", "hybrid"], note: "Knowledge graph memory engine; the open-source core of Zep. Builds temporal entity-relationship graphs from agent interactions for richer-than-vector retrieval." },
+          { name: "Cognee (open source)", badges: ["open"], note: "Cognitive architecture for AI agents; combines graph databases, vector storage, and knowledge representation into a unified memory layer." },
+          { name: "Letta (formerly MemGPT, open source)", badges: ["open", "spans"], note: "Stateful agent platform built around persistent memory as its core abstraction; originated as MemGPT research at UC Berkeley. Spans into Agent Frameworks." }
         ]
       },
       {
@@ -1411,7 +1417,7 @@ const PHASES = [
         companies: [
           { name: "Lakera", badges: ["commercial"], note: "Prompt injection and jailbreak defense; enterprise-focused with a strong threat-research practice." },
           { name: "Protect AI", badges: ["commercial"], note: "Broader AI security platform; model scanning, supply-chain risk, runtime defense." },
-          { name: "NVIDIA NeMo Guardrails", badges: ["open"], note: "Open-source toolkit for adding programmable rails to LLM applications." },
+          { name: "NVIDIA NeMo Guardrails (open source)", badges: ["open"], note: "Open-source toolkit for adding programmable rails to LLM applications." },
           { name: "Robust Intelligence", badges: ["commercial"], note: "Model risk management and red-teaming; acquired by Cisco in 2024." },
           { name: "Haize Labs", badges: ["commercial"], note: "Automated red-teaming as a service; finds failure modes before deployment." }
         ]
@@ -1420,20 +1426,20 @@ const PHASES = [
         name: "Agent Frameworks",
         def: "Libraries for building applications on top of foundation models — tool use, memory, multi-step workflows.",
         companies: [
-          { name: "LangChain", badges: ["hybrid"], note: "Largest agent framework by adoption; spawned LangGraph (now separate) and LangSmith (observability)." },
-          { name: "LangGraph", badges: ["open"], note: "Graph-based agent orchestration from the LangChain team; explicit state machines for longer-running agents." },
-          { name: "LlamaIndex", badges: ["hybrid"], note: "Originally retrieval-focused; broader agent framework now." },
-          { name: "CrewAI", badges: ["hybrid"], note: "Multi-agent orchestration; growing rapidly in enterprise pilots." },
-          { name: "AutoGen", badges: ["open"], note: "Microsoft's multi-agent framework; research-led." },
-          { name: "Mastra", badges: ["open"], note: "TypeScript-native AI framework; rapid traction with Node and frontend developers." },
-          { name: "Pydantic AI", badges: ["open"], note: "Type-safe agent framework from the Pydantic team; emphasis on validated structured outputs." }
+          { name: "LangChain (open-source core)", badges: ["hybrid"], note: "Largest agent framework by adoption; spawned LangGraph (now separate) and LangSmith (observability)." },
+          { name: "LangGraph (open source)", badges: ["open"], note: "Graph-based agent orchestration from the LangChain team; explicit state machines for longer-running agents." },
+          { name: "LlamaIndex (open-source core)", badges: ["hybrid"], note: "Originally retrieval-focused; broader agent framework now." },
+          { name: "CrewAI (open-source core)", badges: ["hybrid"], note: "Multi-agent orchestration; growing rapidly in enterprise pilots." },
+          { name: "AutoGen (open source)", badges: ["open"], note: "Microsoft's multi-agent framework; research-led." },
+          { name: "Mastra (open source)", badges: ["open"], note: "TypeScript-native AI framework; rapid traction with Node and frontend developers." },
+          { name: "Pydantic AI (open source)", badges: ["open"], note: "Type-safe agent framework from the Pydantic team; emphasis on validated structured outputs." }
         ]
       },
       {
         name: "Agent Sandboxes & Code Execution",
         def: "Isolated environments where agents can safely run code, install packages, and interact with files or browsers. Critical infrastructure as agents move from chat to action.",
         companies: [
-          { name: "E2B", badges: ["hybrid"], note: "Open-source plus managed; the dominant code execution sandbox for AI agents." },
+          { name: "E2B (open-source core)", badges: ["hybrid"], note: "Open-source plus managed; the dominant code execution sandbox for AI agents." },
           { name: "Daytona", badges: ["commercial"], note: "Cloud development environments adapted as agent runtimes." },
           { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU plus sandboxed execution; spans inference and orchestration too." },
           { name: "Vercel Sandbox", badges: ["commercial"], note: "Isolated execution tightly integrated with Vercel's deployment platform." },
@@ -1446,8 +1452,8 @@ const PHASES = [
         companies: [
           { name: "LangSmith", badges: ["commercial"], note: "From the LangChain team; deeply integrated with their framework." },
           { name: "Arize AI", badges: ["commercial"], note: "ML observability incumbent; expanded into LLM tracing." },
-          { name: "Langfuse", badges: ["open"], note: "Open-source LLM observability; rapidly growing in adoption." },
-          { name: "Helicone", badges: ["hybrid", "spans"], note: "Proxy-based observability; spans into the gateway layer." },
+          { name: "Langfuse (open source)", badges: ["open"], note: "Open-source LLM observability; rapidly growing in adoption." },
+          { name: "Helicone (open-source core)", badges: ["hybrid", "spans"], note: "Proxy-based observability; spans into the gateway layer." },
           { name: "Weights & Biases", badges: ["commercial", "spans"], note: "Originally experiment tracking; production observability is a newer addition." }
         ]
       },
@@ -1460,8 +1466,8 @@ const PHASES = [
           { name: "Claude Code", badges: ["commercial", "frontier"], note: "Anthropic's terminal-based agentic coding tool; runs locally with Claude as the engine." },
           { name: "Cognition (Devin)", badges: ["commercial"], note: "Autonomous SWE agent; longer-horizon tasks delegated rather than co-authored." },
           { name: "Windsurf", badges: ["commercial"], note: "VS Code fork from Codeium; subject of the 2025 OpenAI acquisition saga, ultimately landed at Cognition." },
-          { name: "Zed", badges: ["hybrid"], note: "High-performance Rust-built editor with a strong recent agentic AI push; open-source core." },
-          { name: "Aider", badges: ["open"], note: "Open-source terminal pair programmer; CLI-first agentic coding." },
+          { name: "Zed (open source)", badges: ["hybrid"], note: "High-performance Rust-built editor with a strong recent agentic AI push; open-source core." },
+          { name: "Aider (open source)", badges: ["open"], note: "Open-source terminal pair programmer; CLI-first agentic coding." },
           { name: "Replit", badges: ["commercial"], note: "Browser-based AI-native development; strong with prototyping and non-traditional developers." }
         ]
       }
