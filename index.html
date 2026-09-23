@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5f5f7" id="themeColorMeta">
-<title>The AI Model Stack v3.0 &mdash; A Newcomer's Reference</title>
-<meta property="og:title" content="The AI Model Stack v3.0">
+<title>The AI Model Stack v4.0 &mdash; A Newcomer's Reference</title>
+<meta property="og:title" content="The AI Model Stack v4.0">
 <meta property="og:description" content="A newcomer's reference to every layer of modern AI infrastructure, with the leading players per category.">
 <meta name="description" content="A newcomer's reference to every layer of modern AI infrastructure, with the leading players per category.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700;8..60,900&display=swap" rel="stylesheet">
@@ -741,7 +741,7 @@
   <nav class="nav">
     <div class="wrap">
       <span class="brand">The AI Model Stack</span>
-      <span class="vtag">v3.0</span>
+      <span class="vtag">v4.0</span>
       <div id="navlinks"></div>
       <button id="menubtn" aria-label="Menu">&#9776;</button>
     </div>
@@ -753,14 +753,15 @@
   <header>
     <h1>The AI Model Stack</h1>
     <p class="subtitle">A newcomer's reference to every layer of modern AI infrastructure — from power and chips through training, evaluation, and deployment — with the leading 5–10 players per category.</p>
-    <p class="meta">Reference / <b>v3.0</b> · 11 September 2026, 7:29 AM ET · build 2026-09-11T07:29-04:00 · silicon, memory and foundry entries verified September 2026</p>
+    <p class="meta">Reference / <b>v4.0</b> · 21 September 2026, 12:06 PM ET · build 2026-09-21T16:06-04:00 · compute, model and application entries re-verified 21 September 2026</p>
     <p class="meta">Click pipeline stages below to jump · Use filters to narrow the view</p>
   </header>
 
   <div class="setup-note" style="max-width:780px;margin-left:0">
-    <b>Two conventions in this edition.</b><br>
-    <b>Codenames carry their products.</b> Architecture and program codenames are useless on their own, so each one is followed by the parts it actually names: Blackwell (B200, B300), Hopper (H100, H200), Rubin (Vera Rubin NVL144), Grace and Vera, Trillium (TPU v6e), Ironwood (TPU v7). A codename alone tells a reader nothing about what ships.<br><br>
-    <b>Open source is marked, and it is not the same as open weights.</b> Every entry whose software is open carries the fact in parentheses after the name. Three states are distinguished. <i>Open source</i> means the source is licensed for use and modification (PyTorch, vLLM, Qdrant). <i>Open-source core</i> means a permissive core with a paid layer above it, which is the dominant commercial pattern here (LangChain, Weaviate, Airbyte). <i>Open weights</i> means downloadable model parameters with no training code, no data, and often a license that restricts commercial use, which is the case for Llama, DeepSeek, and most of Mistral. Calling those models open source is the single most common category error in this field, and it matters because weights you can download are not software you can audit.
+    <b>Three conventions in this edition.</b><br>
+    <b>Codenames carry their products.</b> Architecture and program codenames are useless on their own, so each one is followed by the parts it actually names: Blackwell (B200, B300), Hopper (H100, H200), Rubin (Vera Rubin NVL72, announced as NVL144), Grace and Vera, Trillium (TPU v6e), Ironwood (TPU v7). A codename alone tells a reader nothing about what ships.<br><br>
+    <b>Open source is marked, and it is not the same as open weights.</b> Every entry whose software is open carries the fact in parentheses after the name. Three states are distinguished. <i>Open source</i> means the source is licensed for use and modification (PyTorch, vLLM, Qdrant). <i>Open-source core</i> means a permissive core with a paid layer above it, which is the dominant commercial pattern here (LangChain, Weaviate, Airbyte). <i>Open weights</i> means downloadable model parameters with no training code, no data, and often a license that restricts commercial use, which is the case for Llama, DeepSeek, and most of Mistral. Calling those models open source is the single most common category error in this field, and it matters because weights you can download are not software you can audit.<br><br>
+    <b>Ownership is stated where it moved.</b> Several entries changed hands in 2026 and the note says so rather than describing the company as it was. Cursor is owned by SpaceX. xAI is a SpaceX division. Groq licensed its core silicon IP to NVIDIA and kept the cloud. A reference that lists these as independent companies is wrong in a way that matters for anyone using it to plan.
   </div>
 
 
@@ -842,8 +843,9 @@
     </div>
     <p>This is a curated reference, not exhaustive. The space moves fast; companies shift layers, new entrants emerge, incumbents pivot. Treat it as a map, not a directory.</p>
     <p class="verstamp">
-      The AI Model Stack &mdash; v3.0 &middot; build 2026-09-11T07:29-04:00 &middot; supersedes v2.0 (26 August 2026), whose silicon entries still described NVIDIA's line as ending at B200 and AMD's at MI350.<br>
-      Changes in v3.0: accelerator, host-CPU, memory and foundry entries rewritten to the September 2026 position (Rubin in full production since 1 June 2026 and shipping to partners; AMD MI400 series and the Helios rack launched 23 July 2026; HBM4 in volume production at all three suppliers). Two editorial conventions applied throughout: every architecture or program codename now carries the products it names in parentheses, and every entry with open software is marked, distinguishing open source from open-source core from open weights. Sixty-eight entries gained an openness parenthetical. Four corrections: Gymnasium is maintained by the Farama Foundation, not OpenAI; Ampere Computing is distinguished from NVIDIA's Ampere GPU architecture and noted as SoftBank-owned; TensorRT-LLM is open source and was badged commercial-only; Meta AI's Llama is marked open weights rather than open source. Layer structure and pipeline order are unchanged from v2.0.</p>
+      The AI Model Stack &mdash; v4.0 &middot; build 2026-09-21T16:06-04:00 &middot; supersedes v3.0 (11 September 2026), which listed five neoclouds and no Nscale, and carried Cursor, xAI and Groq as independent companies.<br>
+      Changes in v4.0: full audit of the compute, model and application layers against September 2026 sources. Neoclouds rewritten and expanded from five entries to nine, adding Nscale, Fluidstack, Voltage Park and SpaceX, with the layer definition rewritten because the original framing (cheaper and faster than a hyperscaler) no longer describes a category whose largest customers are the hyperscalers. Foundation Model Providers expanded with Moonshot, Z.ai, Alibaba Qwen and MiniMax, since DeepSeek alone no longer represents the open-weight frontier. Meta Compute added to Hyperscalers as announced intent. Four ownership corrections: Cursor is owned by SpaceX (closed 14 August 2026), xAI is a SpaceX division (February 2026), Groq licensed its silicon IP to NVIDIA and kept GroqCloud (December 2025), and Meta now runs a proprietary line alongside Llama. Two naming corrections: the Rubin rack ships as Vera Rubin NVL72, the NVL144 name having counted dies rather than packages, and the v3.0 claim of full production on 1 June 2026 is replaced with NVIDIA's own framing, since published dates for that milestone disagree. Qumulo and Oracle entries corrected. A third editorial convention added: ownership changes are stated in the entry. Layer structure and pipeline order are unchanged from v3.0.
+</p>
   </footer>
 </div>
 
@@ -1019,12 +1021,12 @@ const PHASES = [
         name: "Chips / Silicon",
         def: "The processors that actually run training and inference. GPUs dominate, with custom accelerators from hyperscalers and a long tail of specialists.",
         companies: [
-          { name: "NVIDIA", badges: ["commercial", "frontier"], note: "Roughly 90% of AI training silicon. The data-center line runs Hopper (H100, H200) \u2192 Blackwell (B200, B300) \u2192 Rubin, which entered full production 1 June 2026 and began partner shipments in H2 2026; Rubin Ultra (VR300, Kyber NVL576 rack) is the stated H2 2027 target and Feynman the 2028 one. The durable moat is CUDA, which is proprietary." },
+          { name: "NVIDIA", badges: ["commercial", "frontier"], note: "Roughly 90% of AI training silicon. The data-center line runs Hopper (H100, H200) \u2192 Blackwell (B200, B300) \u2192 Rubin. NVIDIA describes Vera Rubin NVL72 as in full production and on track to ship in H2 2026; note that the rack first announced as NVL144 counted GPU dies, and the shipping name counts the 72 dual-die packages, so the two names describe one system. Rubin Ultra (VR300, Kyber NVL576 rack) is the stated H2 2027 target and Feynman the 2028 one. The durable moat is CUDA, which is proprietary." },
           { name: "AMD", badges: ["commercial", "frontier"], note: "The credible number two. Shipping MI350X and MI355X (CDNA 4, 288 GB HBM3e); the MI400 series launched 23 July 2026 with the MI455X inside the Helios rack: 72 GPUs, 31 TB unified HBM4, all-Ethernet scale-up rather than a proprietary fabric. Anchored by named multi-gigawatt commitments from OpenAI (6 GW) and Anthropic (2 GW). Its software stack, ROCm, is open source, which is the main structural difference from CUDA." },
           { name: "Google TPU", badges: ["commercial", "frontier"], note: "Custom accelerators used internally for Gemini and rentable via GCP. Generations carry codenames: Trillium (v6e) and Ironwood (v7, inference-oriented). The longest-running non-NVIDIA accelerator program by some margin." },
           { name: "AWS Trainium / Inferentia", badges: ["commercial", "frontier"], note: "Amazon's in-house training and inference chips. Anthropic runs on Trainium at scale, including Project Rainier. The compiler path is Neuron SDK; parts of it are open source, the silicon is not." },
           { name: "Cerebras", badges: ["commercial"], note: "Wafer-scale training systems; the entire silicon wafer as a single chip." },
-          { name: "Groq", badges: ["commercial"], note: "LPU-based ultra-fast inference; deterministic execution for very low latency." },
+          { name: "Groq", badges: ["commercial", "spans"], note: "LPU-based inference silicon: deterministic execution and several hundred megabytes of on-chip SRAM instead of HBM, which is where the latency advantage comes from. In December 2025 Groq licensed that technology to NVIDIA on a non-exclusive basis, reported at roughly $20bn, with founder Jonathan Ross, president Sunny Madra and much of the senior team moving to NVIDIA. Groq remains independent, retains the IP, and has refocused on running GroqCloud as an inference cloud, which is why it now spans into the compute layer. A reverse acquihire in substance, structured to avoid an acquisition review." },
           { name: "Tenstorrent", badges: ["commercial"], note: "Jim Keller's company. AI hardware built on RISC-V (an open instruction-set architecture) with a software stack (TT-Metalium and TT-Buda) that is open source. The bet is that openness at both ISA and software beats a proprietary moat." },
           { name: "SambaNova", badges: ["commercial"], note: "Reconfigurable dataflow architecture; enterprise full-stack appliances." }
         ]
@@ -1035,7 +1037,7 @@ const PHASES = [
         companies: [
           { name: "Intel", badges: ["commercial"], note: "Xeon — still the most-deployed datacenter CPU, though losing share at both ends." },
           { name: "AMD", badges: ["commercial", "frontier"], note: "EPYC — the rising x86 alternative; common host CPU in NVIDIA GPU servers and frontier-lab clusters." },
-          { name: "NVIDIA Grace / Vera", badges: ["commercial", "frontier"], note: "Arm-based host CPUs. Grace pairs with Hopper (H100, H200) and Blackwell (B200, B300) in the GH200, GB200 and GB300 superchips over NVLink-C2C. Its successor, Vera (88 custom Arm cores), pairs with Rubin — one Vera to two Rubin GPUs, in the Vera Rubin NVL144." },
+          { name: "NVIDIA Grace / Vera", badges: ["commercial", "frontier"], note: "Arm-based host CPUs. Grace pairs with Hopper (H100, H200) and Blackwell (B200, B300) in the GH200, GB200 and GB300 superchips over NVLink-C2C. Its successor, Vera (88 custom Arm cores), pairs with Rubin at one Vera to two Rubin GPUs, giving 36 Vera CPUs and 72 Rubin GPUs in a Vera Rubin NVL72 rack." },
           { name: "AWS Graviton", badges: ["commercial"], note: "Amazon's in-house Arm CPUs. Powers a large fraction of general AWS compute and, increasingly, inference hosts." },
           { name: "Microsoft Cobalt", badges: ["commercial"], note: "Azure's in-house ARM datacenter CPU; rolling into Azure general compute services." },
           { name: "Google Axion", badges: ["commercial"], note: "Google's first in-house ARM datacenter CPU; deploying across GCP services." },
@@ -1064,7 +1066,7 @@ const PHASES = [
           { name: "Pure Storage", badges: ["commercial"], note: "All-flash arrays; co-engineered AIRI reference architecture with NVIDIA." },
           { name: "NetApp", badges: ["commercial"], note: "Enterprise storage incumbent; ONTAP AI bundles with NVIDIA DGX." },
           { name: "Dell PowerScale", badges: ["commercial"], note: "Scale-out NAS (formerly Isilon); long-running HPC and AI deployments at enterprise scale." },
-          { name: "Qumulo", badges: ["commercial"], note: "Hybrid cloud file storage with strong streaming-throughput characteristics; growing footprint in AI workloads." },
+          { name: "Qumulo", badges: ["commercial"], note: "Scale-out NAS and AI data platform running on-premises and natively in the major public clouds; inline compression across all data, and changed-region tracking so edge-to-core replication moves only what changed." },
           { name: "Solidigm", badges: ["commercial"], note: "SK Hynix subsidiary; high-capacity QLC SSDs increasingly used for AI data lakes." },
           { name: "Kioxia", badges: ["commercial"], note: "NAND flash for enterprise SSDs; major supplier to hyperscalers." },
           { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." },
@@ -1099,18 +1101,23 @@ const PHASES = [
           { name: "AWS", badges: ["commercial", "frontier"], note: "Largest cloud; Anthropic's primary compute partner via Trainium." },
           { name: "Microsoft Azure", badges: ["commercial", "frontier"], note: "OpenAI's primary partner; deepest enterprise AI distribution." },
           { name: "Google Cloud", badges: ["commercial", "frontier"], note: "TPU access; runs Google's own Gemini training." },
-          { name: "Oracle Cloud (OCI)", badges: ["commercial", "frontier"], note: "Late entrant punching above weight via OpenAI and xAI deals." },
-          { name: "Alibaba Cloud", badges: ["commercial"], note: "Largest non-US AI cloud; powers Qwen and the Chinese AI ecosystem." }
+          { name: "Oracle Cloud (OCI)", badges: ["commercial", "frontier"], note: "Late entrant punching above weight on the strength of very large single-customer commitments, principally OpenAI." },
+          { name: "Alibaba Cloud", badges: ["commercial"], note: "Largest non-US AI cloud; powers Qwen and the Chinese AI ecosystem." },
+          { name: "Meta Compute", badges: ["commercial", "frontier"], note: "Meta's infrastructure unit, reported in July 2026 to be preparing to sell surplus AI capacity and hosted model access to outside customers. Notable less as a product than as a category shift: the largest buyers of external capacity are now positioning as sellers of it, which is the same move SpaceX made with Colossus. Treat as announced intent rather than a shipping service." }
         ]
       },
       {
         name: "Neoclouds (GPU Clouds)",
-        def: "Specialized providers offering bare-metal GPU clusters, optimized for AI training and inference. Generally cheaper and faster to provision than hyperscalers.",
+        def: "Specialized providers offering bare-metal GPU clusters for AI training and inference. The original pitch was cheaper and faster than a hyperscaler; by 2026 that is no longer the defining feature, because the hyperscalers and frontier labs are themselves the largest customers. Microsoft has committed a reported $60bn-plus across CoreWeave, Nebius and Nscale, booking capacity as operating expense rather than capex. What actually distinguishes this layer now is secured power, speed of delivery, and a willingness to carry the capital. None of the large neoclouds is GAAP-profitable, and the concentration is extreme: contracted value sits with a handful of counterparties.",
         companies: [
-          { name: "CoreWeave", badges: ["commercial", "frontier"], note: "Largest neocloud; tightly aligned with NVIDIA; serves OpenAI, Microsoft, Meta." },
-          { name: "Lambda Labs", badges: ["commercial"], note: "On-demand GPU instances popular with researchers and smaller labs." },
-          { name: "Nebius", badges: ["commercial"], note: "Full-stack AI cloud (ex-Yandex); strong European presence." },
-          { name: "Crusoe", badges: ["commercial", "spans"], note: "Spans into this layer — owns its datacenters and power, then sells GPU capacity." },
+          { name: "CoreWeave", badges: ["commercial", "frontier"], note: "Largest US pure-play; tightly aligned with NVIDIA, serving Microsoft, OpenAI and Meta. Public since 2025, so its backlog and its GPU-collateralized debt are both on the record." },
+          { name: "Nscale", badges: ["commercial", "spans", "frontier"], note: "UK-headquartered, spun out of crypto miner Arkon Energy, and the fastest riser in the category. Filed a Form S-1 on 18 September 2026 to list on the NYSE as NSCL, disclosing $103.4bn of active and contracted value, against a $1.02bn net loss for H1 2026 and one customer at 52% of H1 revenue. Microsoft agreements run to $43.8bn and Anthropic agreements to roughly $44.6bn, the latter for dedicated Vera Rubin capacity at its Monarch campus in West Virginia. Financing for that infrastructure was not yet committed at filing, which is the whole risk in one line. Owns and colocates its own datacenters, so it spans the physical layer too." },
+          { name: "Nebius", badges: ["commercial", "frontier"], note: "Full-stack AI cloud built from the former Yandex international business; builds its own datacenters across Finland, the US, the UK, France and Iceland. Public, with Microsoft and Meta among its named counterparties." },
+          { name: "Fluidstack", badges: ["commercial", "frontier"], note: "UK-based, and builds bespoke infrastructure for frontier labs rather than competing on self-serve rental. Anthropic named it in November 2025 as the partner for a $50bn program of custom datacenters in Texas and New York coming online through 2026, its first large build outside the public clouds. Also counts Meta, NVIDIA, Samsung and Dell as customers. Lower public profile than its contracted scale implies." },
+          { name: "Lambda", badges: ["commercial"], note: "On-demand and reserved GPU instances, popular with researchers and smaller labs; among the more transparent on published hourly pricing. Private, reported to be heading toward an IPO." },
+          { name: "Crusoe", badges: ["commercial", "spans", "frontier"], note: "Spans into this layer: owns its datacenters and its power, then sells GPU capacity on top." },
+          { name: "SpaceX (SpaceXAI)", badges: ["commercial", "spans", "frontier"], note: "Not built as a neocloud, but now one of the largest sellers of frontier capacity. SpaceX absorbed xAI in February 2026 and listed in June 2026; it rents Colossus 1 in Memphis to Anthropic and further capacity to Google under multi-year contracts disclosed in its filings. The company describes this as dual monetization: build for your own model, sell what you are not using." },
+          { name: "Voltage Park", badges: ["commercial"], note: "Rents H100 and Blackwell clusters on published hourly pricing rather than negotiated contracts; unusual in the category for being backed by a nonprofit endowment rather than venture investors." },
           { name: "Together AI", badges: ["commercial", "spans"], note: "GPU cloud plus open-model inference; trains and hosts models." }
         ]
       },
@@ -1381,10 +1388,14 @@ const PHASES = [
           { name: "Anthropic", badges: ["commercial", "frontier"], note: "Claude family; safety-focused frontier lab." },
           { name: "OpenAI", badges: ["commercial", "frontier"], note: "GPT and o-series; the original modern foundation model provider." },
           { name: "Google DeepMind", badges: ["commercial", "frontier"], note: "Gemini family; integrated across Google products." },
-          { name: "Meta AI (Llama released as open weights, not open source)", badges: ["open", "frontier"], note: "Llama family — released with open weights, anchor of the open model ecosystem." },
-          { name: "xAI", badges: ["commercial"], note: "Grok family; building the Colossus supercluster in Memphis." },
+          { name: "Meta AI (Llama released as open weights, not open source)", badges: ["open", "frontier"], note: "Llama family, released with open weights and long the anchor of the open model ecosystem, though Chinese labs now carry more of that weight. Meta also runs a proprietary line, Muse Spark, introduced in April 2026 and not released openly." },
+          { name: "xAI (SpaceXAI)", badges: ["commercial"], note: "Grok family. Acquired by SpaceX in an all-stock deal in February 2026 and now operated as a division rather than a standalone lab; SpaceX listed publicly in June 2026. Its Colossus clusters in Memphis are both the training base for Grok and, increasingly, capacity sold to other labs." },
           { name: "Mistral (several models open weights)", badges: ["hybrid"], note: "European challenger; open weights for smaller models plus paid API for flagship tier." },
-          { name: "DeepSeek (open weights)", badges: ["open"], note: "Chinese lab releasing strong open-weight models; pushed reasoning capabilities into the open ecosystem." },
+          { name: "DeepSeek (open weights, MIT)", badges: ["open", "frontier"], note: "The lab that proved a Chinese release could match Western reasoning quality and ship the weights anyway. Its V4 line is MIT-licensed with a very long context window and prices far below the proprietary frontier." },
+          { name: "Moonshot AI (Kimi, open weights)", badges: ["open"], note: "Kimi family; its K3 release is among the largest open-weight models yet published, aimed at long-horizon agentic work. Custom license, not OSI-approved." },
+          { name: "Z.ai / Zhipu (GLM, open weights)", badges: ["open"], note: "GLM family, positioned on agentic and long-horizon coding; publicly listed in Hong Kong. Among the most-used open weights in coding workloads." },
+          { name: "Alibaba Qwen (open weights)", badges: ["open"], note: "The most widely fine-tuned open-weight base family, with checkpoints from workstation size up to sparse flagships. Licensing varies sharply by size: smaller checkpoints are Apache 2.0, the largest carry bespoke terms including revenue-share thresholds." },
+          { name: "MiniMax (open weights)", badges: ["open"], note: "Sparse-attention architecture built for very long context at lower compute cost than a standard transformer; publicly listed in Hong Kong." },
           { name: "Cohere", badges: ["commercial"], note: "Enterprise-focused alternative; emphasizes RAG, deployment flexibility, and multilingual support." }
         ]
       },
@@ -1461,7 +1472,7 @@ const PHASES = [
         name: "AI-Native IDEs & Coding Tools",
         def: "End-user products built directly on top of the stack — where most developers actually experience frontier models day-to-day. Included as the most mature example of an application category.",
         companies: [
-          { name: "Cursor", badges: ["commercial"], note: "VS Code fork with deep AI integration; the breakout AI IDE." },
+          { name: "Cursor (SpaceX)", badges: ["commercial"], note: "VS Code fork with deep AI integration; the breakout AI IDE, and no longer independent. SpaceX took an option on the company in April 2026, exercised it in June, and closed the $60bn all-stock acquisition of parent Anysphere on 14 August 2026, folding it into the SpaceXAI division. Widely described as the largest acquisition of a venture-backed startup on record." },
           { name: "GitHub Copilot", badges: ["commercial", "frontier"], note: "The originator (2021); deepest enterprise distribution via Microsoft." },
           { name: "Claude Code", badges: ["commercial", "frontier"], note: "Anthropic's terminal-based agentic coding tool; runs locally with Claude as the engine." },
           { name: "Cognition (Devin)", badges: ["commercial"], note: "Autonomous SWE agent; longer-horizon tasks delegated rather than co-authored." },
@@ -1779,7 +1790,7 @@ function renderBrief(data) {
 // ============================================================
 const DC_MODELS = [
   { name:"Raw / Entitled Land", sub:"Strategic Reserve",
-    time:"36–60+ months", lease:"Land purchase or NNN ground lease (Price / Acre)", density:"Infinite — built ground-up to the tenant's own cooling blueprint",
+    time:"36–60+ months", lease:"Land purchase or NNN ground lease (Price / Acre)", density:"Unconstrained — built ground-up to the tenant's own cooling blueprint",
     builder:["Land acquisition","Civil site-prep","Environmental & community permits","Water rights secured"],
     tenant:["Architectural design","Complete physical shell","Full mechanical / electrical plant","On-site substations","IT infrastructure"],
     audience:"Hyperscalers (AWS, Azure, Google Cloud, Meta) planning long-term multi-gigawatt regional campuses. Zoned, but no substation or utility lines built yet.",
