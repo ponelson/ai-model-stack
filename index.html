@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5f5f7" id="themeColorMeta">
-<title>The AI Model Stack v4.0 &mdash; A Newcomer's Reference</title>
-<meta property="og:title" content="The AI Model Stack v4.0">
+<title>The AI Model Stack v4.1 &mdash; A Newcomer's Reference</title>
+<meta property="og:title" content="The AI Model Stack v4.1">
 <meta property="og:description" content="A newcomer's reference to every layer of modern AI infrastructure, with the leading players per category.">
 <meta name="description" content="A newcomer's reference to every layer of modern AI infrastructure, with the leading players per category.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700;8..60,900&display=swap" rel="stylesheet">
@@ -741,7 +741,7 @@
   <nav class="nav">
     <div class="wrap">
       <span class="brand">The AI Model Stack</span>
-      <span class="vtag">v4.0</span>
+      <span class="vtag">v4.1</span>
       <div id="navlinks"></div>
       <button id="menubtn" aria-label="Menu">&#9776;</button>
     </div>
@@ -753,7 +753,7 @@
   <header>
     <h1>The AI Model Stack</h1>
     <p class="subtitle">A newcomer's reference to every layer of modern AI infrastructure — from power and chips through training, evaluation, and deployment — with the leading 5–10 players per category.</p>
-    <p class="meta">Reference / <b>v4.0</b> · 21 September 2026, 12:06 PM ET · build 2026-09-21T16:06-04:00 · compute, model and application entries re-verified 21 September 2026</p>
+    <p class="meta">Reference / <b>v4.1</b> · 19 October 2026, 6:08 PM ET · build 2026-10-19T18:08-04:00 · compute, model and application entries re-verified 21 September 2026; ownership changes audited 19 October 2026</p>
     <p class="meta">Click pipeline stages below to jump · Use filters to narrow the view</p>
   </header>
 
@@ -843,7 +843,9 @@
     </div>
     <p>This is a curated reference, not exhaustive. The space moves fast; companies shift layers, new entrants emerge, incumbents pivot. Treat it as a map, not a directory.</p>
     <p class="verstamp">
-      The AI Model Stack &mdash; v4.0 &middot; build 2026-09-21T16:06-04:00 &middot; supersedes v3.0 (11 September 2026), which listed five neoclouds and no Nscale, and carried Cursor, xAI and Groq as independent companies.<br>
+      The AI Model Stack v4.1 &middot; build 2026-10-19T18:08-04:00 &middot; supersedes v4.0 (build 2026-09-21T16:06-04:00), several of whose entries predated the convention that ownership changes are stated in the entry.<br>
+      Changes in v4.1: ownership and naming audit. Pure Storage renamed Everpure. Weights &amp; Biases and OpenPipe marked as CoreWeave, Neptune as OpenAI, Gretel as NVIDIA, Protect AI as Palo Alto Networks, Lakera as Check Point, Replicate as Cloudflare, and Langfuse as ClickHouse. Fivetran and dbt Labs marked as merged. Aligned's Macquarie line replaced with its AIP, MGX and GIP owners, matching the AI capital map. Switch and Vantage noted as SoftBank-linked through DigitalBridge. MinIO's community edition marked as archived. Azure AI Foundry renamed Microsoft Foundry and Vertex AI renamed Gemini Enterprise Agent Platform, matching the cloud platforms field note. Nscale's closed pre-IPO round added. The Qumulo entry's compression claim scoped to Cloud Native Qumulo and the edge. Layer structure and pipeline order unchanged.<br>
+      v4.0 superseded v3.0 (11 September 2026), which listed five neoclouds and no Nscale, and carried Cursor, xAI and Groq as independent companies.<br>
       Changes in v4.0: full audit of the compute, model and application layers against September 2026 sources. Neoclouds rewritten and expanded from five entries to nine, adding Nscale, Fluidstack, Voltage Park and SpaceX, with the layer definition rewritten because the original framing (cheaper and faster than a hyperscaler) no longer describes a category whose largest customers are the hyperscalers. Foundation Model Providers expanded with Moonshot, Z.ai, Alibaba Qwen and MiniMax, since DeepSeek alone no longer represents the open-weight frontier. Meta Compute added to Hyperscalers as announced intent. Four ownership corrections: Cursor is owned by SpaceX (closed 14 August 2026), xAI is a SpaceX division (February 2026), Groq licensed its silicon IP to NVIDIA and kept GroqCloud (December 2025), and Meta now runs a proprietary line alongside Llama. Two naming corrections: the Rubin rack ships as Vera Rubin NVL72, the NVL144 name having counted dies rather than packages, and the v3.0 claim of full production on 1 June 2026 is replaced with NVIDIA's own framing, since published dates for that milestone disagree. Qumulo and Oracle entries corrected. A third editorial convention added: ownership changes are stated in the entry. Layer structure and pipeline order are unchanged from v3.0.
 </p>
   </footer>
@@ -1010,10 +1012,10 @@ const PHASES = [
           { name: "Equinix", badges: ["commercial"], note: "Largest colocation operator globally; dominant in network interconnection points." },
           { name: "Digital Realty", badges: ["commercial"], note: "Hyperscale-grade colos; long-term leases to AWS, Azure, GCP." },
           { name: "QTS (Blackstone)", badges: ["commercial"], note: "Hyperscaler build-to-suit campuses; one of the fastest growers since Blackstone took it private." },
-          { name: "Vantage Data Centers", badges: ["commercial"], note: "DigitalBridge-backed; massive hyperscale campuses across North America, EMEA, and APAC." },
+          { name: "Vantage Data Centers", badges: ["commercial"], note: "DigitalBridge-backed, and so SoftBank-linked since 30 September 2026; massive hyperscale campuses across North America, EMEA, and APAC." },
           { name: "CyrusOne", badges: ["commercial"], note: "KKR/GIP-owned; one of the largest privately-held hyperscale operators." },
-          { name: "Aligned Data Centers", badges: ["commercial"], note: "Macquarie-backed; known for liquid cooling at scale and rapid build cycles." },
-          { name: "Switch", badges: ["commercial"], note: "DigitalBridge-owned; large 'SuperNAP' campuses in Nevada, Michigan, Georgia, Texas." },
+          { name: "Aligned Data Centers", badges: ["commercial"], note: "Known for liquid cooling at scale and rapid build cycles. Formerly Macquarie-backed; acquired by the AI Infrastructure Partnership with MGX and BlackRock's GIP at about $40bn enterprise value, announced October 2025 and closed around July 2026." },
+          { name: "Switch", badges: ["commercial"], note: "DigitalBridge-owned, and so under SoftBank since its acquisition of DigitalBridge closed on 30 September 2026; large 'SuperNAP' campuses in Nevada, Michigan, Georgia, Texas." },
           { name: "NTT Global Data Centers", badges: ["commercial"], note: "Japanese telecom giant; major operator across Asia, Europe, and the US." }
         ]
       },
@@ -1063,14 +1065,14 @@ const PHASES = [
           { name: "WEKA", badges: ["commercial", "frontier"], note: "Parallel file system optimized for GPU workloads; common pick at neoclouds and enterprise AI." },
           { name: "DDN", badges: ["commercial", "frontier"], note: "HPC storage incumbent; widely deployed under frontier-scale training runs." },
           { name: "IBM Storage Scale", badges: ["commercial", "frontier"], note: "Parallel filesystem formerly known as GPFS / Spectrum Scale; the original HPC standard, still common in frontier deployments." },
-          { name: "Pure Storage", badges: ["commercial"], note: "All-flash arrays; co-engineered AIRI reference architecture with NVIDIA." },
+          { name: "Everpure (formerly Pure Storage)", badges: ["commercial"], note: "All-flash arrays repositioned as enterprise data management; co-engineered AIRI reference architecture with NVIDIA. Renamed from Pure Storage and trading as Everpure on the NYSE since 5 March 2026, ticker PSTG unchanged, alongside an agreed acquisition of data-intelligence firm 1touch." },
           { name: "NetApp", badges: ["commercial"], note: "Enterprise storage incumbent; ONTAP AI bundles with NVIDIA DGX." },
           { name: "Dell PowerScale", badges: ["commercial"], note: "Scale-out NAS (formerly Isilon); long-running HPC and AI deployments at enterprise scale." },
-          { name: "Qumulo", badges: ["commercial"], note: "Scale-out NAS and AI data platform running on-premises and natively in the major public clouds; inline compression across all data, and changed-region tracking so edge-to-core replication moves only what changed." },
+          { name: "Qumulo", badges: ["commercial"], note: "Scale-out NAS and AI data platform running on-premises and natively in the major public clouds; inline compression used heavily (all Cloud Native Qumulo data auto-compressed, adaptive compression at the edge), and changed-region tracking so edge-to-core replication moves only what changed." },
           { name: "Solidigm", badges: ["commercial"], note: "SK Hynix subsidiary; high-capacity QLC SSDs increasingly used for AI data lakes." },
           { name: "Kioxia", badges: ["commercial"], note: "NAND flash for enterprise SSDs; major supplier to hyperscalers." },
           { name: "Hammerspace", badges: ["commercial"], note: "Global data orchestration across clouds and on-prem; growing for distributed AI workloads." },
-          { name: "MinIO (open source, AGPL)", badges: ["hybrid"], note: "Open-source S3-compatible object storage; ubiquitous in AI/ML pipelines for datasets, checkpoints, and model registries." }
+          { name: "MinIO (community edition open source, AGPL; archived)", badges: ["hybrid"], note: "S3-compatible object storage, long ubiquitous in AI/ML pipelines for datasets, checkpoints, and model registries. MinIO stopped publishing community binaries in October 2025, put the open-source repository into maintenance mode in December 2025 and archived it in April 2026, steering users to its proprietary AIStor. Existing deployments run; new self-hosted work is moving to open-source alternatives such as Garage, SeaweedFS and RustFS." }
         ]
       },
       {
@@ -1111,7 +1113,7 @@ const PHASES = [
         def: "Specialized providers offering bare-metal GPU clusters for AI training and inference. The original pitch was cheaper and faster than a hyperscaler; by 2026 that is no longer the defining feature, because the hyperscalers and frontier labs are themselves the largest customers. Microsoft has committed a reported $60bn-plus across CoreWeave, Nebius and Nscale, booking capacity as operating expense rather than capex. What actually distinguishes this layer now is secured power, speed of delivery, and a willingness to carry the capital. None of the large neoclouds is GAAP-profitable, and the concentration is extreme: contracted value sits with a handful of counterparties.",
         companies: [
           { name: "CoreWeave", badges: ["commercial", "frontier"], note: "Largest US pure-play; tightly aligned with NVIDIA, serving Microsoft, OpenAI and Meta. Public since 2025, so its backlog and its GPU-collateralized debt are both on the record." },
-          { name: "Nscale", badges: ["commercial", "spans", "frontier"], note: "UK-headquartered, spun out of crypto miner Arkon Energy, and the fastest riser in the category. Filed a Form S-1 on 18 September 2026 to list on the NYSE as NSCL, disclosing $103.4bn of active and contracted value, against a $1.02bn net loss for H1 2026 and one customer at 52% of H1 revenue. Microsoft agreements run to $43.8bn and Anthropic agreements to roughly $44.6bn, the latter for dedicated Vera Rubin capacity at its Monarch campus in West Virginia. Financing for that infrastructure was not yet committed at filing, which is the whole risk in one line. Owns and colocates its own datacenters, so it spans the physical layer too." },
+          { name: "Nscale", badges: ["commercial", "spans", "frontier"], note: "UK-headquartered, spun out of crypto miner Arkon Energy, and the fastest riser in the category. Filed a Form S-1 on 18 September 2026 to list on the NYSE as NSCL, disclosing $103.4bn of active and contracted value, against a $1.02bn net loss for H1 2026 and one customer at 52% of H1 revenue. Microsoft agreements run to $43.8bn and Anthropic agreements to roughly $44.6bn, the latter for dedicated Vera Rubin capacity at its Monarch campus in West Virginia. Financing for that infrastructure was not yet committed at filing, which is the whole risk in one line. A week later it closed a $3.36bn pre-IPO convertible round led by Third Point: $2.36bn funded at closing and $1bn from NVIDIA due in mid-November, converting at the IPO. Owns and colocates its own datacenters, so it spans the physical layer too." },
           { name: "Nebius", badges: ["commercial", "frontier"], note: "Full-stack AI cloud built from the former Yandex international business; builds its own datacenters across Finland, the US, the UK, France and Iceland. Public, with Microsoft and Meta among its named counterparties." },
           { name: "Fluidstack", badges: ["commercial", "frontier"], note: "UK-based, and builds bespoke infrastructure for frontier labs rather than competing on self-serve rental. Anthropic named it in November 2025 as the partner for a $50bn program of custom datacenters in Texas and New York coming online through 2026, its first large build outside the public clouds. Also counts Meta, NVIDIA, Samsung and Dell as customers. Lower public profile than its contracted scale implies." },
           { name: "Lambda", badges: ["commercial"], note: "On-demand and reserved GPU instances, popular with researchers and smaller labs; among the more transparent on published hourly pricing. Private, reported to be heading toward an IPO." },
@@ -1226,9 +1228,9 @@ const PHASES = [
         companies: [
           { name: "Databricks", badges: ["commercial", "spans"], note: "Lakehouse + Mosaic training platform; spans data, training, and inference." },
           { name: "Snowflake", badges: ["commercial"], note: "Cloud data warehouse; building out AI features via Cortex." },
-          { name: "dbt Labs (dbt Core open source)", badges: ["hybrid"], note: "SQL-based transformation; the standard for analytics engineering." },
+          { name: "dbt Labs (dbt Core open source; merged with Fivetran)", badges: ["hybrid"], note: "SQL-based transformation; the standard for analytics engineering. Merged with Fivetran in an all-stock deal that closed on 1 June 2026; the combined company operates as Fivetran + dbt Labs." },
           { name: "Airbyte (open-source core)", badges: ["hybrid"], note: "Open-source data integration; hundreds of connectors." },
-          { name: "Fivetran", badges: ["commercial"], note: "Managed ELT — automated connectors from SaaS sources to warehouses." }
+          { name: "Fivetran (merged with dbt Labs)", badges: ["commercial"], note: "Managed ELT: automated connectors from SaaS sources to warehouses. Now one company with dbt Labs, so ingestion and transformation sit under one roof." }
         ]
       },
       {
@@ -1237,7 +1239,7 @@ const PHASES = [
         companies: [
           { name: "Scale AI", badges: ["commercial", "spans"], note: "Synthetic data is part of its broader labeling product." },
           { name: "Datology AI", badges: ["commercial"], note: "Automated data curation and synthesis for pretraining." },
-          { name: "Gretel", badges: ["commercial"], note: "Privacy-preserving synthetic data; tabular and unstructured." },
+          { name: "Gretel (NVIDIA)", badges: ["commercial"], note: "Privacy-preserving synthetic data; tabular and unstructured. Acquired by NVIDIA in 2025." },
           { name: "Mostly AI", badges: ["commercial"], note: "Synthetic tabular data for enterprise use cases." },
           { name: "Frontier labs (internal)", badges: ["frontier"], note: "OpenAI, Anthropic, Google generate most synthetic data internally with their own models." }
         ]
@@ -1255,10 +1257,10 @@ const PHASES = [
         name: "Experiment Tracking",
         def: "Tracks training runs, hyperparameters, metrics, artifacts. Essential when running many parallel experiments.",
         companies: [
-          { name: "Weights & Biases", badges: ["commercial", "spans", "frontier"], note: "Dominant experiment tracker; expanding into evals and observability." },
+          { name: "Weights & Biases (CoreWeave)", badges: ["commercial", "spans", "frontier"], note: "Dominant experiment tracker; expanding into evals and observability. Acquired by CoreWeave in 2025, so the leading tracker now belongs to a neocloud." },
           { name: "MLflow (open source)", badges: ["open"], note: "Open-source standard; created at Databricks." },
           { name: "Comet", badges: ["commercial"], note: "Strong in classical ML; growing LLM features." },
-          { name: "Neptune", badges: ["commercial"], note: "Focused on at-scale experiment management for foundation model training." },
+          { name: "Neptune (OpenAI)", badges: ["commercial"], note: "At-scale experiment management for foundation model training. OpenAI agreed to acquire it in December 2025, taking the tool in-house." },
           { name: "ClearML (open-source core)", badges: ["hybrid"], note: "Open-source core, enterprise tier; ML platform with orchestration." }
         ]
       },
@@ -1336,7 +1338,7 @@ const PHASES = [
           { name: "Fireworks AI", badges: ["commercial"], note: "Fast inference with custom kernels; strong fine-tuning offering." },
           { name: "Baseten", badges: ["commercial"], note: "Custom model deployment with cold-start optimization." },
           { name: "Modal", badges: ["commercial", "spans"], note: "Serverless GPU platform; popular for custom inference setups." },
-          { name: "Replicate", badges: ["commercial"], note: "Open-model API marketplace; popular with prototype builders." }
+          { name: "Replicate (Cloudflare)", badges: ["commercial"], note: "Open-model API marketplace; popular with prototype builders. Cloudflare agreed to acquire it in November 2025, folding its model catalog into Cloudflare's developer platform." }
         ]
       },
       {
@@ -1344,7 +1346,7 @@ const PHASES = [
         def: "Hosted services for adapting open or proprietary models to specific tasks or domains. Sits between training and inference — these platforms train your model and then serve it.",
         companies: [
           { name: "Predibase", badges: ["commercial"], note: "Infrastructure for fine-tuning open models at scale; LoRA-focused." },
-          { name: "OpenPipe", badges: ["commercial"], note: "Fine-tune small models from production traces to replace expensive frontier calls." },
+          { name: "OpenPipe (CoreWeave)", badges: ["commercial"], note: "Fine-tune small models from production traces to replace expensive frontier calls. Acquired by CoreWeave in 2025." },
           { name: "Together AI", badges: ["commercial", "spans"], note: "Fine-tuning is one piece of their broader open-model platform." },
           { name: "OpenAI Fine-tuning API", badges: ["commercial", "frontier"], note: "Hosted fine-tuning for GPT and o-series; supervised plus reinforcement fine-tuning." },
           { name: "Hugging Face AutoTrain (open source)", badges: ["hybrid"], note: "No-code fine-tuning on the HF Hub; integrates with the open model ecosystem." }
@@ -1355,8 +1357,8 @@ const PHASES = [
         def: "Hyperscaler-branded multi-model catalogs with enterprise SLAs, security controls, and integrated billing. The default way most large enterprises consume frontier models — distinct from developer-first inference providers (Together, Fireworks) and from independent gateways (OpenRouter).",
         companies: [
           { name: "AWS Bedrock", badges: ["commercial", "frontier"], note: "Anthropic Claude, Meta Llama, Mistral, Cohere, Amazon Nova — Amazon's managed multi-model service." },
-          { name: "Azure AI Foundry", badges: ["commercial", "frontier"], note: "Formerly Azure AI Studio; OpenAI's GPT family, Llama, Mistral, Microsoft's own Phi models." },
-          { name: "Google Vertex AI Model Garden", badges: ["commercial", "frontier"], note: "Gemini, Claude (via the Anthropic partnership), Llama; tightly integrated with GCP tooling." },
+          { name: "Microsoft Foundry", badges: ["commercial", "frontier"], note: "Formerly Azure AI Foundry and, before that, Azure AI Studio; OpenAI's GPT family, Claude, Llama, Mistral, and Microsoft's own Phi and MAI models." },
+          { name: "Google Gemini Enterprise Agent Platform (formerly Vertex AI)", badges: ["commercial", "frontier"], note: "Model Garden carries Gemini, Claude (via the Anthropic partnership) and Llama; tightly integrated with GCP tooling." },
           { name: "Databricks Mosaic AI", badges: ["commercial", "spans"], note: "Foundation Model APIs plus custom fine-tuning on top of lakehouse data. Spans into training and data layers." },
           { name: "NVIDIA NIM", badges: ["commercial"], note: "Containerized inference microservices; portable across any environment with NVIDIA GPUs. Sold via NVIDIA AI Enterprise." }
         ]
@@ -1426,8 +1428,8 @@ const PHASES = [
         name: "Guardrails & AI Safety Tooling",
         def: "Wrappers around model calls to filter input and output — block prompt injection, jailbreaks, PII leakage, off-topic responses, and unsafe content.",
         companies: [
-          { name: "Lakera", badges: ["commercial"], note: "Prompt injection and jailbreak defense; enterprise-focused with a strong threat-research practice." },
-          { name: "Protect AI", badges: ["commercial"], note: "Broader AI security platform; model scanning, supply-chain risk, runtime defense." },
+          { name: "Lakera (Check Point)", badges: ["commercial"], note: "Prompt injection and jailbreak defense; enterprise-focused with a strong threat-research practice. Acquired by Check Point in 2025." },
+          { name: "Protect AI (Palo Alto Networks)", badges: ["commercial"], note: "Broader AI security platform; model scanning, supply-chain risk, runtime defense. Acquired by Palo Alto Networks in 2025." },
           { name: "NVIDIA NeMo Guardrails (open source)", badges: ["open"], note: "Open-source toolkit for adding programmable rails to LLM applications." },
           { name: "Robust Intelligence", badges: ["commercial"], note: "Model risk management and red-teaming; acquired by Cisco in 2024." },
           { name: "Haize Labs", badges: ["commercial"], note: "Automated red-teaming as a service; finds failure modes before deployment." }
@@ -1463,9 +1465,9 @@ const PHASES = [
         companies: [
           { name: "LangSmith", badges: ["commercial"], note: "From the LangChain team; deeply integrated with their framework." },
           { name: "Arize AI", badges: ["commercial"], note: "ML observability incumbent; expanded into LLM tracing." },
-          { name: "Langfuse (open source)", badges: ["open"], note: "Open-source LLM observability; rapidly growing in adoption." },
+          { name: "Langfuse (open source; ClickHouse)", badges: ["open"], note: "Open-source LLM observability, built on ClickHouse. ClickHouse acquired it in January 2026; the core stays MIT-licensed and self-hostable." },
           { name: "Helicone (open-source core)", badges: ["hybrid", "spans"], note: "Proxy-based observability; spans into the gateway layer." },
-          { name: "Weights & Biases", badges: ["commercial", "spans"], note: "Originally experiment tracking; production observability is a newer addition." }
+          { name: "Weights & Biases (CoreWeave)", badges: ["commercial", "spans"], note: "Originally experiment tracking; production observability is a newer addition. Owned by CoreWeave since 2025." }
         ]
       },
       {
