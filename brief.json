@@ -1,418 +1,418 @@
 {
-  "headline": "236 stories across 28 layers \u2014 Power & Energy most active",
+  "headline": "247 stories across 33 layers \u2014 Networking & Interconnect most active",
   "lede": "Daily roundup of news across the AI infrastructure stack. Stories are grouped by layer, ordered by volume, with near-duplicate headlines collapsed. Click any item to read the source.",
   "sections": [
     {
-      "title": "Power & Energy",
-      "analysis": "23 stories in the last 24 hours. Most active: Talen Energy (4), Vistra (4), Siemens Energy (3).",
+      "title": "Networking & Interconnect",
+      "analysis": "21 stories in the last 24 hours. Most active: NVIDIA (Mellanox) (4), Broadcom (4), Arista Networks (4).",
       "stories": [
         {
-          "company": "Talen Energy",
-          "title": "Talen Energy Secures PJM Capacity Sales; Guernsey Deal Expected to Generate $100 Million Annually",
-          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNWDRuSmJPQno4ZlFYSlRyeDVOY1dfVnhIeXMzZklXTDBKVUc5RDFvMURUV2JIekhRaV9qRTRvVnd5V0VSZEpGNVdkbjJEVXhKX21NMkQtalMtRW1ZYjVaNlBDcC1NaGhHcmpycWNVNm9HWTFvU3dwaUlTR3J0ak5qTG5xdVFXb1RrLVJJQVY2UFB3NlRRWFlYaFA2Z1RleGJPRTJQakR2TFJZZEU5ckdmbmI0Z1hnQ2E1ZER4WWtERmVycVFzSEhEejZra3pNanNTRk9GT05aLUlCSW9PdEpNbDZxX3hnRlR3ZjY5ZDh3?oc=5",
-          "source": "TradingView",
-          "published": "2026-11-12T13:33:00+00:00"
+          "company": "NVIDIA (Mellanox)",
+          "title": "Colette Kress Nvidia: $6.9B Mellanox, Israel Ties",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfT2dJbUFEYlJJVm5HamdRd25oS19LMFBtX2hqTktHSTdBeC1WdkRYckhqTFZmQWdFUTQ3M3E3eDhIZmszbF95NjhRZm5TVGExeGRRaEF5Sjl1bG44bEw1SXBvR0YxMC1zOFVfRzM4ZjJnYnJQbGl2dGI4MDBGUVE?oc=5",
+          "source": "shattered.io",
+          "published": "2026-11-13T12:59:36+00:00"
         },
         {
-          "company": "GE Vernova",
-          "title": "GE Vernova validates hydrogen capability for LM2500XPRESS and LM6000 turbines",
-          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8wdUIzQ1lvZXJUUm0tTmk5SHFNakQzYmpuekg5b2hpVDI3VDRRQU5KUkRCbXJJbUp3enpMU0dVcVJIbGxLNXhhSDMzLU1hemVHTjhMR2FpUGU3amNXQ0R3N2Q4SmMxZ3l2emhlTXV1Sy1LZ3lhRTRF?oc=5",
-          "source": "Power Engineering Magazine",
-          "published": "2026-11-12T12:18:00+00:00"
+          "company": "Broadcom",
+          "title": "Broadcom Is 'Very, Very Capable,' Analyst Says As NVIDIA's Troubles Mount",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdndHc3VGcDZQV3ZaMUJGYl9MLTV1SnY4ZVRFMDd0NnZWNXowTTdIQzV0TVN6R2dEUE43M1l6OHhLUnNPdzVla3hBM3NBMHFtMFVTYzZBNmJWdk1vWGN6eG9EMWVhVGI3Zk9WMTFyWVlOZWtwVjJRdXVJQ29SOWU3ZmExekVwNGhRc0ZDRFd4eXZ5b0dEOEZjTTdmSENYREUtN2o4NUtHZ0x2Z0tMcF80WHNJd2M1SFFXY2JNQXJn?oc=5",
+          "source": "Benzinga",
+          "published": "2026-11-13T12:44:58+00:00"
         },
         {
-          "company": "Brookfield Renewable",
-          "title": "Brookfield Renewable Partners L.P.: What Its Dividend Yield Means for Income-Focused Investors",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUHAxNUhGSGRZdVAwWWZidWdnRVRIa1BtV0NNa25kN1FtbnBxUENfR3RHUHhxaW9yMzN4Ni14NEpMRHpBNVlOU2REeWhtZmJ5LTY1RlR2NVZMbEFoYjBUbWplOXZwMy0xUjlDTG5hU0ZpT2hxcFoxeDQ2ZG1oZlJYdmVycWRpSGh1Z2l2SnU3eHpfZU1sWGwtN2ZIZklpanJobnRDc1dSSnl3YlZQUDZXNmliVUdHcFR5Tnh0LVdfaElWVXFkOE10bE9acw?oc=5",
-          "source": "kalkine.ca",
-          "published": "2026-11-12T11:40:00+00:00"
+          "company": "Cisco",
+          "title": "Cisco posts its fastest growth in 15 years with about 8,000 fewer employees than two years ago",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1zVEM2WFZNNWhYUGUwcmQ5cnBxMnZnaDdTUmpvckxlWGlCbUo1M0I0Ql82TVc1RW4yOVd3RlZoNF9hQW02YlNFM1JGdldmOHcxa29sdmpqZ0wtcm81RmptbmpsRlg1N1k?oc=5",
+          "source": "CTech",
+          "published": "2026-11-13T12:27:00+00:00"
         },
         {
-          "company": "Vistra",
-          "title": "Vistra: The Market Is Pricing In An AI Bust That May Never Come",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORWJSdnFqTlQ0M1h6YTJxQWhEZ1BLbVBndkpTU3RMb1phb1dNRngtQVQzT3V5MHNhRWZpTjZ2eklGMVhQa0oxb0tPNy1QdXlwLUR4NTRkQjdsWFpBLXNEcDRpRU5FRWJYYnN3TXNTUlVld0U3SnZXbVUwc1QzVmJ3Y1FlNURFcl9ORTVBZVNLbS1takQ0UkkweFZ4bFFiVU4ybVBoSE9n?oc=5",
-          "source": "Seeking Alpha",
-          "published": "2026-11-12T11:35:23+00:00"
+          "company": "NVIDIA (Mellanox)",
+          "title": "Explainer: Three Israelis considered for Nvidia CEO role",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNnRYbmthdDVKdW1vSDJDb2hteXl6RnotTWxOSnFwNEZjVGQ0Z3Uya0xIQVdmMDZfZ01nTVVjZEJoSG0tMll0blhPOFNiWFYyS3lzLWlMOGM2eDlxNzM3VVhseFFOZEU4bGQzd3ExTE40cE9fRDNfOGYwRTNGSkF1ZVRUS09MQQ?oc=5",
+          "source": "The Jerusalem Post",
+          "published": "2026-11-13T12:25:58+00:00"
         },
         {
-          "company": "Siemens Energy",
-          "title": "SSE selects Siemens Energy as preferred supplier for Berwick Bank B",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQW1VNzJrb09rUUN6NTZPLWRJUVFwQXByUjM3RmpPcXhqUE5CM0k2VFRjaXhfUUd1S0UyWENLQlJFdjkzaENSOUw4Y3lIdHFBSjVWMXdYRFNVMVVwZUVqdDFtTkg2cmttN3U1LWZ1NHNIVXhYOHo3TXZ2eHFuM3RVZnBrSjJXRXU5MWc?oc=5",
-          "source": "Yahoo Finance",
-          "published": "2026-11-12T11:10:34+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Critical Minerals & Raw Materials",
-      "analysis": "22 stories in the last 24 hours. Most active: BHP (4), Cameco (3), Air Products (3).",
-      "stories": [
-        {
-          "company": "Cameco",
-          "title": "Cameco Offers Stability, Uranium Energy Delivers Upside in the Uranium Upcycle",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNWNhR2p6SGhNS1VSdmF0a2d4TGpOUGJfWDJfbWJGVDZkaW9Wcld2WF8zUU5ieHk4ZW4zb3BSYk94VEg3QWRpdXBvSV9lNTQ3TTlxbE0ySGt0Mk9wbFJQMFJ2NFVMbTMyVkQyeEdFMTFnZTJYYnNzamljcXBza3ZuV3J3c2NOdjJ0Y19NdFZoZzg1N0R1SDVvWUJkMU5nU2FYbG52YzJrX3hnQzJJc0pv?oc=5",
-          "source": "NAI500",
-          "published": "2026-11-12T13:42:28+00:00"
-        },
-        {
-          "company": "Wacker Chemie",
-          "title": "Wacker Chemie AG (WCH.DE) stock price, news, quote and history",
-          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1nR1phMG5OVHpfQktuNklIbWs3S2RZZGNkRkE4el9SMGtnOUFZMERrSmlSWmxKZUMtdDJqUVltQXAyZDVHbVBiTU5zSExVVFk3UHBXYg?oc=5",
-          "source": "Yahoo Finance UK",
-          "published": "2026-11-12T13:25:29+00:00"
-        },
-        {
-          "company": "Air Products",
-          "title": "Plant Supervisor Stade \u2013 Air Products \u2013 Stade, Lower Saxony",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9mNHU2WUtKV2VPVUk2Z0o2a0VKQVA5bTRnZVk4RjdLLWFndXZ3bVlET2loYXRkSFk2cnZzd25INHJ3WDlwcVptWHA4QmotU3l3MlF1VXpGcmpKWFJjTHhpX3dOSE1ucDc4SngzR2o1SVBkajZzTG01a1RvbVo?oc=5",
-          "source": "energynews.pro",
-          "published": "2026-11-12T11:39:12+00:00"
-        },
-        {
-          "company": "Linde",
-          "title": "498,633 Shares of Linde PLC $LIN Bought by King Luther Capital Management Corp",
-          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOczFBck1iREUxQU55akVjdDZHaEJEa2ExbGNWbTZyNGVSeGJrVzh0QmthY181OHVDcHdjRnl6UlJ3SXBXdkc0WFdCYUpEaE1pUExLYXJhWHVKZkNHN0FEdWRhYnJ6OUc0cHRsUGhCTGoxcTdxSkFuSnNJWk5yNWNIZjdpSjM3cVliSk1qT1Y3TmlCZmpaZEl2SVVHN0VPVVV5T2U1U05jdGN1aWNXNk5UV0JfcjhVT3ppNWR2bWZmdXFHU2VhS3piNHM5cWFOd2dNNlgw?oc=5",
-          "source": "MarketBeat",
-          "published": "2026-11-12T11:27:09+00:00"
-        },
-        {
-          "company": "Cameco",
-          "title": "The Best Uranium Stocks to Buy and Hold as Nuclear Power Expands",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV09jYVdXdlZodC1JWllsaHhWOHktTDBBUVlXQmNQX3BncUs2X0NVMnV3dlpIOENfSlZMcUVSM3B0d2x1M3pkbHp6dVdjMFEzR3dpdXBQYU14ZEI5bUUwOGRwVTh3OVFSVlhKYkhvSmJEbXV5eXhlSThrcl9YWFFLNHFPR05PQzh4cVZpemkteVA?oc=5",
-          "source": "The Motley Fool",
-          "published": "2026-11-12T09:40:00+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Quantum Computing (Adjacent)",
-      "analysis": "19 stories in the last 24 hours. Most active: PsiQuantum (4), IBM Quantum (4), Quantinuum (3).",
-      "stories": [
-        {
-          "company": "PsiQuantum",
-          "title": "AMD Stock Takes Quantum Leap With PsiQuantum Investment Plan",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNclM3OExhR2dPblpaQ25rYjc4eEpHQmdlOGdIVWxnOWZvNUNJZUVWamI0WmxGWDRXVE5FbzJORk0wdXZvM1h3azl4VWlSSFJycno5RWhHbUFJVDZkTDl4a3FCY3dSQi1acHBlbVBSbk9qOUNFWW4tNG1UMmN0ZkhsZ3RhalBfQXZ6SnNwMg?oc=5",
-          "source": "Blockonomi",
-          "published": "2026-11-12T13:50:44+00:00"
-        },
-        {
-          "company": "PsiQuantum",
-          "title": "AMD teams with PsiQuantum to design fault-tolerant, utility-scale quantum infrastructure",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUFluLWRISnVSa3paZ1BucnNkVldNRFBxNkEwb2g1eHBDblJXc0YxTjRYYXA1bUo2c1JMQlZINXpSSTJGOGVadWpqR2RGOV9yR1RiMnkwVnpQYkhBY3FldWxEazdYUGxkMHlyLXJrQjBqdEJCc2kxVm05MENOOWpFSEtxdWZ6aEtpcDV3QmsyMDZyb0ZyODktajY3aFBWWDE2cmhQQ1k2UTFrRGVDV2Z0NGVtYnh0T3FGR1l5SkhScDQ3Zzg?oc=5",
-          "source": "Seeking Alpha",
-          "published": "2026-11-12T13:44:39+00:00"
-        },
-        {
-          "company": "PsiQuantum",
-          "title": "AMD to invest in PsiQuantum to advance quantum computing infrastructure",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTTFkTGh4eko2eld1TFJGZ1g1cjlWeHd3eFJ0aVVHalJNSG5VQW1uRkFnNFdFV1BMTWhhQ3Q4WmdxZTNsOHFLTmszallnUWo4cDk0UXZOTzZ5eDdEVm5aVmRzb1Zicl9ESVZhbjNiakdWSDREU1M0dVBmbDM1VFk4bkdOclhHQ3NuRW5Id0JfMTJoOVBqX3FtRXlqOWE5aFI4YXc?oc=5",
-          "source": "WHBL News",
-          "published": "2026-11-12T13:38:16+00:00"
-        },
-        {
-          "company": "Quantinuum",
-          "title": "BTIG initiates Quantinuum stock coverage with buy rating on quantum edge",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOekhCQnRHbnpCbHVZcHhnSVpfSWtHZV8zeExvcmoxTDdaZUtvOE96bXhHM3l3NWljREpWWF9ZZEdQS3lNbTdwbER1YW1SZENSRng5ckU2NU9QT01zSzhXUHNSOGM3WXJ2V1MtSkdmNDlpM1JUajFoQUtvTEtfM1djZENwTmg5Y2JoQ1BpeWg0R3ZzNmQ2clRLNU45NUxMUWx1Qk5xVW50ZmtaN0tNSm9lazJyTFFhUTFWRXhMXzBNLWx4R3B2ZEI1X2pNQmc?oc=5",
-          "source": "Investing.com",
-          "published": "2026-11-12T11:48:25+00:00"
-        },
-        {
-          "company": "IonQ",
-          "title": "Where Will IonQ Stock Be in 5 Years?",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaktjSUJlZ3E1di1DZ1JpZ3o2Zkc2QTJjc09Kc2lubk9GMTdpM18zMWk3LWctdjNHZEd2Q1QwVFVUUXZZdHcxT1RDMkw4eWc4MGx5b2UtYU84V05OaEFGcHBiVTVMaFZzYS1rY29oYUhvMjFDZGcteWFaMVJfSWU3MV9ZMUxaVVFENHdiUjNleXlhWVU?oc=5",
-          "source": "Yahoo Finance",
-          "published": "2026-11-12T11:35:00+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Hyperscalers",
-      "analysis": "17 stories in the last 24 hours. Most active: AWS (4), Meta Compute (3), Google Cloud (3).",
-      "stories": [
-        {
-          "company": "Microsoft Azure",
-          "title": "Kno2 Brings Nationwide Connectivity to Microsoft Azure Healthcare Customers",
-          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQczVMdlFUQklYZWptUS1mbEM5SG53R2ZmVExtTUVlNWZGUUxyRVo1ZUFQakVrZzBMdHIxU3ZTRmZFOUpFUUZWd3RHSXdaR0VpRm5xejRQVU04c2tRT3FVeW9IbElRWFpiaU5tWWh4Nkdhak5LcHFkeGFQcW52T0tnb0g4QzNvQ0ZQd0NtMVlFM3FibjJES0tnS2FBemV3SjdaRHhQcV9NbjdZTndjTGhfRnRVOFlRZGxqQWtpWmJLSEhDWjNDcFFNQ1UxTEQwcmJxY1E?oc=5",
-          "source": "Morningstar",
-          "published": "2026-11-12T13:30:00+00:00"
-        },
-        {
-          "company": "Meta Compute",
-          "title": "Meta Infrastructure Chief Santosh Janardhan Steps Down; AWS Hire Dave Brown Takes Over Data Centers",
-          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOcWJpYXlUMGJrNHlvYWxDTGhIQWRkejJzcXl5b3Y4V0g4N09mME9OdGI4YlpTUG5oWTZiTERRdnR6dy0tdU1GVGVtSTl0R3JCUWVDNUczZEE4Mk56LWgzd1dLcFlGcU5fQjNQSkVHeDM5dGdGTE1heGtrSTQ0T19FYkZ0LTRPcjhOVWdNYmpYV241TXdicGFwTllUelBhQl92dFJWcWlweEQ1OTJlazBWTzVnRlZaSVhzbGNSOVdGemVhSHk3M25ZclRXcUoxaVdoTDBjSWZSOGlJWTVBN3pOWEQ0bGYzUTZj?oc=5",
-          "source": "Tech Times",
-          "published": "2026-11-12T12:17:01+00:00"
-        },
-        {
-          "company": "Google Cloud",
-          "title": "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSFBvcy1JREJDeDJ4NzBhMV9ORUFucks5eHYzR1dkNFYyeTJ1TE9iZFFDSU51Nk4tWXRFSG9kS200SmpXcjdJVXV6eGZUT1VtQ0dWdzFKdG1xRHB0Uk51S3hGX2tXZk5XWW1YMHI4OFA2M0JUVnZDX3NUOVptRmZDeDZ3dw?oc=5",
-          "source": "The Hacker News",
-          "published": "2026-11-12T12:09:00+00:00"
-        },
-        {
-          "company": "Meta Compute",
-          "title": "Meta Taps Former AWS Executive Dave Brown to Lead AI Infrastructure as Santosh Janardhan Steps Down",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQN1JuQ1JWYkpCX3llVXcwVVU2VkZjd0tzMjVjVzQ2NGQzcWg4clFqdmVmUVpnUmhETl9mMl8tNHNfMENmWVpqSS1Fa1RQdzdnc2V3U1Qyd0MtT2t4RXQ4TGlkbWQ5OG42TXRZZzRNTzllRXNtUExUZWZmSHNJclliUWpFallJV3BMV2NHN3M2QzJMRjRIUGZPVF92WXVhZ0JEZzhMVVY3aDIzUG42WGx1eUhtaDNiWk9pWXpMaURORU9EdHZXTC15ZkJzWjRROTFWbnZNTw?oc=5",
-          "source": "citybiz",
-          "published": "2026-11-12T10:46:35+00:00"
-        },
-        {
-          "company": "Alibaba Cloud",
-          "title": "Alibaba Cloud opens first Dutch public cloud region",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMHFTN0pJdm5DdHc0OTNEV0VZZll6cmhRaXh4V0FRSHZON1ZQbkVlWnhsc21iT3dGeGNwUmdzeWhITzNWYS1Gc0xLN1VZU2U2bXlmdkRSSldYN0ZXX1ZOZ0dWVE42cThYVk9DbXptSDd2V0ZxdmxkRlU5QzBMTGR2a05VWGZXZw?oc=5",
-          "source": "IT Brief UK",
-          "published": "2026-11-12T09:15:00+00:00"
+          "company": "NVIDIA (Mellanox)",
+          "title": "Colette Kress helped bring Israel to the heart of Nvidia's AI business. Now she's in charge.",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBtcVpnOXE4Sk9DN25tRFl0VDBSV3dCWUpZTFNpak5FTFhmVVRYWWppV3ZQYkxPSzVsSnJpN3Jwb2hrNmhFRGc2bFJxU3RUMklncm1KemFxai16WU5rNlMtSTZwblYxTC1Y?oc=5",
+          "source": "CTech",
+          "published": "2026-11-13T12:02:00+00:00"
         }
       ]
     },
     {
       "title": "Foundation Model Providers",
-      "analysis": "14 stories in the last 24 hours. Most active: Anthropic (4), OpenAI (3), Google DeepMind (3).",
+      "analysis": "17 stories in the last 24 hours. Most active: Anthropic (4), OpenAI (4), Google DeepMind (3).",
       "stories": [
         {
           "company": "Anthropic",
-          "title": "AI models from Google, Anthropic and more lean on recommending promoted drugs: study",
-          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTlh1MGktTFl3SEdkWkN3Rlk2ZHNtTlhabzY2UkFuelZ5dFJfaHZ4U0VHc2dacDZ0bHoyVU1vSmRwTHdad1U3a3NDTUFHeEtGWlZreUxJMnJaRXFNaEV6VjY0bnVEVGhLWlVGR05CUnM4eldSZFJBXzRLT1F3Uk1VRm94c2ZaekR0S2hqTEVkRFhuX0d5MWx4ZDhVdnZqaHNfZVdIV3VLNS0yeTA?oc=5",
-          "source": "Fierce Pharma",
-          "published": "2026-11-12T12:45:05+00:00"
-        },
-        {
-          "company": "MiniMax (open weights)",
-          "title": "MiniMax Releases Open-Weight Image Model H3-Image: Only Pricier Highspeed Tier Nears 10-Second 4K",
-          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNa2l1cUdxTVAxeDFiQ0NpbEZfT1NEV242VWl4a3gxRFNWZE5wckxjemlpdkdGakhQVHhMcmRWN0ZhQnVVcG5RRkZvNzZDeHpBVDZ2X2lhTG9selk3cnZYbXljX0RwOFlJMThLdk5XaXdMZmh2VXhGczFzOF8wQkNod21aT2drRG42U3JaSElyVWk3VV9JbW81bmpyMnFGc2YxVmh0WWR2aTIwYjJvenc3TFlPM2ZBUkR1T2phdFduLU82VU9henpJWjFkN2dNTml1UkdfZmo3bjVlZHFqWW16c00tbDVSUQ?oc=5",
-          "source": "Tech Times",
-          "published": "2026-11-12T12:37:41+00:00"
+          "title": "The Stock Market Is Bigger Than Nvidia. But What About Anthropic?",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZ3hvLVN0dVZKMTV2YVNERXMzVkZxcWZ1d19kWUpsM0RnRDJaWlZrcFhEVVZFRTZwR3lsbnNDWlNGbkdtakZKaW5mZm9BQ2NKRC1NaXJlVlF3UjBZMjRfQVM0c25Yb3hEMXlHeEF0MUNtZW5jY0E1N1QyWW5qRHptbw?oc=5",
+          "source": "Barron's",
+          "published": "2026-11-13T12:38:00+00:00"
         },
         {
           "company": "Anthropic",
-          "title": "What Does The Anthropic IPO Mean For Broadcom Stock?",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObE9Hcm5TWkh4aUExY0lHX3lHc01ER2hueDJGcXFaOXlxaTU0eW00OWdTUm51UWpNNUlRXzN5bGNsZ3NBQVVhNVlaMEVfbHVnRlVLWGxpZElSVjVPX3lHcXQ3Y2ZYTWxXZWtNVGt4SXhMYVlhR1MxNmJsT05TSFFfc2RGUDBIY1dkOUtua01JUVZ5Q0dvajVxTm9rYXZfVU1ZalRTeVg4UWdhdVhVSUczeDVB?oc=5",
-          "source": "Trefis",
-          "published": "2026-11-12T11:25:22+00:00"
+          "title": "Is Claude-maker Anthropic going public just as the AI bubble bursts?",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWVJPMWF5cVBHQjhIYUZ4V1F1RmdRbTNvWEVDWmZXY2JZSGJMWE81akNWVHFQc0FsRDN0aFk0VmtfT1ZfdFVKdXUxcF91UFczV3lDbzVVSWVwX2YxV0JQdXd5b2FsVm9HRzl2STFFSjNwSWQtS3QtSnBLMm9IUjZCNHBhUmdXLXo5bDc2dWJzQkZGZ9IBkgFBVV95cUxQQmlPNUVGME9kZDNadXdsbk5TRkpXd0FmVDltVDBuRVFUX3REWFJDSWM2X3Z3SzlLbzViX1l2VGxJSl9Uc2dkcm9wVkV2SkdSWk5aYTg3bWw5VERKWnB0WC1xcXlPLU5BdmlZY3RJYnhiaHhoS2NTeTJ6NUtOeHpTV1lvNjUtQ2pCdEJrVTZ4Vm9NUQ?oc=5",
+          "source": "DW.com",
+          "published": "2026-11-13T12:32:21+00:00"
         },
         {
           "company": "OpenAI",
-          "title": "How Apollo\u2019s SoftBank Ties Unlocked an Unprecedented OpenAI Bet",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRWRLTDUxX3VYM0Rwc3FpUkFzM01kOWhYWmlaS1dmU1c0OUxKVlFQVTJ1X0NfZEtaTzZWT1Rlb21ROHg3NUIxUWI5b2pnN1NrYUF0UEEwMXNUQ0tXOXJxMFNZYlRKZVROc1VXNHU4aHJPMFdlbm02WWRXQnBlNzFGMW1MUkZWYzhwdURjbnRTTU9zYTNuQTM0engyc1NmMGF6NGdOUVB2NWRxM1pYbWxnNXJSQzQ?oc=5",
-          "source": "Bloomberg.com",
-          "published": "2026-11-12T11:00:00+00:00"
+          "title": "Cerebras Stock: Earnings Beat and New Microsoft Partnership",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5GV3pHZXI5bHdjSjFjc2JBMEF0UGNGZTBYVUgzZzZ6Smd0dGhTdUdyYzd2QzVYbnBrUkRweWhSWW9OQ1ZWVWotWXlBbHFob05kWUtqSmVwOEhZXzh6azBFZ0haOTh3eXYzazZ3SFluUDRWRW5FYi1EY0FtOA?oc=5",
+          "source": "Barron's",
+          "published": "2026-11-13T11:13:00+00:00"
         },
         {
-          "company": "MiniMax (open weights)",
-          "title": "MiniMax ships open-weight image model, bars US, EU, UK and South Korea",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNYTV4My1jazFBRTdUaC1KalpDaFZGNXZiT0E4MXhoWlF0VjlEWUR5SXl2T1dSN2w4Zm52VTV1QjBEdEpXUGVIZnpnVEdXX0pDYmpMNDJCWE01cFJKNjVaVV9EMy00VEh5RUdTQkVRQ0xFcDJEUUpIdG1FVGxQZ0xfX1N2Y1lmWlFTRFprRjhyY3Z5dXJtand3MWtMQUs5TUZzUUtN?oc=5",
-          "source": "Dealroom",
-          "published": "2026-11-12T10:09:29+00:00"
+          "company": "Moonshot AI (Kimi, open weights)",
+          "title": "Open Source AI Models: 3 Run Paths, 48% Coding Index [2026]",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeGs0NkFSTlFpUXNQNDBZeEUtSjVpb1ZpM2dUMWtvcjV0dVJuNXJVVGlrQ3RYWDVlcEQ3cVp3RGtiSmN1WEZieWUtanItbnRyWVRYTlhRSERUc1oyamJPNzQ2blB0R3BWcjVlaGUzOVBaVDZNVncyaTJkZEhfeXN3OGszSXdQREVvWUhCYlJxU3ZXeFpWOFczbmdR?oc=5",
+          "source": "shattered.io",
+          "published": "2026-11-13T07:59:25+00:00"
+        },
+        {
+          "company": "Google DeepMind",
+          "title": "Google DeepMind Introduces AlphaProof Code for Verifying Complex Software at Depth",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVzkxU29lczBKRWJXd1hhbmVSbFhEaEdYcS1lX0NUU1hkX2JkUlZGUnczX1g4dXR5ZDNwWkpKcm5Kb2dzSTEzMFA1bGMtRjNxY0szY2M5ZEJaS2JLdGVBQXRYS0ZMdlZnRmtuUUhuTWk5QkdQNFRRYzFwMzdXS2NYaUc0X3ZaaW1QaklTSWhicWNnRmhxdVRGRFR5NVVlVVZxS0staEgxbU40aVZnYTBoWVBEd3dNN3Q3QWFXRktTQXBoQTA?oc=5",
+          "source": "HPCwire",
+          "published": "2026-11-13T01:33:15+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Critical Minerals & Raw Materials",
+      "analysis": "14 stories in the last 24 hours. Most active: MP Materials (3), Codelco (3), Linde (2).",
+      "stories": [
+        {
+          "company": "Linde",
+          "title": "What Are Wall Street Analysts' Target Price for Linde Stock?",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPc0ppYTVmYTdDOWRZenhfYW1iMGx5TldjdU14ZGpwSHpyS1I2RnZrajJRVjlFTnFRblJrNlNuWjExN29wVS01eEIxOUhJajFoY2JMMjRmQWJwaERocWpGT3NJc0F0VDhRalFvU00ydXYwY0RzcVVmN2YwLXNIQThsNFRYS3ZSS2dISVRJcC03Rl9GNGhQYnVZSE1xMHJyOUV5b2t0Uw?oc=5",
+          "source": "Barchart.com",
+          "published": "2026-11-13T13:18:37+00:00"
+        },
+        {
+          "company": "Air Products",
+          "title": "INOX Air Products plans 27% capacity expansion on buoyant demand",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSG8zV0NIQnVyTzZwRHZXMzdZYkljT19xWlVOMDBMM1dLNGh0amVWSEVDcVRSY2c1QnpqLXFuWFAzdjl0RnVTWnhVeDI2SFVKdHJNN1lXc1YxZGZIY2NUV0lsYUNWelRFV3l5d1Ntb2dQc21aY2lKalNMREFNU1ZrUGlPZ2pXaENWU2d0cjdsYWdIdngxdE5lU25EeVlWeG5vQ3BHTl9oSndhQWVIcm9iRG0xM1NCd1BvMXpnNg?oc=5",
+          "source": "TradingView",
+          "published": "2026-11-13T12:02:25+00:00"
+        },
+        {
+          "company": "MP Materials",
+          "title": "Wall Street Wrap: Nvidia Faces Downgrades As Jensen Huang\u2019s Exit Rattles Analysts \u2014 AMD, MP Materials, Riot Platforms Get Bullish Calls",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTTZXcF90OGx5aFBrblROcDBBSlhFQjM1MnNvbEtiMGRvamhrdVl0NmM2Y3JWR1hBRWlKZFNiMDE0eXBQWUVCRllvcG50OThESTh1c0VLX2lHd0R4VHI4aHNjVzhBMjREU3V0UTBVbUVfbmV6NjU0SjVhaG0yQkVGNlJOUUI4TTFTTHFrOHFjdHY1LThzaFp3UEt3?oc=5",
+          "source": "Yahoo Finance",
+          "published": "2026-11-13T09:06:45+00:00"
+        },
+        {
+          "company": "BHP",
+          "title": "Bobcats look to hone in on BHP in Crane\u2019s return",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQ2JkTk9aTGZ6Zk1Sdy1BYTlVU0FBNGxCU2t1YXFhNnZobUFTcmM0SjE3VHZ0VHBSblZLczhDVGg0UFlvLTd0VUtfTVNfbkNMWHdqNjZHYzdsTVFGVEl1OEVYOEVQZjV2dU9tcHVKaW5HbXhGTXNRN2JOMU50Ujh6dDNfcHJxbDNlMHlnUjB1QXoxYUwxSEdVT18zZlcxU3hQa1dXTlVKUW5QMkJIcllLNUMwNW5VcFdFeFU3YWpRSTJYT05JLV9ibHRR?oc=5",
+          "source": "upstatetoday.com",
+          "published": "2026-11-13T06:30:00+00:00"
+        },
+        {
+          "company": "Codelco",
+          "title": "Chile's Codelco Partners with Adani to Secure Long-Term Copper Raw Material Supply [SMM Copper Morning Meeting Summary]",
+          "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOMldTcjdsNzBSUjJPck1teUx1RVBwVTltRzZkaE1BMGE3NUVKUEFONDdCeWdmQVR1NmJIVmRhZzd0SXhZNnRkM1VINGhyeEJuTDQxNFJQXzZyS3RtcEJER19Ca0RYTkVZWTFiLThpRWhrUW43bXZzZFhVbk1KZlJfeExnNGEzTHBvcmhHdkM1cTBBa1JyMGRrR25sSXJuT1dadDEwazlmUEk3RzdXLU84c0JxTTRiUTFtc2xKQmNDTm9JM0d2amwwbkw1QXVTZUljQ0VwSGpFcVZRRUd0dEhRWk1jbDFPMEJLT2dJV0JjWFNZTWR3T3g3SnRveU9oZV9hYmwzUllMbUF6UEFwT0NSYUQ0bmtJY212MWZj?oc=5",
+          "source": "Shanghai Metals Market",
+          "published": "2026-11-13T01:05:00+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Semiconductor Equipment & Lithography",
+      "analysis": "14 stories in the last 24 hours. Most active: Lam Research (4), Applied Materials (4), KLA (3).",
+      "stories": [
+        {
+          "company": "Lam Research",
+          "title": "Lam Research And LEGO Education Partner To Expand STEM Learning For Kids Worldwide",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KY0Z1OVE1QU1VWFZFYjY4ZmxEQ3RnT2JOcXM2WENncE9odkJJN2ZzVHFYLWhReXFtcW1lZHlHODRuTUJIbElNaS02RlljUmlDRHV0M29lMjd1T3lQR2lwa2pOcnEwU0QzOTJSV3p4Z0U?oc=5",
+          "source": "Pokde.Net",
+          "published": "2026-11-13T13:18:28+00:00"
+        },
+        {
+          "company": "KLA",
+          "title": "What Is The True Hidden Price Of KLA Stock?",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORnpEV3Q4WWN6SGg0Vm5ZSC1rNTFMVV9vNVQ0N2xyNERza3JERk5xU3dqbEM3X2FpWlF3WU1FbFoxYTNVUXZqTVRyUDFHWjRYY3E3VjBVQUxTV2lVTU5qZ1cteUVKTnBJQ2FsYm5WZVNuTHpMdktCMTlvTUdNOVpsT3lSdl9lMmQwanNmQS15SW80U1BWdlFpWlZoYTAtYlZyTWhyS2pEcVQ?oc=5",
+          "source": "Trefis",
+          "published": "2026-11-13T11:26:15+00:00"
+        },
+        {
+          "company": "Applied Materials",
+          "title": "Huang ouster fallout; Cisco, Applied Materials outlooks - what\u2019s moving markets",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeE5HeWNYT1BwcVcwbDBBMk5mN0MwNWE0SGFrZV85VHJ0Y0ZfQXFOS0ZQRVd0aGFaYlBiUV9iWllaVzBZLUFQM29zRGtxVEtNWTR1RG1qZFdOUTZTSDRuM0VwODlONmdpVUZXYi10eHNQMHNvaGdIVVU0Mmh2cnlDU1c5d2pRWVd4RzhSZ0ZNZGV1VEJ6b3JOaTRQM1NJLTJ5cXo3b3J4N0xFX1Q2b3dPVERuamQzSHQzc0tGd090TXJMR3JhN2c?oc=5",
+          "source": "Investing.com",
+          "published": "2026-11-13T11:06:27+00:00"
+        },
+        {
+          "company": "ASML",
+          "title": "ETFs Are Net Sellers of ASML (ASML) on Nov. 11",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPYlNBRkJkM3ZiWVFQTzF3UnpkUDhqVTBBNFZvaHV2ZER2d204X29xU2ZjVW1DRFFTa2M3SFFXaWd2aW4wVjVnZ0p3d1dmMEhVUzJ4MG85QjVLUXFkNGFZWVI1aXlpMkh6UGNtcjJNNTg4Z2t5VUJiRloyUUU4QVllS1psVVhjSndDamQ3MHJ4eTBRNko0RUE?oc=5",
+          "source": "Yahoo Finance",
+          "published": "2026-11-13T11:02:28+00:00"
+        },
+        {
+          "company": "Applied Materials",
+          "title": "Cisco, Applied Materials And 3 Stocks To Watch Heading Into Friday",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOcHY3VnI0TloyM3hCVzNMZ3lWaVNXeURhdlZNTnJNMHJJa0tvTVBFQnJuSWx5R1NIalVhNXBFRjZQRHpJT2RwXzdTaUI4TUZPYkVCcWpFS0c4aFl0OEpGTWk3OW1yNGVWaVlIa1BzUkxud3VMUVFuWXhZd1pUcTVxS1F1Zk5BNDFmMjkySWV5bkhGVTRwSXV5RHZvaXFRNGxxd3c5TVBwLXVLTzRwNDBTN19CQ3hWa0dQTnNaUGxFbmdPTVpueG93dFFR?oc=5",
+          "source": "Benzinga",
+          "published": "2026-11-13T06:43:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Quantum Computing (Adjacent)",
+      "analysis": "14 stories in the last 24 hours. Most active: PsiQuantum (3), Rigetti Computing (3), QuEra Computing (2).",
+      "stories": [
+        {
+          "company": "QuEra Computing",
+          "title": "Quantum computing is coming to Pennsylvania. Are we ready? | Opinion",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMWJ0RjBKZjJXV2NVYzZCeTVOSXZqbzVlYURNdGQzOXhRRmhtUDdvSzNmaVNLeXZraUZkM3M5QXRsVlYwWEZRZEJQcG5tUWYtemhPbkc2X1QxWkc0V3h4N2ZJaUs3ejJpTFBBZS1WWG1WZm9LTDZnamJxNlI4ZWZpalYtbERvdG4wTXZyZ3ZuU0tXOE1TQmtUVkJicFRiaHhYX2o1UV8ybkxuY0hsb1dF?oc=5",
+          "source": "PennLive.com",
+          "published": "2026-11-13T13:00:00+00:00"
+        },
+        {
+          "company": "PsiQuantum",
+          "title": "PsiQuantum-AMD collaboration could reach Chicago South Works",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd2dsMkd4ZVJZRG42U3JDcER0Q3Y0TENiUUV4OVdYRS1HdzdXOVlQQXVKdldGMlFiMm5uZ2NMcl9OOVZkUHVLUENLRTh3OTBFUk1udHJoV1dPMVJqUGhzNlNCNVRPVXItZ283dFY2UXJ0VTVLRkpOSnkxN3V6N2RqOTZUdkttaHlNbm9QREszYlpkS012N095c2tJeXJ0U0VyQnIxQw?oc=5",
+          "source": "Crain's Chicago Business",
+          "published": "2026-11-13T12:04:02+00:00"
+        },
+        {
+          "company": "Quantinuum",
+          "title": "Quantinuum, GE Vernova collaborate to advance superconductivity research",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVVdTandVTlFkN0FSQWF3VlJTUlQ3SmswR1BJekpVNmpIYnVGVVdrek5SZlBSRkpZZXdGUzZtelUzYld3cGxpUk9GaUo3N2lQOWVGTUIyeFR2OWNMa05ib2l3bUFUM2NtdkFOdDV1SXlwQzEyWVEzbC1BTUtESmNkU29qTTZfQjQtXy1BQTAwekJ6UUZRLWE3YzJ6T2RRWEFOb1k4N2Mxc3RPUjFSdkE?oc=5",
+          "source": "Evertiq",
+          "published": "2026-11-13T12:00:00+00:00"
+        },
+        {
+          "company": "QuEra Computing",
+          "title": "QuEra Found Ten Applications Survived Three Years Of Evaluation.",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWGZlMTUtR2k4ck12YmhDSlNjS1I5MjB6eVVrMklCRUx3aW9WMlpCaC1xRHlmSTR0aEZQLU1BNi02SGsyVTJIUERSYlBPY20zSGFzek9ULTBTTzFoYU1iaVhWSVZfVlNqcGtpanFhUS1Oc1BTTXpfMnZadnNzVU5kN0h3?oc=5",
+          "source": "Quantum Zeitgeist",
+          "published": "2026-11-13T09:45:00+00:00"
+        },
+        {
+          "company": "D-Wave",
+          "title": "What Should D-Wave Quantum, Inc. Investors Know After 9.51% Stock Drop? The Law Offices of Frank R. Cruz Outlines Securities Fraud Class Action Lead Plaintiff Deadline",
+          "link": "https://news.google.com/rss/articles/CBMixAJBVV95cUxPWmN0TFhmbkhMUEFiVC0tSDB3ekd0Uk5uR3ZDOEYzYUNUWEtEY2hIeENpa2ZRUGhJWmVsNXBTQkNpVklYbVlqd0diamJFaGkwUl9mbDZZcXZHWnZvXy1fRFBRLXhfWXkwQzI4d1lMWHZLWHNWek5HSExsVjhlWGpnMUF6QW9wc1g0Q0tCMG9DQ3pZR1N6bllENUxsa1RNTFlsMXpkelc3SlJucGRVTzVqdzFiVk5LX1RUNEZiTGNzaTlGampQa2pZRHRUbkdSMW95REJYNGVCWmNRQ0VHVkVtcFNoN3RqTHFmcjRfUW1PRnBVb21oRGFoaEY4djJoc01ZZ25FMnJMUk4xTzR1Y2F2M2RnZFJvRVVxOHR3d2x0dmJjaWxUbUlNNVFibkpLOW1yRDBnYXRaSTl0aDdqMExITmk4WEg?oc=5",
+          "source": "Morningstar",
+          "published": "2026-11-12T19:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Datacenter Builders & Operators",
+      "analysis": "13 stories in the last 24 hours. Most active: Switch (4), Equinix (3), Digital Realty (3).",
+      "stories": [
+        {
+          "company": "Applied Digital",
+          "title": "Applied Digital Soars 20% in a Week. Jim Chanos Calls the Wait for Profits a \u201cNonsensical Narrative\u201d",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcTFEVHZfQmo0RThicUVCOTdXN3lqWEUzdl9uZVdhY1pPYlphZW8xbmswajhoYkNXYkRDUl9LdExJRW9qTWdDU2Uwenoyb3V2RklxOW43amN1XzBqMk4xT0p3SE9UMmdvYklXakM4ZFRqZFlsMXRWaWlwbDNnc0U5QTByVl9aYkZNekZUUmNqLWltVVQ2SGdFQlJR?oc=5",
+          "source": "Yahoo Finance",
+          "published": "2026-11-13T12:05:17+00:00"
+        },
+        {
+          "company": "Switch",
+          "title": "Mauricio Pochettino\u2019s switch from USA to Manchester United confirmed",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbk1sdlgyRGIzMzBwNXd2SGlwcW9wdnhFdzhYYW54S1Jxa0dHckJrNkJab1g3ZUF6djJnTVl6RldhVjN6eWlJc1dpc3BaMHh2bUJCUnM4aVZMdjJJLWNfWmhidWhMUmxsV0tyRnYxajFlTGtMNG1FbDJYT0ptcjJhdnV2cUJYei0tSDJNYldDemFDNHdHX3lWZUUyLXNMWlZablE?oc=5",
+          "source": "The Guardian",
+          "published": "2026-11-13T12:00:00+00:00"
+        },
+        {
+          "company": "Applied Digital",
+          "title": "How Much Should This Fall Change Your View Of Applied Digital Stock?",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdTlyRU1FbmQzbGU1SXpVdVdTWjFwYmJrbWw1bGlEX3V1WVN5bTQwamd6OXY5SkpiSEUwZU82R0RhSkJtcW9VVFh4Mjl4WXB6RFRCZlhmWGhOOG9xak1iN2lYSllzOUhvelprODM5ODNham45R2JVUHlCM0VtSDhJajlaVENiX1JfWWJETVJ2ZC0zbVN4WHhMZktkMWpNaDJwMTJ0MzFWbVRGSGh3akN1VmhLOEFKcE9EMTFueXdzRGYyMlZhZUpj?oc=5",
+          "source": "Trefis",
+          "published": "2026-11-13T10:50:21+00:00"
+        },
+        {
+          "company": "Switch",
+          "title": "Round Up: The Reviews Are In For Metaphor: ReFantazio's Switch 2 Port",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVnVEdG8xNU5hREtTZHR0TmpDOHROc2FoTDZIVWxkYlFSSnRfeXhrMlJZckF3RURZcXpBME9pRnVMbzBneU1oaUtVb2pibERpSTlJZ3Z3RHRkcEkzMGRJMVkyUFBrUE5JdkRLcFlNeEtVTS05NzJHS3lndTA0b1FaSmxVVXVxWTdFNHplQ0xSbUZrd3JSMkItOTIxVV9ERWluQXYyVEZMeTF4RHZH?oc=5",
+          "source": "Nintendo Life",
+          "published": "2026-11-13T02:55:00+00:00"
+        },
+        {
+          "company": "Equinix",
+          "title": "Equinix Fabric expands 100 Gbps virtual connections to Denver, Dublin, Manchester and Seattle after muted trading session",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQRWptN1pMRkhDU2drUmliMTlscU12ZmNVc1FGZ1lJUzQ1T3pSSHZxTHprdFFtRGlvZHR5SmRKWklwS0RtSkVZZURiWHJDZExoeHpUUUtjM25lbjdmTUl4LWo5Wkc5a2NxcS1MZkhxTy1YcGthWVNvWjRWbmd4WXNUU1RNYVhSN2pOZmZv?oc=5",
+          "source": "Traders Union",
+          "published": "2026-11-12T23:04:25+00:00"
         }
       ]
     },
     {
       "title": "CPUs & Host Processors",
-      "analysis": "13 stories in the last 24 hours. Most active: Apple Silicon (4), AMD (4), Intel (4).",
+      "analysis": "13 stories in the last 24 hours. Most active: Apple Silicon (4), AMD (4), AWS Graviton (2).",
       "stories": [
         {
           "company": "Apple Silicon",
-          "title": "Mount Thor raises $45 million to build Mac data centers for AI agents",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaUdlbVJjRVNLdEprSDZaMGlkZElMRHpyVUxFNVpiTF84OTJ5aHl0N0FWWS0yOEpkSUcwN195OUc3a1VPMThkRkJISzU3Vm5QSFhZcnN3T3o2RG9iamx6QWNPQks5NURSSXJaS1RkRjNwRDNDUDJ1LXl5b01wYnlYYmJqWkJGdGNOZ09oYnloOGtsYWRBR1phZDBtLW9tNDJVWlE?oc=5",
-          "source": "9to5Mac",
-          "published": "2026-11-12T14:00:00+00:00"
+          "title": "Johny Srouji Nvidia CEO Report: 1 Source, 0 Confirmed",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTC1yTGpwTUJCNXEtWm40Tkx4RzRRcWVOWlBqLTJxY3lPb1dCUnlPOUZ0Y0xQaXhhY0UzWjV4eHBtZzY4TVdPcEZOWk1RbnBfNjhEeVh6c1VsWDBWRS0yemN3eUxLTF9tOEw1ajluQjc4R2VLek50cUZ1WjJHVUxCRTdYSWM?oc=5",
+          "source": "shattered.io",
+          "published": "2026-11-13T11:09:26+00:00"
         },
         {
           "company": "Apple Silicon",
-          "title": "Apple Silicon chief Johny Srouji could take over Nvidia as its new CEO",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOalJjeVUxaDVISzh3bkVMUjMxNnVVRlVReEMydnYxR3pnN3poWDZJYjZiYVd5c3hmbmpibEI2ZVN5cVYxNnlOQ2xpM3A1UkRLazFZclNKSk9pcGV2dTBmSlp3bTk5aXV0TWZORUo1X2RfbXhhbkc3QXJzXy1OU0lyMFlWdUZYNUszTTFpLTdMVC0zM1pwZ2J6dU5FaUxGQ0Uya3VlME9FWUZrSUdYOXdmWTF2bw?oc=5",
-          "source": "AppleInsider",
-          "published": "2026-11-12T13:10:00+00:00"
+          "title": "macOS on PC becomes possible again thanks to Apple Silicon translator for x86-64 \u2014 Hackintosh revival project uses Linux-based UEFI app that translates Arm and Metal calls on the fly, currently 'slow and not very stable'",
+          "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQRTVsQWRSZmlhaW8xZU16VWxubWFDRHo4OEM0bnhSMkVrUEVfMHRhTk9WdFZYTURiN2xNX2taUk1Na1l4YkhvU1E4MTRkU29CeS03Yl9nUlNSTkhBTkhleXZ1VFQtTGpjVHdVbXNJdjk5SEFpVWNNVmJpZV9VRjlhMGlWaElLUXg1Y3JBZFZPX3Q5em1EN2x0bEthZFppNm9lbE5vWUp3ZzFMZ09zN2tyUFo0b3J6WnlWU2F2ZEQwTTRFeVloOWZDc1N6dGtCLXgyVUpNNTBGTHE2Z2x0eXpPd1VPSEszcUNhRjd0T0NuWWs3RGxvYmgxWVpqRk5MTXAxTUhKZ2VRcFpJVlN6Z1VtOTNMaVA?oc=5",
+          "source": "Tom's Hardware",
+          "published": "2026-11-13T10:00:00+00:00"
+        },
+        {
+          "company": "AWS Graviton",
+          "title": "AWS Graviton support for Java in AWS Transform continuous modernization",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSFVjUm1PelNtajhKZUx3alhNOUJZSEdrcEJUTktLd0tfRUNjaTd4clJMekptc081akNzM3dBQk5laDNMVk5MTzdMT0RQTmZyaEN3WXlKcEdKN3VNN18zNHA5NFJueng4V2otX0VsQ21PZkE5UXdxbzNMUEpjUVFYcVhMWDMwZE0wTUMwYlI2SzBneFdRRE05Z1VHb053VDdiS3czVnA0X2h1YV93?oc=5",
+          "source": "Amazon Web Services (AWS)",
+          "published": "2026-11-13T00:29:31+00:00"
+        },
+        {
+          "company": "AWS Graviton",
+          "title": "Boosting Amazon RDS for PostgreSQL with AWS Graviton5: Benchmarks",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPUDJndVJFOWtOXzJfeS0tUXQ3VjJLRFpqOVdtMzN2SnhTR2NscmxNLUdpaU1KcmExRjVtVHJoQXBrRDN1YW9SLWpEM0NRU2U2Y1h3QUxYekNaSjFILWx6SmljMUtJVnRnWUoydWRVU3VpS3lRN2RYUW1UQlJadWhBanpBUVZ3U3phQXdhd0tzblJYUQ?oc=5",
+          "source": "Amazon Web Services (AWS)",
+          "published": "2026-11-12T23:59:59+00:00"
         },
         {
           "company": "AMD",
-          "title": "Here are Thursday's biggest analyst calls: Nvidia, SpaceX, AMD, Apple, Ulta, Disney & more",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNanBOVDF4Slo1MWFfQ2RvTkVGOGkxa0FvNHR4d3dYU0ZzYWZnaTFFU1QtQVYyQTdFNnpMdXNiOU5UeWZMZFRQdjFLUW1PSXJMZmFELU1TRDI5VjJ0WFUxM0VsWTZHWHJoTW11WnM1Si1RM214cEFsT2VJdVRKTGV1c05XMGFyOTFqUV9CZnB0dVM?oc=5",
-          "source": "CNBC",
-          "published": "2026-11-12T12:58:09+00:00"
-        },
-        {
-          "company": "Intel",
-          "title": "Intel\u2019s Selloff Is Turning to Range Bound Consolidation",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbGVsenhTYXZOU1poWjRWcDU4cUlkRGJQM1BUb1JMSk0tSlFldkpVc1ZjS3RJMlRldVFTeGlvQmNhU19QN0hNeFRhalp1YVlzU09RZU9HLVRzZ2ZJaUlJQjhORi1qc29zdnFTRU9rSElNWW9GbWI3Y0otMF9fLUxTeWdydE5Qa1lBVzZEYXpnVWZLcFdncEVLRl9yMWl4M0k?oc=5",
-          "source": "Yahoo Finance",
-          "published": "2026-11-12T12:15:43+00:00"
-        },
-        {
-          "company": "Apple Silicon",
-          "title": "Review: Apple\u2019s M6 iMac is pricey, but it\u2019s still a good choice for a clean desk",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPczRYQ3pNWnpia0JTVER5c0t5WXMtZ3BEMjdEejNVd1NSV0J6V0ppSEZOOHVRNGVPUElvcnRjcXNUUXR6ZjBtVnp2NGpXVURVOXk1UGdTVnpiWUhTUGJsVkpJSi14dHZvUG5ic1R0N2ttMURuLWgzWDByOEFOcGVub0wtMGpHWjk3Vm5GOWxjOW9VV2NOSjhGWXJ0UHhRNFZTdVhFQWx4NTU4bWtVZWthOTRQNTNNa1pXV1E?oc=5",
-          "source": "Ars Technica",
-          "published": "2026-11-12T12:00:37+00:00"
+          "title": "AMD Reportedly Cuts Gaming GPU Supply in China by Up to 50%",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWFctOC1sUTN0WEctRkxTaVNUVFN4aHltcVRzVFpDbUpQZlAtTmNUMHQxajBzVzFNSjgydUJLUmpST2U1THZGdjVBaHlJVGFqR3lFQlN6a0sxeG1fNzJBbVBUbzJZZ3FiSHVZSFdNZnduQjRDZkh3OG96R0N2T09zSkpISTJJTjk1MzEzc1dDalJ4d2cxZkN1QtIBngFBVV95cUxOdXB5N1JkRkZVWEU5VVFMbkgwUll6NUtQYWcwbWVMRm1nN1Z4ZVlfMkJTMUxkemhSM0NTY0lQcWl4dEQ4RTUzdExQcFhvN205RVQyVlJITzRVcm5UYnFFRnUtN19lazlSMlNZbGY3QTRXNmwzdWo2ZVI0cFZMNGltdzNIbmd0ZHRSVEdWMGxnR3dKOHBVdTVOb3lPa2xkQQ?oc=5",
+          "source": "TechPowerUp",
+          "published": "2026-11-12T21:14:49+00:00"
         }
       ]
     },
     {
-      "title": "Networking & Interconnect",
-      "analysis": "13 stories in the last 24 hours. Most active: Broadcom (4), Marvell (3), Cisco (2).",
+      "title": "Power & Energy",
+      "analysis": "13 stories in the last 24 hours. Most active: Rolls-Royce (4), Vistra (3), Constellation Energy (2).",
       "stories": [
         {
-          "company": "Cisco",
-          "title": "Cisco\u2019s people chief: \u2018We can\u2019t transform our workforce without fundamentally rethinking how we lead\u2019",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbzBvTDEyanlia0JtV19JVUNVNU5VQlBnNHRiTEFpOE8zakJpNnBnSnZXMXp2RzhiSkpGT3lZajZHNXR1QVFDR0V1WVRzQ1FzeTdHTG5iN2VVZ3BudXN4RW9aeEF3Y0lTYTQzbDhmTnJBbG5YUnpGQ280ZDY4c1lpeWduRkcyWmgyS21zUEwyd0FaXzhpYnRDTUhld3ZTclVCZzE2NmhjOHBLQzJpZnFYREVvR3lLTXNjOXY5S1RsN20xemdNeFlv?oc=5",
-          "source": "Fortune",
-          "published": "2026-11-12T12:00:00+00:00"
+          "company": "Vistra",
+          "title": "Vistra (NYSE:VST): A Value Stock Built on Forward Undervaluation and Profitability",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVmFNbXl5bl85SGpXYzllTFQwcmUwSEp5UlhBY0lYeUN0OUVoam42TG5JSjB6TmgzajV3TzVrUFdRdmJPX2F2M3ViRkJYVkc2RGdsYzdVVHZ2RTNDeEFzc2Rtbzdab0hBdGNZMmJVbFpPQ0dkZURxM20zMVFTYXFFYU1fdTJMV3B0ODg0MEhxdXdWV3VWQVVqNkQ2QnVGX1BUeEJKeTRQQ1U5dFNSR3QtSWV4RnBaUU1KWk5vdXg5M0NySEJnQ1hHcw?oc=5",
+          "source": "ChartMill",
+          "published": "2026-11-13T10:50:51+00:00"
         },
         {
-          "company": "Marvell",
-          "title": "Intel and Marvell Slip. Why Huang\u2019s Potential Exit Is Causing Chip-Stock Nerves.",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOa2tZajB4elVGMmRsV3Rmc3JseFc1bFUyWWd3UkpaajdDZmhqYk9PYWxyWldkOEtTLWotbHh0Y1I2TzkwYzhVT3A0ZWZZUTdCWWJmT1c2Y19YRGJocmR4UktuRW1UM1IzZlBnNHpNb0pTalJtUDJGd3pUamNUdFE1LU5WV244VlE?oc=5",
-          "source": "Barron's",
-          "published": "2026-11-12T11:53:00+00:00"
+          "company": "Brookfield Renewable",
+          "title": "Brookfield Renewable Partners L.P.: Dividend Sustainability and Income Outlook",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZ09pdEJ1M2t5cW9uUy1hVDZyb0JaZUpOLW1wODhUdVZXNmd4YkthQUtKYXRJMTZsM3U1RUMzdk04WXk1YXZOYnJDQUkxVGhyLUNJZWJDT0ptb19pci1IakJkOE0xX3VmUWRSdE94eXRzaXVYdlh3THdMWlVGQWZSUUUwOVd1MEs3RUJMaUZNNHhQcjZ5dEdYRXpWXzkwdmJ0VnBJRlhxVlpFdkJmX1NVS2pNWTZ6Zw?oc=5",
+          "source": "kalkine.ca",
+          "published": "2026-11-13T10:44:00+00:00"
         },
         {
-          "company": "Broadcom",
-          "title": "Why Has Ark Invest Repeatedly Added to Broadcom (AVGO)? Its Big Ideas Report Offers a Clue",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOM0JfVkRwcHBuVXh5Y01oTFlUSmVMb0s1TDRaNEVCM3Q3cTI3WWlfeGg3ZmNXVE83cjNkODFINnhRTXZoN1FQUGg1aXBiRlpuYnJVTUdsUTM0bklHdHVnWkF3Nkp5Zzd4SUxjMWljdFEwcUJBZ3NvQm1aTVJpOS1iZTUxMTYyS3B4bC05ak92YmZtOVNJMGpkLXI3WlU?oc=5",
+          "company": "Constellation Energy",
+          "title": "Bloom Energy vs. Constellation Energy: On-Site Power or Grid Power, Which Wins the Data Center?",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQc1N2UDNHWjgySDJBVDZ3a05fdmZZQ21QRVBkUF9hVmVjejlqTlZFdnlSTmJ1blZjU2JkOTBvUVNsTFQ4MG4yMG9RNlRjWU1jc0tVdVpocUw2dVJUUHJlRnY5UDJlckwwb0RKUFdXUFl2WlY0NHpWWnJhMkU1LTViNDNxLUFuMERLSlRhZUFYTlNnVGx2Y09uTw?oc=5",
           "source": "Yahoo Finance",
-          "published": "2026-11-12T11:32:20+00:00"
+          "published": "2026-11-13T09:06:00+00:00"
         },
         {
-          "company": "Broadcom",
-          "title": "Nvidia Turmoil Lifts AMD, Broadcom on Bets for Business Gains",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOVNuY1hQVVBKWnpYYldPbW1yYm9Nc3lhMGhyM1E0aTE2ektOem82UkdWZWtQclFUem41QWFpLUZXRnNWQV9YT2J4eUNrZ0Y2Z1JBajBYTlJmWjBHSXBVVFIyNC1jX2FiTnNIenZjSlNQX1lvb1JxVjQtMTZ4TG1BZTc4X3BJTk5SeWpibEwzeWM0VF9rSEs3SHpLcXpYckJmQ0Q4RXN1REVuNDhUS09xYg?oc=5",
-          "source": "Bloomberg.com",
-          "published": "2026-11-12T11:27:15+00:00"
-        },
-        {
-          "company": "Broadcom",
-          "title": "What Does The Anthropic IPO Mean For Broadcom Stock?",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObE9Hcm5TWkh4aUExY0lHX3lHc01ER2hueDJGcXFaOXlxaTU0eW00OWdTUm51UWpNNUlRXzN5bGNsZ3NBQVVhNVlaMEVfbHVnRlVLWGxpZElSVjVPX3lHcXQ3Y2ZYTWxXZWtNVGt4SXhMYVlhR1MxNmJsT05TSFFfc2RGUDBIY1dkOUtua01JUVZ5Q0dvajVxTm9rYXZfVU1ZalRTeVg4UWdhdVhVSUczeDVB?oc=5",
+          "company": "Vistra",
+          "title": "Should I Buy Vistra Stock While It Is Down?",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbFpSVG5WWUhqeFJOQV9FZEZjbWlCTWNWRVU0WkhfdlI5eEtqZXR1QjYzQm82Y0liQng3Qzc0NGowVGdyaFp1ZWxxcFhKMV9fY2ZsbmU5d295cjZIRmpjMzlPZHFoY0JMb29qVFhCcEtvVGFyZzNkaFl6aXdNRzBpMXQ4cEJSQWx4Yzk3ZVI0M3lTcThoSkJ4ajFUSXNjVG1RcXRjSw?oc=5",
           "source": "Trefis",
-          "published": "2026-11-12T11:25:22+00:00"
+          "published": "2026-11-13T09:02:13+00:00"
+        },
+        {
+          "company": "Rolls-Royce",
+          "title": "Rolls-Royce gas leak prompts emergency response",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDbUJVYmMxd2dLRnJIcVg5cTM1cmI0V3lzR2NVZ2JTeWZlUnZpeGNhZWxfQ0RDMkZhQUxzMm5NeXIycWNVS2NhSDQtQmRsT0k5bkdrM0M5TWJIS0k?oc=5",
+          "source": "BBC",
+          "published": "2026-11-12T22:17:13+00:00"
         }
       ]
     },
     {
       "title": "Neoclouds (GPU Clouds)",
-      "analysis": "12 stories in the last 24 hours. Most active: CoreWeave (4), Nebius (4), Lambda (2).",
+      "analysis": "12 stories in the last 24 hours. Most active: Nscale (4), CoreWeave (4), Nebius (3).",
       "stories": [
         {
+          "company": "Nscale",
+          "title": "Nvidia-Backed Nscale Says It Needs Additional Financing Ahead of Planned IPO",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcUZzU1JvX2lzdENhZ1BKSEZ4QUNuWk5qZWQ1WkZuX3JENDM5MWFUVmtlZ2l3anlNSzdIay11eGFzYzRzM254ZlZvcFk4Q3F6VVg3WGpubTByWGxfbEp6anpvaWl4WU9CWW9uVDZZdDhJMk5HM3pueTJSTDl0d0k4WGc5YkJlalM4MFZVYUc4ZzAzdms2cGx5SjdCNXZoWjFBY2lTbmIwcmRoNVlXZGU4?oc=5",
+          "source": "WSJ",
+          "published": "2026-11-13T12:30:06+00:00"
+        },
+        {
           "company": "CoreWeave",
-          "title": "CoreWeave is planning to raise at least $4 billion in a new high-grade loan",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZlBaN0Z0NUYyWlRwY1N3VDlFLVdlM0YweHEtT3BxT2p1MUhUSUF6X21fbm1LUGFEY2tsYWkxbEpSWmF6VDlOOC1TcFJtN2pId0xiSmdhaUhGd2dWc1JqOElKNmlSTzl5VE9kNUtxUm9wWU5YZzljM1dPdjgtMnJ2X0JIUTY?oc=5",
-          "source": "Quartz",
-          "published": "2026-11-12T13:14:27+00:00"
+          "title": "CoreWeave\u2019s Demand is There, $41.6B of Corporate Debt Remains: What This Means for Nebius and CoreWeave",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUy1QMkI1dnVDOFhxVDlMaERaYThVdHRRZWZCTzZEMHdaYTJSVjZwbk5TRnhHdFRaVWp4SmpaX1RMRllEbWNYTFl2Q0pUeVNMcmhKdjlBR21nX3J2M0pGX1NaazlETElxRGJlWDYxb2k5MGd5UWFDMWFzM01VNUVYSko0OThmNEN4WXNsQnpIeXhmdm9GSUtJSmpNZmM?oc=5",
+          "source": "Yahoo Finance",
+          "published": "2026-11-13T12:15:13+00:00"
+        },
+        {
+          "company": "CoreWeave",
+          "title": "Microsoft Just Piled Onto the Bad News for CoreWeave, Oracle, and Nebius",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaHFzZDRxenNlbEc0OGE4YWFNaGxQX3hxbWZjQzhBaDRDTzJONzZKWGdCdXp3M2JXWXV5M2pkVnRzam1YeGtIRWwzRnFtLVlSTkNsTERfT3p1VlFFdXZzWHVvbWt2Y0NOOGNuUzhVWjVRd05Zd1JPcEh6bFp6em9sOXctdDBNck9IclpFZW40dUxKeTFsYy04cG5n?oc=5",
+          "source": "Yahoo Finance",
+          "published": "2026-11-13T11:40:02+00:00"
+        },
+        {
+          "company": "Nscale",
+          "title": "Nscale warns it needs more cash ahead of $35bn IPO",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUEszUlJjTzUyRjJJS0hBSF85NWJZaHgyYzJxYmtRRmNKUzYyb3BFU0VwYzFSTEV0X1dYeUR0MFlrUkdZQzhHOUdqZnlETXJCTVM0YWVuOFp6V3ZaOEJXTEotWWtoV3JyOXEtNjZZUlc2Mlk4OGc3QzdPeWtaNkI3R005TEQ?oc=5",
+          "source": "Financial Times",
+          "published": "2026-11-13T04:10:06+00:00"
         },
         {
           "company": "Lambda",
-          "title": "Merak Capital leads $1.3 million investment in Saudi gaming startup Lambda Studios",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQM29ocFhzYzdKQWtDOXdxQUQ0YU9XbkFZTVQ1dnE2N2N2TF8tOXlSdFNJQ1U3WU1xZ2JoNEplclVyZEZjU0pJMndGZ2dSSUxtTHpabjJJMFFjMkZ1Zk11Mk4wc242ZUhvQzIyejlZRFBEVVhOdVM1ZWdXMmh2TU1pbTBJME9xZ3BvQ0NEQlNsNFdOYXNSZ1Y5OXZXUHhRdXlEWVNwbXRQYnF6Rmts?oc=5",
-          "source": "Wamda",
-          "published": "2026-11-12T12:39:20+00:00"
-        },
-        {
-          "company": "Nebius",
-          "title": "Nebius Stock Tumbles After Earnings as CEO Warns of Revenue Delay",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9FWHlJeHh0OVJrUlZ3bHhVTkJIeFFQcWg4a1hkZERkVzR2eU9GNTNHVHBsY2hHaXliZjBqQXJIQ0VLbUVaeHlBM3ZQWllrdURxRjdpZDBHTDlBdk9PMklWMFdnMFdoVlFkc2FUbHEyRHhoOVdMMFNJSg?oc=5",
-          "source": "Barron's",
-          "published": "2026-11-12T12:38:00+00:00"
-        },
-        {
-          "company": "Nebius",
-          "title": "Nebius Group: Q3 Earnings Snapshot",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQYUhpcG5QTHdDZXI5OFJHWWUydUZuT2ZjUVk2TG10aktLOGRfWkZjSE1PWkRXZ1ZrdU5XbDdWXzVOQXpja1FHSlRpZDR2RXdGSEFDZll5M1Q5ZU9NaV9uRGdMa1l0T0lBVW1CQzU2azZHcUFDNHIxQzFfNWx0TWdTbVNoSUtMdDZKLU5FRkxyQ3hVZHVFTHZrTTlQdm00TTg?oc=5",
-          "source": "Yahoo Finance",
-          "published": "2026-11-12T12:25:02+00:00"
-        },
-        {
-          "company": "Nebius",
-          "title": "Nebius pares back 2026 revenue forecast on capacity delays, shares slump",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZVZOamNtUFlhNWZOd0VqQndNNU05YTRjWjFXRVdMcmZndTlMT3NRbEhUYTM0X29MQVNUWC1MZS02VG5zT1BReWozVV9wbDljaV9xT2JuTXFBdUlYbkpVMnducVNXSWtLdXBSTnAxYnp5YTNtaVhEb0ZyTzdUTnlmLV9XVTNpS3FqTFlnU1RFMjgzTnc5ZWdrYzdJRUlQbUtBamlEVDdsakF6NFh1Uk01TVA1RQ?oc=5",
-          "source": "marketscreener.com",
-          "published": "2026-11-12T12:23:24+00:00"
+          "title": "Monmouth student Jayden Taylor gets Alpha Lambda Delta scholarship - Polk County Itemizer-Observer",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVUVILVNyMWFodUkwLUIzQXc2aHlTYlZFVUFMdE54YkNNMkVNVEM3S3pYOEdZaDh0c2pkb2owVUpkSXZBaFUySnVEbGRGWF9FNWhOQmU4N2Y1ODVOUy15NmlYQVRmUzVoM0ZMazBDcFk2ZmpYMHVVbmw0b2ZBZkdkRmZqbklDd21YdklHQjczN1BVY3hzQml3RmZUSmp3cTEzX19acXRXOEFNVlltRG1rY0o3UjJvLWZKMmxjcTB3NTgyNS1oUXVuc3FnMV94QjVMSl92STlDNXFjTDY0Wm9NcjdOTQ?oc=5",
+          "source": "Polk County Itemizer-Observer",
+          "published": "2026-11-13T02:01:11+00:00"
         }
       ]
     },
     {
-      "title": "Memory (HBM & DRAM)",
-      "analysis": "10 stories in the last 24 hours. Most active: Micron (4), Samsung (4), SK Hynix (2).",
+      "title": "Foundries",
+      "analysis": "12 stories in the last 24 hours. Most active: SMIC (4), TSMC (3), Samsung Foundry (3).",
       "stories": [
         {
-          "company": "Micron",
-          "title": "Join The Dip Buyers in Micron If You Dare",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZEFqN3JMckJRZWkzdU9PVHdhZUpTMkN2MlVWdEVXMHdJeXh4MFlKYUpBQU9QRUdTWGpCbFAxNU9mMnZCcDNJTU5CUEJXNVpTN2dSVTh6b0N2VlVCbENGVnZSMzJCa0Q3SnVkVXl1eWF4NC1MZXBwVk5MUlkycTNCSmIxMGRfX19EdWtoNnZ6QmdZbDYtT1Jz?oc=5",
+          "company": "TSMC",
+          "title": "TSMC Faces Major Security Scare as Hackers Demand Bitcoin",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUk5INXI5Y0pSMGNKdEdUUFMyc01TeWpETk9DaGtsZDF4b0puN2xyekdwRDhkeXZsTkpINkZuOTZnU0djdFltT05Xb2N0QmtDeklTOHV5MmhZVWozdGNxSjJBUnk4MF9RVVB0NGczZXVOZ2JkMGR2SzhYM2VDSDIxbURfTEZoektfWGRHMnh4dExkeHpfSW05WkIwYw?oc=5",
           "source": "Yahoo Finance",
-          "published": "2026-11-12T13:45:55+00:00"
+          "published": "2026-11-13T11:59:50+00:00"
         },
         {
-          "company": "Micron",
-          "title": "Form 144 | Micron Technology(MU.US) Officer Proposes to Sell 11.41 Million in Common Stocks",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUzc5a29BX1l5UmdUQkh6d1dTdEtoVlJRX29YSW9GbTVYNzJPaUEyOVlFU2k0Vld1TW5HS1o0bF8yVzA0WHZ3YTFXYXJ1eGdxc3ZOdXZlY2ZqMDgtRll1TmZMWWx4anJES1gtMmdlZ1pnYWVFOElSRC1YTzZZT3NZd1I0NmhtWmEzTUQ1NG5hMDg5S1VWdF9pWU96bi0wUmFyWUdmZFlEZw?oc=5",
-          "source": "Moomoo",
-          "published": "2026-11-12T13:32:42+00:00"
+          "company": "GlobalFoundries",
+          "title": "GlobalFoundries to break ground on major Malta expansion backed by $21 billion investment",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMjVmT0lwRjJwOVNDd3JfNWl1b00wUC1pUkJRazl1T3dsVGw4c1pJN0FfdkFjNllaTTQ0WHd6cUV3VlJsSHk1SjJsaFJULXdLRHd5SWNlNTdlby1qXzdlTkdYTWNzQjVqVnY1cGlVNkhKNEpnN3NXVV9nalRBYWliRlhHQ1lmei1KTm9Bd0dkUDRoMlhRZ3JIRm03ZGl0aEFob3hzcDgyX3IxbEVIZlRrUE9aZHlkNzhoaXc?oc=5",
+          "source": "WNYT.com",
+          "published": "2026-11-13T11:11:29+00:00"
         },
         {
-          "company": "Micron",
-          "title": "Micron (MU) Has Next Year\u2019s High-Bandwidth Memory Mostly Sold. Can That Anchor a Decade-Long Case?",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTmFDczRta2ozeFp1RnVHT1MyYmgtMzJCUFgyYmlEVGViNkZuakh0T0lMQ3Z3czcxQTZuR1phbTdkbHkxY0YyLU9rYi1lcVFqNXRaWEthQmhDemNoTFI4aGg3eEtrT2VrZnVyaEdWRk9vMkJyZUpFWDZsYWd0aEZYZ0tBZGp1U3BDZ0N6Qi1HN1BGTTEwb2lYR3JB?oc=5",
-          "source": "Yahoo Finance",
-          "published": "2026-11-12T11:33:13+00:00"
+          "company": "Samsung Foundry",
+          "title": "DeepX Bets $100 Million on New AI Chip Using Samsung Technology",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPTkRBMFRqbmlJdXhBT0E4TE5GUUdYTktYOVVwWERUZnpFY0RGVmVsMUNGc2hNLTVpV3NOa0E0Wm5NcWQ3S3VQenZoMzdUN1ZmYWxlWk5GVzhLcnZuU0tMMWRlSXBMM0hoaGlKRVF5WUtpaUN0QTM4NTJzZS1fUWVtdkloMDBRSUE0Mko2U1NDUFktaGpxalN5VFdPTVE5SzJEcUFzU3RKNkZhR1hYby1nMW1TMA?oc=5",
+          "source": "Bloomberg.com",
+          "published": "2026-11-13T09:33:55+00:00"
         },
         {
-          "company": "Samsung",
-          "title": "\u2018Megaproject\u2019 breaks ground at Samsung memory plant",
-          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5MUjFaeUVWZXpoQ281QVBabWdkaHAwRy1IdXNzOWR4bnQxSG5paGlOZUR5bEFnWTNUUHBiTTZCVmwxQ201MXdWTGRxSDFuUjlZVExWdldSMA?oc=5",
-          "source": "The Korea Herald",
-          "published": "2026-11-12T06:29:50+00:00"
+          "company": "SMIC",
+          "title": "China\u2019s SMIC sees AI computing crunch until 2028 as Nvidia heat risks tighter chip curbs",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOdndWc1ZTejZ1Mmc1OGJqbEVzVXE4YjRsTXFrT1l4SGdqVEx4S1JoUzhZWGpRRm5XYUc1cHdObm9wTlhnSldiXzkxb0FRUWpvS0RFQV9SeDNqeW5QSmluT3E4amstRGtYdENkVzlKLU5mRlFqVG94ZVRoS0JBWkQxaEN5S2dUQkhfNU1Pb0FjeDNZbnpFV1p5d3ZKYmZwZzRybHpYQXR0TkpIYTlrYUo1SmtpaHpQa0tFYVZkZkp1dm5IZnkwamlUeEFLUVN2dWxM?oc=5",
+          "source": "South China Morning Post",
+          "published": "2026-11-13T05:55:56+00:00"
         },
         {
-          "company": "Samsung",
-          "title": "Stock tips with a beat: Samsung Securities' AI K-pop group racks up views",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUDQ3c0otcnRoeXI2Y1dUOWhpLV9HNFVRMkVBWmRGdF95b1NCek5yRy10aDRSS3VlNkNMcURnQ3RaWlA0Y1hiRmhpckZpX3NzdWlNLXJPZGtCRnFzQ2xFX0o1a0d2SDN6SmNHM3RJSEdST1IzdE9VcVhKUDc3NjFPbTlYa3o0UkhkeHYzLTFNX05QZDdMb0g4bWQ5aV83NGZvYVFDaDhEVG1aN1d0UC1GclBXQlRWT1VRdzJGMEl2QmJ4eEREWUNv?oc=5",
-          "source": "Reuters",
-          "published": "2026-11-12T01:35:00+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Chips / Silicon",
-      "analysis": "10 stories in the last 24 hours. Most active: NVIDIA (4), Cerebras (3), SambaNova.",
-      "stories": [
-        {
-          "company": "NVIDIA",
-          "title": "Nvidia Stock Is Tumbling. What Happens If Huang Gets Ousted.",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTmY5c05oNmptS3d1Z1B6aUtOaEkwMGxxbjBkendjRzNqU2lrclhPNlkxWEdlU2c5NnhUVVQ4a09vSVFOX3ZhNnNpUy1VeHo3aFlHdlAzZVdSLXQyWml3VE0xMnNNUnU5T2NCM2pHNjE2end6NjlRNVBYbkxKOGZOSTR3MU1aYk9IaWtMLQ?oc=5",
-          "source": "Barron's",
-          "published": "2026-11-12T13:25:00+00:00"
-        },
-        {
-          "company": "NVIDIA",
-          "title": "Stocks making the biggest moves premarket: Nvidia, AMD, Corteva & more",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSnRjVVEyQTc5NnhZY0wwMEZ2dk9kOHVPVzVOWDBXbVR6bW1WYVVuUUpsRzlPRzJCdTBWa3FoSUo1d3ZaMy1EamVyV3NDQktCN3FTMHRlMjNBalVhaUdXdHpjQ3JhSWJxVndhNVdIVDk5NnNJZmZlVGM5UjlUUjVTeE85ekw?oc=5",
-          "source": "CNBC",
-          "published": "2026-11-12T12:50:00+00:00"
-        },
-        {
-          "company": "NVIDIA",
-          "title": "Nvidia CEO Jensen Huang\u2019s future hangs in the balance as U.S. chip giant reels from China spy scandal",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTDEzc2M0RE5QVXh1cVZ0U1B3V2FRV2NOUWNSbnBVSGNFU0FhWVNjYWJrRXBhQlVkM3ItZ29hUVd4MkJEVW14TnBDMEwwNWRKSWNhZlc2dEV4NkNNMi1fZXU3V1FJaWpEVGNna0xlamdRVmN1TDRtcW1Cc3o0R05hUHcxYmthV2Yyb0tBbXlKa3NqLXpaaWNBSXhJaUFEUFByelB0TFRWT09rak9TUnRUYXZkUDBJbEhlaVoxYkpYTHY?oc=5",
-          "source": "NBC News",
-          "published": "2026-11-12T12:44:00+00:00"
-        },
-        {
-          "company": "Cerebras",
-          "title": "Cerebras (CBRS) vs. TSMC (TSM): Which Stock Has More Upside, According to Analysts?",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdHc2Um1aNWgySzNxX1dyWEpIVkxjbjcxaWt5SWl3NHNJX29pUTljMjY0VG9OU21oS0QtV096YVBYU1NfdDU4ZXpQdkc0QUNIVFp2aTNGS0d5SHhYUjUwY3RpWGJ0TkN3QXM0ZUpsblgxcE9BZEpHcjU5SlhCaFlIOVdudXpCYUM5Y0ttakRrYVR1Q241aTJOYVZzU3JNMHRtTjhia040YXV1QWcxNmlhRGw4SQ?oc=5",
-          "source": "TipRanks",
-          "published": "2026-11-12T09:54:04+00:00"
-        },
-        {
-          "company": "Cerebras",
-          "title": "NVDA Fallout Pressures Tech Trade As Investors Turn To Cerebras, Applied Materials For Chip Demand Cues",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUE5Lc0Y0Q2JGRGxKcVV5MG5uT2J1Szlvb004cGdIbGdLVkxzLUtvUC1KcnRra25YOUdIS1p3aHF3RTVvLXFuZFZJTDN4ZTQwWDNOOU5UQW1TQUJGWlZzMGpZQjd2UUpnX3lLWmdTSnBYSGlsNzE5NWpJbHNIVVU5MUVRdDJoLUUySlZFSVVUa3czS19kZ3lDVTNGWGV6ZlE?oc=5",
-          "source": "Yahoo Finance",
-          "published": "2026-11-12T05:19:41+00:00"
+          "company": "SMIC",
+          "title": "SMIC says AI chip shortage lasts through 2027 as fabs hit 97% use",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQN2g4alJNZWNPYU5lRHdCZ29KRHNiN3p5Vkt0dFNaaG5wMHlQamc2bGhPanhTbWw4ampRT0RXV3JiWkFKQlQ3SElBZ2RPZXZFWmE0a0xHOVQxSTZVN29wdkt1WEJHcWxWM1VqblFndElVZHNqRHpLYnRMTVNWRVJTd3JUaGFwVzdfVkxWTzF1cHVDYUx6cU9n?oc=5",
+          "source": "Startup Fortune",
+          "published": "2026-11-13T04:16:07+00:00"
         }
       ]
     }
   ],
-  "date": "2026-11-12T14:04:39.959668+00:00",
-  "item_count": 236
+  "date": "2026-11-13T13:30:21.060873+00:00",
+  "item_count": 247
 }
